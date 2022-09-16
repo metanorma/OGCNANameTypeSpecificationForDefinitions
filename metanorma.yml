@@ -3,5 +3,7 @@ metanorma:
   source:
     files:
       - document.adoc
-  deploy:
-    email: "ci@metanorma.org"
+
+  collection:
+    organization: "OGC"
+    name: "OGC Policy: Name Type Specification - definitions - part 1 - basic name"
