@@ -1,5 +1,4 @@
 [bibliography]
-[[references]]
 == References
 
 * [[[OGC_08-131r3,OGC 08-131r3]]], OGC 08-131r3 -- The Specification Model -- A Standard for Modular Specifications

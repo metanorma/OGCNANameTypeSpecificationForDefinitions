@@ -23,6 +23,6 @@
 
 * [[[OGC_09-046r6,OGC 09-046r6]]], OGC 09-046r5, OGC Naming Authority – Procedures, https://docs.opengeospatial.org/pol/09-046r6.html (2021)
 
-* [[[W3C_SKOS,SKOS]]], W3C: SKOS Simple Knowledge Organization System, https://www.w3.org/TR/skos-reference (2009)
+* [[[W3C_SKOS,W3C TR/skos-reference]]], W3C: SKOS Simple Knowledge Organization System, https://www.w3.org/TR/skos-reference (2009)
 
-* [[[W3C_CURIEs,CURIE]]], W3C: CURIE Syntax 1.0, https://www.w3.org/TR/curie (2010)
+* [[[W3C_CURIEs,W3C TR/curie]]], W3C: CURIE Syntax 1.0, https://www.w3.org/TR/curie (2010)
