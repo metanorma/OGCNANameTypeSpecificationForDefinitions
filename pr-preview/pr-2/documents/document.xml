@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.3" schema-version="v2.1.5" flavor="ogc">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.6" schema-version="v2.1.6" flavor="ogc">
 <bibdata type="standard">
 <title language="en" type="main">OGC Name Type Specification - definitions - part 1 – basic name</title>
 <docidentifier type="ogc-internal" primary="true">09-048r6</docidentifier><docidentifier type="ogc-external">http://www.opengis.net/doc/POL-NTS/DEF-1/1.3</docidentifier><docnumber>09-048r6</docnumber><date type="published"><on>2029-06-03</on></date><date type="issued"><on>2029-05-29</on></date><date type="received"><on>2029-03-28</on></date><contributor><role type="author"/><organization>
@@ -500,20 +500,20 @@
 <td id="_6b3573a3-cf02-8be5-34de-790a8edb19e2" valign="middle" align="left">Conversion to metanorma asciidoc.</td>
 </tr></tbody>
 </table>
-</annex><bibliography><references id="_b7bbac86-c089-e996-314f-c0b23e6d185f" normative="true" obligation="informative">
+</annex><bibliography><references id="_83e0d2ac-3b4c-135a-899e-4ef6a54ceddf" normative="true" obligation="informative">
 <title id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><p id="_49996d2b-65c1-916b-9bbf-42b933aa0025">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
-<bibitem id="_a3666bbb-312a-4229-70b3-78ed89f2e148" type="standard" schema-version="v1.2.9" anchor="OGC_08-131r3">
-  <fetched>2026-04-16</fetched>
+<bibitem id="_2d4c31f1-5944-67d7-58d9-781d058abdda" type="standard" schema-version="v1.5.6" anchor="OGC_08-131r3">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-intro" format="text/plain" language="en" script="Latn">The Specification Model</title>
+<title language="en" script="Latn" type="title-intro">The Specification Model</title>
 
   
-<title type="title-main" format="text/plain" language="en" script="Latn">Standard for Modular specifications</title>
+<title language="en" script="Latn" type="title-main">Standard for Modular specifications</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">The Specification Model — Standard for Modular specifications</title>
+<title language="en" script="Latn" type="main">The Specification Model — Standard for Modular specifications</title>
 
-  <uri type="pdf">https://docs.ogc.org/pol/08-131r3/08-131r3.pdf</uri>
+  <uri type="html">https://docs.ogc.org/pol/08-131r3/08-131r3/pdf</uri>
   <docidentifier type="OGC" primary="true">08-131r3</docidentifier>
   <date type="published">
     <on>2009-10-19</on>
@@ -534,22 +534,37 @@
 
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
   <edition>3</edition>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">This standard contains requirements for writing standards to be used for any document whose
-eventual purpose is the specification of requirements for software, services or data structures.</abstract>
-  
+  <abstract language="en" script="Latn">This standard contains requirements for writing standards to be used for any document whose
+eventual purpose is the specification of requirements for software, services or data structures. </abstract>
 </bibitem>
-<bibitem id="_0d8ebe5a-e960-258c-a29e-78c5fc16f24f" type="standard" schema-version="v1.2.9" anchor="OGC_06-121r9">
-  <fetched>2026-04-16</fetched>
+<bibitem id="_60ad63a7-1c05-9688-863c-91a4d7032ec9" type="standard" schema-version="v1.5.6" anchor="OGC_06-121r9">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-main" format="text/plain" language="en" script="Latn">OGC Web Service Common Implementation Specification</title>
+<title language="en" script="Latn" type="title-main">OGC Web Service Common Implementation Specification</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">OGC Web Service Common Implementation Specification</title>
+<title language="en" script="Latn" type="main">OGC Web Service Common Implementation Specification</title>
 
-  <uri type="pdf">https://docs.ogc.org/is/06-121r9/06-121r9.pdf</uri>
+  <uri type="html">https://docs.ogc.org/is/06-121r9/06-121r9/pdf</uri>
   <docidentifier type="OGC" primary="true">06-121r9</docidentifier>
   <date type="published">
     <on>2010-04-07</on>
@@ -578,23 +593,38 @@ eventual purpose is the specification of requirements for software, services or 
 
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
   <edition>9</edition>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">This document specifies many of the aspects that are, or should be, common to all or multiple OGC Web Service (OWS) interface Implementation Standards. These common aspects are primarily some of the parameters and data structures used in operation requests and responses. Of course, each such Implementation Standard must specify the additional aspects of that interface, including specifying all additional parameters and data structures needed in all operation requests and responses.</abstract>
-  
+  <abstract language="en" script="Latn">This document specifies many of the aspects that are, or should be, common to all or multiple OGC Web Service (OWS) interface Implementation Standards. These common aspects are primarily some of the parameters and data structures used in operation requests and responses. Of course, each such Implementation Standard must specify the additional aspects of that interface, including specifying all additional parameters and data structures needed in all operation requests and responses.</abstract>
 </bibitem>
-</references><references id="_c8646c1f-e667-4558-3523-7188081499a2" normative="false" obligation="informative">
-<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_33f81de7-0180-3122-c204-caaffaf5558e" type="standard" schema-version="v1.2.9" anchor="OGC_09-046r6">
-  <fetched>2026-04-16</fetched>
+</references><references id="_f3a913ba-32cc-17a2-4363-c0e8cb848b81" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_d36d1c0e-61bf-46f3-2afe-4e5a7d479201" type="standard" schema-version="v1.5.6" anchor="OGC_09-046r6">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-intro" format="text/plain" language="en" script="Latn">OGC Naming Authority</title>
+<title language="en" script="Latn" type="title-intro">OGC Naming Authority</title>
 
   
-<title type="title-main" format="text/plain" language="en" script="Latn">Procedures</title>
+<title language="en" script="Latn" type="title-main">Procedures</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">OGC Naming Authority — Procedures</title>
+<title language="en" script="Latn" type="main">OGC Naming Authority — Procedures</title>
 
   <uri type="src">http://www.opengis.net/doc/POL/OGC-NA/1.3</uri>
   <uri type="html">https://docs.ogc.org/pol/09-046r6.html</uri>
@@ -626,15 +656,30 @@ eventual purpose is the specification of requirements for software, services or 
 
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
   <edition>6</edition>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">The mission of the OGC Naming Authority (OGC-NA) is to provide the means through which OGC resources such as OGC documents, namespaces and ontologies can be controlled and managed such that they can provide clear and well-defined names and definitions. In the terminology defined in ISO 19135, OGC-NA is the Control Body for the register of OGC Names. This document describes the framework of documents, registers and other resources required for OGC-NA to execute that role.</abstract>
+  <abstract language="en" script="Latn">The mission of the OGC Naming Authority (OGC-NA) is to provide the means through which OGC resources such as OGC documents, namespaces and ontologies can be controlled and managed such that they can provide clear and well-defined names and definitions. In the terminology defined in ISO 19135, OGC-NA is the Control Body for the register of OGC Names. This document describes the framework of documents, registers and other resources required for OGC-NA to execute that role.</abstract>
+</bibitem><bibitem id="_05cfdad9-131b-951d-c1ef-a29b73e9d40b" type="standard" schema-version="v1.5.6" anchor="rfc2141">
+  <fetched>2026-06-16</fetched>
   
-</bibitem><bibitem id="_52ad8890-a9b9-be3a-2a9d-701ed891c5c0" type="standard" schema-version="v1.2.9" anchor="rfc2141">
-  <fetched>2026-04-16</fetched>
-  
-<title type="main" format="text/plain">URN Syntax</title>
+<title type="main">URN Syntax</title>
 
   <uri type="src">https://www.rfc-editor.org/info/rfc2141</uri>
   <docidentifier type="IETF" primary="true">RFC 2141</docidentifier>
@@ -647,7 +692,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">R. Moats</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">R.</formatted-initials>          <surname language="en" script="Latn">Moats</surname>          <completename language="en" script="Latn">R. Moats</completename>       </name>
 
     </person>
   </contributor>
@@ -655,7 +700,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="publisher"/>
     <organization>
       
-<name>RFC Publisher</name>
+<name language="en">RFC Publisher</name>
 
     </organization>
   </contributor>
@@ -663,42 +708,70 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="authorizer"/>
     <organization>
       
-<name>RFC Series</name>
+<name language="en">RFC Series</name>
 
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name language="en">Internet Engineering Task Force</name>
+
+      <subdivision type="workgroup">
+        
+<name>Uniform Resource Names</name>
+
+        <identifier>urn</identifier>
+      </subdivision>
+      <abbreviation language="en">IETF</abbreviation>
     </organization>
   </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
-    <p id="_aa2b178a-cefc-7b99-d48d-a41479e77199">Uniform Resource Names (URNs) are intended to serve as persistent, location-independent, resource identifiers. This document sets forward the canonical syntax for URNs. [STANDARDS-TRACK]</p>
+  <abstract language="en" script="Latn">
+    <p id="_baa8a2b9-8ab1-a9f2-ff2a-0a03766b3aca">Uniform Resource Names (URNs) are intended to serve as persistent, location-independent, resource identifiers.  This document sets forward the canonical syntax for URNs. [STANDARDS-TRACK]</p>
 
   </abstract>
+  <status>
+    <stage>PROPOSED STANDARD</stage>
+  </status>
   <relation type="obsoletedBy">
     <bibitem>
-      <formattedref format="text/plain">RFC8141</formattedref>
+      <formattedref>RFC8141</formattedref>
       <docidentifier type="IETF" primary="true">RFC8141</docidentifier>
     </bibitem>
 
   </relation>
   <series>
     
-<title format="text/plain">RFC</title>
+<title>RFC</title>
 
     <number>2141</number>
   </series>
   <series type="stream">
     
-<title format="text/plain">IETF</title>
+<title>IETF</title>
 
   </series>
-  <keyword>URN-SYNTAX</keyword>
-  <keyword>Uniform</keyword>
-  <keyword>Resource</keyword>
-  <keyword>Names</keyword>
-</bibitem><bibitem id="_77dece2f-8397-57cb-3680-44ccf706eef1" type="standard" schema-version="v1.2.9" anchor="rfc2616">
-  <fetched>2026-04-16</fetched>
+  <keyword>
+    <vocab>URN-SYNTAX</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Uniform</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Names</vocab>
+  </keyword>
+</bibitem><bibitem id="_19292718-20ce-1468-8fbc-1a5e9d63c1c9" type="standard" schema-version="v1.5.6" anchor="rfc2616">
+  <fetched>2026-06-16</fetched>
   
-<title type="main" format="text/plain">Hypertext Transfer Protocol — HTTP/1.1</title>
+<title type="main">Hypertext Transfer Protocol — HTTP/1.1</title>
 
   <uri type="src">https://www.rfc-editor.org/info/rfc2616</uri>
   <docidentifier type="IETF" primary="true">RFC 2616</docidentifier>
@@ -711,7 +784,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">R.</formatted-initials>          <surname language="en" script="Latn">Fielding</surname>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
 
     </person>
   </contributor>
@@ -719,7 +792,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">J. Gettys</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">J.</formatted-initials>          <surname language="en" script="Latn">Gettys</surname>          <completename language="en" script="Latn">J. Gettys</completename>       </name>
 
     </person>
   </contributor>
@@ -727,7 +800,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">J. Mogul</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">J.</formatted-initials>          <surname language="en" script="Latn">Mogul</surname>          <completename language="en" script="Latn">J. Mogul</completename>       </name>
 
     </person>
   </contributor>
@@ -735,7 +808,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">H. Frystyk</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">H.</formatted-initials>          <surname language="en" script="Latn">Frystyk</surname>          <completename language="en" script="Latn">H. Frystyk</completename>       </name>
 
     </person>
   </contributor>
@@ -743,7 +816,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">L.</formatted-initials>          <surname language="en" script="Latn">Masinter</surname>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
 
     </person>
   </contributor>
@@ -751,7 +824,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">P. Leach</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">P.</formatted-initials>          <surname language="en" script="Latn">Leach</surname>          <completename language="en" script="Latn">P. Leach</completename>       </name>
 
     </person>
   </contributor>
@@ -759,7 +832,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">T.</formatted-initials>          <surname language="en" script="Latn">Berners-Lee</surname>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
 
     </person>
   </contributor>
@@ -767,7 +840,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="publisher"/>
     <organization>
       
-<name>RFC Publisher</name>
+<name language="en">RFC Publisher</name>
 
     </organization>
   </contributor>
@@ -775,78 +848,108 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="authorizer"/>
     <organization>
       
-<name>RFC Series</name>
+<name language="en">RFC Series</name>
 
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name language="en">Internet Engineering Task Force</name>
+
+      <subdivision type="workgroup">
+        
+<name>HyperText Transfer Protocol</name>
+
+        <identifier>http</identifier>
+      </subdivision>
+      <abbreviation language="en">IETF</abbreviation>
     </organization>
   </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
-    <p id="_eb68d0a0-4b95-dd13-b45e-b8cc6ec33a8c">HTTP has been in use by the World-Wide Web global information initiative since 1990. This specification defines the protocol referred to as “HTTP/1.1”, and is an update to RFC 2068. [STANDARDS-TRACK]</p>
+  <abstract language="en" script="Latn">
+    <p id="_b43e9580-d127-f96b-317a-2da001cb97c6">HTTP has been in use by the World-Wide Web global information initiative since 1990.  This specification defines the protocol referred to as “HTTP/1.1”, and is an update to RFC 2068. [STANDARDS-TRACK]</p>
 
   </abstract>
+  <status>
+    <stage>DRAFT STANDARD</stage>
+  </status>
   <relation type="obsoletedBy">
     <bibitem>
-      <formattedref format="text/plain">RFC7230</formattedref>
+      <formattedref>RFC7230</formattedref>
       <docidentifier type="IETF" primary="true">RFC7230</docidentifier>
     </bibitem>
 
   </relation>
   <relation type="obsoletedBy">
     <bibitem>
-      <formattedref format="text/plain">RFC7231</formattedref>
+      <formattedref>RFC7231</formattedref>
       <docidentifier type="IETF" primary="true">RFC7231</docidentifier>
     </bibitem>
 
   </relation>
   <relation type="obsoletedBy">
     <bibitem>
-      <formattedref format="text/plain">RFC7232</formattedref>
+      <formattedref>RFC7232</formattedref>
       <docidentifier type="IETF" primary="true">RFC7232</docidentifier>
     </bibitem>
 
   </relation>
   <relation type="obsoletedBy">
     <bibitem>
-      <formattedref format="text/plain">RFC7233</formattedref>
+      <formattedref>RFC7233</formattedref>
       <docidentifier type="IETF" primary="true">RFC7233</docidentifier>
     </bibitem>
 
   </relation>
   <relation type="obsoletedBy">
     <bibitem>
-      <formattedref format="text/plain">RFC7234</formattedref>
+      <formattedref>RFC7234</formattedref>
       <docidentifier type="IETF" primary="true">RFC7234</docidentifier>
     </bibitem>
 
   </relation>
   <relation type="obsoletedBy">
     <bibitem>
-      <formattedref format="text/plain">RFC7235</formattedref>
+      <formattedref>RFC7235</formattedref>
       <docidentifier type="IETF" primary="true">RFC7235</docidentifier>
     </bibitem>
 
   </relation>
   <series>
     
-<title format="text/plain">RFC</title>
+<title>RFC</title>
 
     <number>2616</number>
   </series>
   <series type="stream">
     
-<title format="text/plain">IETF</title>
+<title>IETF</title>
 
   </series>
-  <keyword>HTTP</keyword>
-  <keyword>Hypertext Transfer Protocol</keyword>
-  <keyword>World Wide Web</keyword>
-  <keyword>WWW</keyword>
-  <keyword>hypermedia</keyword>
-</bibitem><bibitem id="_00278fe9-d2e5-d9d3-5efa-157908988370" type="standard" schema-version="v1.2.9" anchor="rfc3986">
-  <fetched>2026-04-16</fetched>
+  <keyword>
+    <vocab>HTTP</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Hypertext Transfer Protocol</vocab>
+  </keyword>
+  <keyword>
+    <vocab>World Wide Web</vocab>
+  </keyword>
+  <keyword>
+    <vocab>WWW</vocab>
+  </keyword>
+  <keyword>
+    <vocab>hypermedia</vocab>
+  </keyword>
+</bibitem><bibitem id="_d1535a97-5c44-b3a7-9e1f-3a189c8bdbb7" type="standard" schema-version="v1.5.6" anchor="rfc3986">
+  <fetched>2026-06-16</fetched>
   
-<title type="main" format="text/plain">Uniform Resource Identifier (URI): Generic Syntax</title>
+<title type="main">Uniform Resource Identifier (URI): Generic Syntax</title>
 
   <uri type="src">https://www.rfc-editor.org/info/rfc3986</uri>
   <docidentifier type="IETF" primary="true">RFC 3986</docidentifier>
@@ -859,7 +962,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">T.</formatted-initials>          <surname language="en" script="Latn">Berners-Lee</surname>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
 
     </person>
   </contributor>
@@ -867,7 +970,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">R.</formatted-initials>          <surname language="en" script="Latn">Fielding</surname>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
 
     </person>
   </contributor>
@@ -875,7 +978,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">L.</formatted-initials>          <surname language="en" script="Latn">Masinter</surname>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
 
     </person>
   </contributor>
@@ -883,7 +986,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="publisher"/>
     <organization>
       
-<name>RFC Publisher</name>
+<name language="en">RFC Publisher</name>
 
     </organization>
   </contributor>
@@ -891,50 +994,65 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="authorizer"/>
     <organization>
       
-<name>RFC Series</name>
+<name language="en">RFC Series</name>
 
     </organization>
   </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
-    <p id="_e0a09f48-a44e-07f7-5579-f349dd1a1ba1">A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource. This specification defines the generic URI syntax and a process for resolving URI references that might be in relative form, along with guidelines and security considerations for the use of URIs on the Internet. The URI syntax defines a grammar that is a superset of all valid URIs, allowing an implementation to parse the common components of a URI reference without knowing the scheme-specific requirements of every possible identifier. This specification does not define a generative grammar for URIs; that task is performed by the individual specifications of each URI scheme. [STANDARDS-TRACK]</p>
+  <abstract language="en" script="Latn">
+    <p id="_46807142-c94e-0ad9-414e-de5ea6bbbd30">A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource.  This specification defines the generic URI syntax and a process for resolving URI references that might be in relative form, along with guidelines and security considerations for the use of URIs on the Internet.  The URI syntax defines a grammar that is a superset of all valid URIs, allowing an implementation to parse the common components of a URI reference without knowing the scheme-specific requirements of every possible identifier.  This specification does not define a generative grammar for URIs; that task is performed by the individual specifications of each URI scheme. [STANDARDS-TRACK]</p>
 
   </abstract>
+  <status>
+    <stage>INTERNET STANDARD</stage>
+  </status>
   <relation type="updates">
     <bibitem>
-      <formattedref format="text/plain">RFC1738</formattedref>
+      <formattedref>RFC1738</formattedref>
       <docidentifier type="IETF" primary="true">RFC1738</docidentifier>
     </bibitem>
 
   </relation>
   <series>
     
-<title format="text/plain">STD</title>
+<title>STD</title>
 
     <number>66</number>
   </series>
   <series>
     
-<title format="text/plain">RFC</title>
+<title>RFC</title>
 
     <number>3986</number>
   </series>
   <series type="stream">
     
-<title format="text/plain">IETF</title>
+<title>IETF</title>
 
   </series>
-  <keyword>Internet protocol</keyword>
-  <keyword>IP</keyword>
-  <keyword>uniform resource identifier</keyword>
-  <keyword>URI</keyword>
-  <keyword>www</keyword>
-  <keyword>world wide web</keyword>
-</bibitem><bibitem id="_a9f4d2c5-afb8-7bbc-a187-f537547a65a4" type="standard" schema-version="v1.2.9" anchor="rfc4395">
-  <fetched>2026-04-16</fetched>
+  <keyword>
+    <vocab>Internet protocol</vocab>
+  </keyword>
+  <keyword>
+    <vocab>IP</vocab>
+  </keyword>
+  <keyword>
+    <vocab>uniform resource identifier</vocab>
+  </keyword>
+  <keyword>
+    <vocab>URI</vocab>
+  </keyword>
+  <keyword>
+    <vocab>www</vocab>
+  </keyword>
+  <keyword>
+    <vocab>world wide web</vocab>
+  </keyword>
+</bibitem><bibitem id="_b286af4b-277e-4d08-936d-b6a403783821" type="standard" schema-version="v1.5.6" anchor="rfc4395">
+  <fetched>2026-06-16</fetched>
   
-<title type="main" format="text/plain">Guidelines and Registration Procedures for New URI Schemes</title>
+<title type="main">Guidelines and Registration Procedures for New URI Schemes</title>
 
   <uri type="src">https://www.rfc-editor.org/info/rfc4395</uri>
   <docidentifier type="IETF" primary="true">RFC 4395</docidentifier>
@@ -947,7 +1065,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">T. Hansen</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">T.</formatted-initials>          <surname language="en" script="Latn">Hansen</surname>          <completename language="en" script="Latn">T. Hansen</completename>       </name>
 
     </person>
   </contributor>
@@ -955,7 +1073,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">T. Hardie</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">T.</formatted-initials>          <surname language="en" script="Latn">Hardie</surname>          <completename language="en" script="Latn">T. Hardie</completename>       </name>
 
     </person>
   </contributor>
@@ -963,7 +1081,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">L.</formatted-initials>          <surname language="en" script="Latn">Masinter</surname>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
 
     </person>
   </contributor>
@@ -971,7 +1089,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="publisher"/>
     <organization>
       
-<name>RFC Publisher</name>
+<name language="en">RFC Publisher</name>
 
     </organization>
   </contributor>
@@ -979,41 +1097,50 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="authorizer"/>
     <organization>
       
-<name>RFC Series</name>
+<name language="en">RFC Series</name>
 
     </organization>
   </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
-    <p id="_6bd97779-8f91-3855-7127-959547d08c2b">This document provides guidelines and recommendations for the definition of Uniform Resource Identifier (URI) schemes. It also updates the process and IANA registry for URI schemes. It obsoletes both RFC 2717 and RFC 2718. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+  <abstract language="en" script="Latn">
+    <p id="_bb7ab519-d976-6ebc-c89d-92b96d4174c9">This document provides guidelines and recommendations for the definition of Uniform Resource Identifier (URI) schemes.  It also updates the process and IANA registry for URI schemes.  It obsoletes both RFC 2717 and RFC 2718.  This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
 
   </abstract>
+  <status>
+    <stage>BEST CURRENT PRACTICE</stage>
+  </status>
   <relation type="obsoletedBy">
     <bibitem>
-      <formattedref format="text/plain">RFC7595</formattedref>
+      <formattedref>RFC7595</formattedref>
       <docidentifier type="IETF" primary="true">RFC7595</docidentifier>
     </bibitem>
 
   </relation>
   <series>
     
-<title format="text/plain">RFC</title>
+<title>RFC</title>
 
     <number>4395</number>
   </series>
   <series type="stream">
     
-<title format="text/plain">IETF</title>
+<title>IETF</title>
 
   </series>
-  <keyword>uniform resource identifier</keyword>
-  <keyword>syntax</keyword>
-  <keyword>semantics</keyword>
-</bibitem><bibitem id="_85d2ff58-2b9e-fd0c-72e1-fd2946c6a9e1" type="standard" schema-version="v1.2.9" anchor="rfc5141">
-  <fetched>2026-04-16</fetched>
+  <keyword>
+    <vocab>uniform resource identifier</vocab>
+  </keyword>
+  <keyword>
+    <vocab>syntax</vocab>
+  </keyword>
+  <keyword>
+    <vocab>semantics</vocab>
+  </keyword>
+</bibitem><bibitem id="_517ad59f-12cb-4fc8-4f37-b0681809ad73" type="standard" schema-version="v1.5.6" anchor="rfc5141">
+  <fetched>2026-06-16</fetched>
   
-<title type="main" format="text/plain">A Uniform Resource Name (URN) Namespace for the International Organization for Standardization (ISO)</title>
+<title type="main">A Uniform Resource Name (URN) Namespace for the International Organization for Standardization (ISO)</title>
 
   <uri type="src">https://www.rfc-editor.org/info/rfc5141</uri>
   <docidentifier type="IETF" primary="true">RFC 5141</docidentifier>
@@ -1026,7 +1153,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">J. Goodwin</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">J.</formatted-initials>          <surname language="en" script="Latn">Goodwin</surname>          <completename language="en" script="Latn">J. Goodwin</completename>       </name>
 
     </person>
   </contributor>
@@ -1034,7 +1161,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">H. Apel</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">H.</formatted-initials>          <surname language="en" script="Latn">Apel</surname>          <completename language="en" script="Latn">H. Apel</completename>       </name>
 
     </person>
   </contributor>
@@ -1042,7 +1169,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="publisher"/>
     <organization>
       
-<name>RFC Publisher</name>
+<name language="en">RFC Publisher</name>
 
     </organization>
   </contributor>
@@ -1050,34 +1177,43 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="authorizer"/>
     <organization>
       
-<name>RFC Series</name>
+<name language="en">RFC Series</name>
 
     </organization>
   </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
-    <p id="_4ad2678c-ed4d-98d6-9486-59a576303267">This document describes a Uniform Resource Name Namespace Identification (URN NID) for the International Organization for Standardization (ISO). This URN NID is intended for use for the identification of persistent resources published by the ISO standards body (including documents, document metadata, extracted resources such as standard schemata and standard value sets, and other resources). This memo provides information for the Internet community.</p>
+  <abstract language="en" script="Latn">
+    <p id="_fb2fb4d0-9122-19f5-677f-c7fb6596b00d">This document describes a Uniform Resource Name Namespace Identification (URN NID) for the International Organization for Standardization (ISO).  This URN NID is intended for use for the identification of persistent resources published by the ISO standards body (including documents, document metadata, extracted resources such as standard schemata and standard value sets, and other resources).  This memo provides information for the Internet community.</p>
 
   </abstract>
+  <status>
+    <stage>INFORMATIONAL</stage>
+  </status>
   <series>
     
-<title format="text/plain">RFC</title>
+<title>RFC</title>
 
     <number>5141</number>
   </series>
   <series type="stream">
     
-<title format="text/plain">IETF</title>
+<title>IETF</title>
 
   </series>
-  <keyword>urn nid</keyword>
-  <keyword>uniform resource name namespace identification</keyword>
-  <keyword>NSS</keyword>
-</bibitem><bibitem id="_2756db0a-cb73-bb86-eb85-f5b9f95030f8" type="standard" schema-version="v1.2.9" anchor="rfc5165">
-  <fetched>2026-04-16</fetched>
+  <keyword>
+    <vocab>urn nid</vocab>
+  </keyword>
+  <keyword>
+    <vocab>uniform resource name namespace identification</vocab>
+  </keyword>
+  <keyword>
+    <vocab>NSS</vocab>
+  </keyword>
+</bibitem><bibitem id="_b3b6720f-48de-5842-7040-85da8c4a55d3" type="standard" schema-version="v1.5.6" anchor="rfc5165">
+  <fetched>2026-06-16</fetched>
   
-<title type="main" format="text/plain">A Uniform Resource Name (URN) Namespace for the Open Geospatial Consortium (OGC)</title>
+<title type="main">A Uniform Resource Name (URN) Namespace for the Open Geospatial Consortium (OGC)</title>
 
   <uri type="src">https://www.rfc-editor.org/info/rfc5165</uri>
   <docidentifier type="IETF" primary="true">RFC 5165</docidentifier>
@@ -1090,7 +1226,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">C. Reed</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">C.</formatted-initials>          <surname language="en" script="Latn">Reed</surname>          <completename language="en" script="Latn">C. Reed</completename>       </name>
 
     </person>
   </contributor>
@@ -1098,7 +1234,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="publisher"/>
     <organization>
       
-<name>RFC Publisher</name>
+<name language="en">RFC Publisher</name>
 
     </organization>
   </contributor>
@@ -1106,37 +1242,52 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="authorizer"/>
     <organization>
       
-<name>RFC Series</name>
+<name language="en">RFC Series</name>
 
     </organization>
   </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
-    <p id="_860962f4-6f5f-67ca-08d6-c0457a2a4718">This document describes a Uniform Resource Name (URN) namespace that is engineered by the Open Geospatial Consortium (OGC) for naming persistent resources published by the OGC. The formal Namespace IDentifier (NID) is “ogc”. This memo provides information for the Internet community.</p>
+  <abstract language="en" script="Latn">
+    <p id="_9f9b04db-afe1-1b42-6d23-db6c86356e72">This document describes a Uniform Resource Name (URN) namespace that is engineered by the Open Geospatial Consortium (OGC) for naming persistent resources published by the OGC.  The formal Namespace IDentifier (NID) is “ogc”.  This memo provides information for the Internet community.</p>
 
   </abstract>
+  <status>
+    <stage>INFORMATIONAL</stage>
+  </status>
   <series>
     
-<title format="text/plain">RFC</title>
+<title>RFC</title>
 
     <number>5165</number>
   </series>
   <series type="stream">
     
-<title format="text/plain">IETF</title>
+<title>IETF</title>
 
   </series>
-  <keyword>location</keyword>
-  <keyword>geospatial</keyword>
-  <keyword>namespace</keyword>
-  <keyword>OGC</keyword>
-  <keyword>URN</keyword>
-  <keyword>Open Geospatial Consortium</keyword>
-</bibitem><bibitem id="_b31e4c1e-51d0-a6d3-b263-3310ea0ae550" type="standard" schema-version="v1.2.9" anchor="rfc5234">
-  <fetched>2026-04-16</fetched>
+  <keyword>
+    <vocab>location</vocab>
+  </keyword>
+  <keyword>
+    <vocab>geospatial</vocab>
+  </keyword>
+  <keyword>
+    <vocab>namespace</vocab>
+  </keyword>
+  <keyword>
+    <vocab>OGC</vocab>
+  </keyword>
+  <keyword>
+    <vocab>URN</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Open Geospatial Consortium</vocab>
+  </keyword>
+</bibitem><bibitem id="_ef059838-01a1-32d1-60b3-c8bba610ef8f" type="standard" schema-version="v1.5.6" anchor="rfc5234">
+  <fetched>2026-06-16</fetched>
   
-<title type="main" format="text/plain">Augmented BNF for Syntax Specifications: ABNF</title>
+<title type="main">Augmented BNF for Syntax Specifications: ABNF</title>
 
   <uri type="src">https://www.rfc-editor.org/info/rfc5234</uri>
   <docidentifier type="IETF" primary="true">RFC 5234</docidentifier>
@@ -1149,7 +1300,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="editor"/>
     <person>
       
-<name>          <completename language="en" script="Latn">D. Crocker</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">D.</formatted-initials>          <surname language="en" script="Latn">Crocker</surname>          <completename language="en" script="Latn">D. Crocker</completename>       </name>
 
     </person>
   </contributor>
@@ -1157,7 +1308,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">P. Overell</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">P.</formatted-initials>          <surname language="en" script="Latn">Overell</surname>          <completename language="en" script="Latn">P. Overell</completename>       </name>
 
     </person>
   </contributor>
@@ -1165,7 +1316,7 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="publisher"/>
     <organization>
       
-<name>RFC Publisher</name>
+<name language="en">RFC Publisher</name>
 
     </organization>
   </contributor>
@@ -1173,61 +1324,89 @@ eventual purpose is the specification of requirements for software, services or 
     <role type="authorizer"/>
     <organization>
       
-<name>RFC Series</name>
+<name language="en">RFC Series</name>
 
     </organization>
   </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
-    <p id="_dae65085-c167-624c-9e13-9e403cd3eb6c">Internet technical specifications often need to define a formal syntax. Over the years, a modified version of Backus-Naur Form (BNF), called Augmented BNF (ABNF), has been popular among many Internet specifications. The current specification documents ABNF. It balances compactness and simplicity with reasonable representational power. The differences between standard BNF and ABNF involve naming rules, repetition, alternatives, order-independence, and value ranges. This specification also supplies additional rule definitions and encoding for a core lexical analyzer of the type common to several Internet specifications. [STANDARDS-TRACK]</p>
+  <abstract language="en" script="Latn">
+    <p id="_9d44302e-5a57-fdf8-01fb-9a7c8090383b">Internet technical specifications often need to define a formal syntax.  Over the years, a modified version of Backus-Naur Form (BNF), called Augmented BNF (ABNF), has been popular among many Internet specifications.  The current specification documents ABNF.  It balances compactness and simplicity with reasonable representational power.  The differences between standard BNF and ABNF involve naming rules, repetition, alternatives, order-independence, and value ranges.  This specification also supplies additional rule definitions and encoding for a core lexical analyzer of the type common to several Internet specifications. [STANDARDS-TRACK]</p>
 
   </abstract>
+  <status>
+    <stage>INTERNET STANDARD</stage>
+  </status>
   <series>
     
-<title format="text/plain">STD</title>
+<title>STD</title>
 
     <number>68</number>
   </series>
   <series>
     
-<title format="text/plain">RFC</title>
+<title>RFC</title>
 
     <number>5234</number>
   </series>
   <series type="stream">
     
-<title format="text/plain">IETF</title>
+<title>IETF</title>
 
   </series>
-  <keyword>ABNF</keyword>
-  <keyword>backus-naur form</keyword>
-  <keyword>augmented backus-naur form</keyword>
-  <keyword>rule definitions</keyword>
-  <keyword>encoding</keyword>
-  <keyword>core lexical analyzer</keyword>
-</bibitem><bibitem id="_502b1d23-2c52-ce03-c9c0-67d010f8d5f0" type="standard" schema-version="v1.2.9" anchor="ISO1087_1">
-  <fetched>2026-04-16</fetched>
+  <keyword>
+    <vocab>ABNF</vocab>
+  </keyword>
+  <keyword>
+    <vocab>backus-naur form</vocab>
+  </keyword>
+  <keyword>
+    <vocab>augmented backus-naur form</vocab>
+  </keyword>
+  <keyword>
+    <vocab>rule definitions</vocab>
+  </keyword>
+  <keyword>
+    <vocab>encoding</vocab>
+  </keyword>
+  <keyword>
+    <vocab>core lexical analyzer</vocab>
+  </keyword>
+</bibitem><bibitem id="_4d4754cb-29da-6759-079e-6f9e707bd25e" type="standard" schema-version="v1.5.6" anchor="ISO1087_1">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-intro" format="text/plain" language="en" script="Latn">Terminology work</title>
+<title language="en" script="Latn" type="title-intro">Terminology work</title>
 
   
-<title type="title-main" format="text/plain" language="en" script="Latn">Vocabulary</title>
+<title language="en" script="Latn" type="title-main">Vocabulary</title>
 
   
-<title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Theory and application</title>
+<title language="en" script="Latn" type="title-part">Part 1: Theory and application</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">Terminology work — Vocabulary — Part 1: Theory and application</title>
+<title language="en" script="Latn" type="main">Terminology work — Vocabulary — Part 1: Theory and application</title>
+
+  
+<title language="fr" script="Latn" type="title-intro">Travaux terminologiques</title>
+
+  
+<title language="fr" script="Latn" type="title-main">Vocabulaire</title>
+
+  
+<title language="fr" script="Latn" type="title-part">Partie 1: Théorie et application</title>
+
+  
+<title language="fr" script="Latn" type="main">Travaux terminologiques — Vocabulaire — Partie 1: Théorie et application</title>
 
   <uri type="src">https://www.iso.org/standard/20057.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:20057:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/02/00/20057.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 1087-1:2000</docidentifier>
   <docidentifier type="iso-reference">ISO 1087-1:2000(E)</docidentifier>
   <docidentifier type="URN">urn:iso:std:iso:1087:-1:stage-95.99</docidentifier>
   <docnumber>1087</docnumber>
   <date type="published">
-    <on>2000-10</on>
+    <on>2000-10-26</on>
   </date>
   <contributor>
     <role type="publisher"/>
@@ -1239,11 +1418,27 @@ eventual purpose is the specification of requirements for software, services or 
       <uri>www.iso.org</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Principles and methods</name>
+
+        <identifier>ISO/TC 37/SC 1</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>1</edition>
   <language>en</language>
   <language>fr</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="fr" script="Latn">La présente Norme internationale établit le vocabulaire fondamental de la théorie et de la pratique du travail terminologique. Elle n’inclut pas le vocabulaire traitant des applications informatiques du travail terminologique, qui est couvert par l’ISO 1087-2. La présentation obéit à l’ISO 10241, sauf spécification contraire.</abstract>
   <status>
     <stage>95</stage>
     <substage>99</substage>
@@ -1259,17 +1454,27 @@ eventual purpose is the specification of requirements for software, services or 
     </owner>
   </copyright>
   <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 1087:1990</formattedref>
+    <bibitem>
+      <formattedref>ISO 1087:1990</formattedref>
       <docidentifier type="ISO" primary="true">ISO 1087:1990</docidentifier>
+      <date type="published">
+        <on>1990-04-26</on>
+      </date>
     </bibitem>
 
   </relation>
-  <relation type="updates">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 1087:2019</formattedref>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>ISO/DIS 1087</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/DIS 1087</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>ISO 1087:2019</formattedref>
       <docidentifier type="ISO" primary="true">ISO 1087:2019</docidentifier>
-      <date type="circulated">
+      <date type="published">
         <on>2019-09-24</on>
       </date>
     </bibitem>
@@ -1284,10 +1489,10 @@ eventual purpose is the specification of requirements for software, services or 
   <docnumber>05-020r25</docnumber>
   <language>en</language>
   <script>Latn</script>
-</bibitem><bibitem id="_85419cbc-4187-6880-d997-02a657903cae" type="standard" schema-version="v1.2.9" anchor="W3C_CURIEs">
-  <fetched>2026-04-16</fetched>
+</bibitem><bibitem id="_c643271e-2627-f5f0-26ff-74b1ab252370" type="standard" schema-version="v1.5.6" anchor="W3C_CURIEs">
+  <fetched>2026-06-16</fetched>
   
-<title format="text/plain">CURIE Syntax 1.0</title>
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
 
   <uri type="src">https://www.w3.org/TR/curie/</uri>
   <docidentifier type="W3C" primary="true">W3C curie</docidentifier>
@@ -1299,7 +1504,7 @@ eventual purpose is the specification of requirements for software, services or 
 <name>World Wide Web Consortium</name>
 
       <abbreviation>W3C</abbreviation>
-      <uri>https://www.w3.org/</uri>
+      <uri>https://www.w3.org</uri>
     </organization>
   </contributor>
   <language>en</language>
@@ -1307,7 +1512,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">CURIE Syntax 1.0</title>
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
 
       <uri type="src">https://www.w3.org/TR/2010/NOTE-curie-20101216/</uri>
       <docidentifier type="W3C" primary="true">W3C NOTE-curie-20101216</docidentifier>
@@ -1317,7 +1522,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">CURIE Syntax 1.0</title>
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
 
       <uri type="src">https://www.w3.org/TR/2009/CR-curie-20090116</uri>
       <docidentifier type="W3C" primary="true">W3C CR-curie-20090116</docidentifier>
@@ -1327,7 +1532,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">CURIE Syntax 1.0</title>
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
 
       <uri type="src">https://www.w3.org/TR/2008/WD-curie-20080506</uri>
       <docidentifier type="W3C" primary="true">W3C WD-curie-20080506</docidentifier>
@@ -1337,7 +1542,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">CURIE Syntax 1.0</title>
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
 
       <uri type="src">https://www.w3.org/TR/2008/WD-curie-20080402</uri>
       <docidentifier type="W3C" primary="true">W3C WD-curie-20080402</docidentifier>
@@ -1347,7 +1552,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">CURIE Syntax 1.0</title>
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
 
       <uri type="src">https://www.w3.org/TR/2007/WD-curie-20071126</uri>
       <docidentifier type="W3C" primary="true">W3C WD-curie-20071126</docidentifier>
@@ -1357,7 +1562,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">CURIE Syntax 1.0</title>
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
 
       <uri type="src">https://www.w3.org/TR/2007/WD-curie-20070307</uri>
       <docidentifier type="W3C" primary="true">W3C WD-curie-20070307</docidentifier>
@@ -1366,14 +1571,14 @@ eventual purpose is the specification of requirements for software, services or 
   </relation>
   <series>
     
-<title format="text/plain">W3C technicalReport</title>
+<title language="en" script="Latn">W3C technicalReport</title>
 
     <number>curie</number>
   </series>
-</bibitem><bibitem id="_a681f21f-ec3d-9a30-ec1e-86393927d227" type="standard" schema-version="v1.2.9" anchor="W3C_SKOS">
-  <fetched>2026-04-16</fetched>
+</bibitem><bibitem id="_831aed6b-c583-8063-e9ca-b1285f8eedf9" type="standard" schema-version="v1.5.6" anchor="W3C_SKOS">
+  <fetched>2026-06-16</fetched>
   
-<title format="text/plain">SKOS Simple Knowledge Organization System Reference</title>
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
 
   <uri type="src">https://www.w3.org/TR/skos-reference/</uri>
   <docidentifier type="W3C" primary="true">W3C skos-reference</docidentifier>
@@ -1385,7 +1590,7 @@ eventual purpose is the specification of requirements for software, services or 
 <name>World Wide Web Consortium</name>
 
       <abbreviation>W3C</abbreviation>
-      <uri>https://www.w3.org/</uri>
+      <uri>https://www.w3.org</uri>
     </organization>
   </contributor>
   <language>en</language>
@@ -1393,7 +1598,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">SKOS Simple Knowledge Organization System Reference</title>
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
 
       <uri type="src">https://www.w3.org/TR/2009/REC-skos-reference-20090818/</uri>
       <docidentifier type="W3C" primary="true">W3C REC-skos-reference-20090818</docidentifier>
@@ -1403,7 +1608,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">SKOS Simple Knowledge Organization System Reference</title>
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
 
       <uri type="src">https://www.w3.org/TR/2009/PR-skos-reference-20090615/</uri>
       <docidentifier type="W3C" primary="true">W3C PR-skos-reference-20090615</docidentifier>
@@ -1413,7 +1618,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">SKOS Simple Knowledge Organization System Reference</title>
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
 
       <uri type="src">https://www.w3.org/TR/2009/CR-skos-reference-20090317/</uri>
       <docidentifier type="W3C" primary="true">W3C CR-skos-reference-20090317</docidentifier>
@@ -1423,7 +1628,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">SKOS Simple Knowledge Organization System Reference</title>
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
 
       <uri type="src">https://www.w3.org/TR/2008/WD-skos-reference-20080829/</uri>
       <docidentifier type="W3C" primary="true">W3C WD-skos-reference-20080829</docidentifier>
@@ -1433,7 +1638,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">SKOS Simple Knowledge Organization System Reference</title>
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
 
       <uri type="src">https://www.w3.org/TR/2008/WD-skos-reference-20080609/</uri>
       <docidentifier type="W3C" primary="true">W3C WD-skos-reference-20080609</docidentifier>
@@ -1443,7 +1648,7 @@ eventual purpose is the specification of requirements for software, services or 
   <relation type="hasEdition">
     <bibitem>
       
-<title format="text/plain">SKOS Simple Knowledge Organization System Reference</title>
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
 
       <uri type="src">https://www.w3.org/TR/2008/WD-skos-reference-20080125/</uri>
       <docidentifier type="W3C" primary="true">W3C WD-skos-reference-20080125</docidentifier>
@@ -1452,7 +1657,7 @@ eventual purpose is the specification of requirements for software, services or 
   </relation>
   <series>
     
-<title format="text/plain">W3C technicalReport</title>
+<title language="en" script="Latn">W3C technicalReport</title>
 
     <number>skos-reference</number>
   </series>
