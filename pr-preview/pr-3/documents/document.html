@@ -1,0 +1,2442 @@
+
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline;
+}
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Overpass",sans-serif;
+}
+
+code, pre, tt, kbd, samp {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+}
+
+code *, pre *, tt *, kbd *, samp * {
+  font-family: "Space Mono",monospace !important;
+  font-variant-ligatures: none;
+}
+
+p code, dt code, li code, label code, legend code, caption code, th code, td code,
+p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
+p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
+p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
+  font-size: 0.8em;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass",sans-serif;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Overpass",sans-serif;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
+
+.h2Annex {
+  font-family: "Overpass",sans-serif;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+div.document-stage-band, div.document-type-band {
+  background-color: #333333;
+}
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
+  vertical-align: super;
+}
+
+.addition {
+  color: blue;
+}
+
+.deletion {
+  color: red;
+  text-decoration: line-through;
+}
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before;
+}
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after;
+}
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em;
+}
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all;
+}
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%;
+}
+
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
+
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
+
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
+
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
+
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
+
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+/* style dfn by override in flavor */
+dfn {
+  font-style: inherit;
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
+
+#guide-band {
+  background-color: #D183C9;
+}
+
+#guide {
+  border-bottom: solid 3px #D183C9;
+}
+
+#specification-band {
+  background-color: #65AFFF;
+}
+
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
+
+#report-band {
+  background-color: #3A405A;
+}
+
+#report {
+  border-bottom: solid 3px #3A405A;
+}
+
+#amendment-band {
+  background-color: #F26430;
+}
+
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
+
+#corrigendum-band {
+  background-color: #C84630;
+}
+
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
+
+#administrative-band {
+  background-color: #BFAE48;
+}
+
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
+
+#advisory-band {
+  background-color: #BD9391;
+}
+
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
+
+#proposal-band {
+  background-color: #39A0ED;
+}
+
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
+
+#working-draft-band {
+  background-color: #2D7393;
+}
+
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
+
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
+
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
+
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
+
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
+
+.coverpage-maturity, .coverpage-stage {
+  font-family: "Overpass",sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase;
+}
+
+.icon-svg {
+  width: 100%;
+  color: #5ecf86;
+}
+
+.wrapper-top {
+  background: rgb(0, 51, 91);
+  background: linear-gradient(130deg, rgb(0, 51, 91) 45%, rgb(241, 248, 255) 100%);
+  color: #ffffff;
+  padding: 5em 0;
+  width: 100%;
+}
+
+.wrapper-top-bottom {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #00335b;
+  border-right: 100px solid transparent;
+  position: absolute;
+}
+
+.document-type-band {
+  top: 260px;
+}
+
+.document-stage-band > :first-child {
+  height: 240px;
+}
+
+.coverpage-metadata {
+  margin-top: 35px;
+  padding-top: 15px;
+  margin-right: 25px;
+  border-top: solid 1px white;
+}
+
+.coverpage-metadata,
+.coverpage-alt-formats {
+  font-size: 12px;
+  font-family: "Overpass",sans-serif;
+  margin-left: 1em;
+  text-align: left;
+}
+.coverpage-metadata span,
+.coverpage-alt-formats span {
+  display: block;
+  text-align: left;
+}
+.coverpage-metadata span a,
+.coverpage-alt-formats span a {
+  color: white;
+}
+.coverpage-metadata span a:hover,
+.coverpage-alt-formats span a:hover {
+  text-decoration: underline;
+  background: none;
+  box-shadow: none !important;
+  font-weight: 400;
+}
+.coverpage-metadata .value,
+.coverpage-alt-formats .value {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.coverpage-metadata .label,
+.coverpage-alt-formats .label {
+  font-size: 12px;
+  padding: 0;
+}
+
+.coverpage-alt-formats span {
+  display: inline;
+  text-align: left;
+}
+.coverpage-alt-formats span a {
+  padding-right: 5px;
+}
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Overpass",sans-serif;
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.coverpage-title span {
+  font-family: "Overpass",sans-serif;
+  font-size: 1.8em;
+  line-height: 1;
+}
+
+.docstage-box table {
+  width: auto;
+}
+.docstage-box th {
+  background-color: #93c0d6;
+}
+.docstage-box td {
+  vertical-align: top;
+  background-color: #daeef3;
+  padding: 0.5em;
+  border: 0;
+}
+.docstage-box th:first-child {
+  border-radius: 1em 0 0 0;
+}
+.docstage-box th:last-child {
+  border-radius: 0 1em 0 0;
+}
+.docstage-box tr:first-child {
+  border-radius: 0 0 0 1em;
+}
+.docstage-box tr:last-child {
+  border-radius: 0 1em 0 0;
+}
+.docstage-box tr:last-child > td:first-child {
+  border-radius: 0 0 0 1em;
+}
+.docstage-box tr:last-child > td:last-child {
+  border-radius: 0 0 1em 0;
+}
+
+.WordSection11 {
+  padding: 0 2em 0 3em;
+}
+
+.info-section {
+  padding: 0 2em 0 5em;
+}
+
+.prefatory-section {
+  padding: 0 3em 0 6em;
+}
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none;
+}
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em;
+}
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass",sans-serif;
+  text-transform: none;
+  font-weight: 300;
+  margin-left: 1em;
+}
+
+.coverpage-logo img, .coverpage-logo svg {
+  width: 500px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0;
+}
+
+.copyright {
+  padding: 1em;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+/* Document Identity */
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.coverpage-title .title-second {
+  display: none;
+}
+
+.coverpage-stage-block {
+  font-family: "Overpass",sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase;
+}
+
+.authors {
+  margin-top: 2em;
+}
+.authors span {
+  display: block;
+  line-height: 2;
+}
+.authors span.roletag {
+  display: inline-block;
+  font-size: 12px;
+  color: #00335b;
+  background-color: white;
+  padding: 2px 5px;
+  margin-left: 7px;
+  border-radius: 5px;
+}
+
+/* Draft Warning */
+.coverpage-warning {
+  border: #f36f36 solid 2px;
+  color: #f36f36 !important;
+  margin: 1em 2em;
+  color: #2e81c2;
+  padding: 2em 1em 1em 1em;
+  border-radius: 25px;
+}
+.coverpage-warning h1 {
+  font-family: "Overpass",sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+@media print {
+  .document-info, .copyright {
+    page-break-before: always;
+  }
+  .coverpage {
+    height: 23cm;
+  }
+  .info-section {
+    display: none;
+  }
+  .wrapper-top {
+    top: 0;
+    padding-top: 4cm;
+    padding-bottom: 4cm;
+  }
+  .wrapper-top-bottom {
+    margin-top: -5px;
+    display: none;
+  }
+}
+/* For Requirement Test anchors */
+p.RecommendationTitle:hover > a.anchor,
+p.RecommendationTitle > a.anchor:hover,
+p.RecommendationTestTitle:hover > a.anchor,
+p.RecommendationTestTitle > a.anchor:hover {
+  visibility: visible;
+}
+
+table a.anchor {
+  margin-left: -2em;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #00335b;
+  background-color: #f6f8fa;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding-left: 360px;
+  }
+}
+@media print {
+  body {
+    padding-left: 0;
+  }
+}
+
+dl {
+  grid-template-columns: minmax(0, 1fr) 93%;
+}
+dl pre {
+  overflow-x: scroll;
+}
+
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #00335b;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #00335b;
+  box-shadow: inset -5px 0px 10px -5px #00335b !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+}
+@media print {
+  #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+    background: white;
+    box-shadow: none !important;
+  }
+  #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+    color: #00335b;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  font-size: 14px;
+}
+#toc li::before, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li::before {
+  content: " ";
+  display: none;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  font-weight: 600;
+}
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  background: none;
+  box-shadow: none;
+}
+
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 30px;
+    background-color: #f1f8ff;
+  }
+}
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #00335b;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none;
+  }
+}
+@media print {
+  #toggle {
+    display: none;
+  }
+}
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #00335b;
+  margin: 2em 0;
+}
+@media screen and (min-width: 768px) {
+  .rule.toc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1.toc-contents {
+    margin-top: 1em;
+  }
+  ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0;
+    margin: 0;
+  }
+}
+#toc-list ul {
+  margin-bottom: 0.25em;
+}
+#toc-list li {
+  list-style-type: none;
+}
+
+figure figcaption {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+figure > img, figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+}
+
+table figure {
+  padding: 0;
+  margin: 0;
+}
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
+.document-stage-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 300;
+  height: 160px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important;
+}
+
+#standard-band p {
+  height: 135px;
+}
+
+#proposal-band p {
+  height: 150px;
+}
+
+#standard-band,
+#published-band {
+  color: rgb(123, 168, 18);
+}
+
+#standard,
+#published {
+  color: #9ABD48;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #00335b;
+  font-weight: 400;
+  margin-top: 1.6em;
+  margin-bottom: 0.3em;
+}
+
+h1, .h1 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+h1 #content, .h1 #content {
+  margin-top: 2em;
+}
+
+h2, .h2 {
+  margin-top: 1.3em;
+  font-size: 1.7em;
+  font-weight: 300;
+}
+h2 p, .h2 p {
+  display: inline;
+}
+
+h3, .h3 {
+  margin-top: 1.3em;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+h4, .h4 {
+  font-size: 1.4em;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  background: none;
+  box-shadow: 0 0 0 0;
+}
+.contact-info a, .contact-info a:hover {
+  color: #00335b;
+}
+.contact-info {
+  padding: 2em;
+  margin-top: 5em;
+  width: 280px;
+  text-align: left;
+  border: #00335b solid 2px;
+  color: #00335b !important;
+  border-radius: 25px;
+}
+.contact-info p, .contact-info a {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  font-weight: 400;
+}
+.contact-info #boilerplate-name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+.contact-info #boilerplate-address {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-top: 0;
+}
+
+ul, ol {
+  margin-left: 1.2em;
+}
+
+ul > li {
+  list-style: none;
+}
+ul > li::before {
+  content: "—";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ul > li p:first-child {
+  display: inline;
+}
+ul > li:first-child {
+  margin-top: 1em;
+}
+
+ul ul > li:first-child {
+  margin-top: 0;
+}
+
+ol ul > li:first-child {
+  margin-top: 0;
+}
+
+span.keyword {
+  font-weight: 600;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
+table table.plain, table table.plain th, table table.plain td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table {
+  /*color: #010d16;*/
+}
+table thead tr th {
+  background-color: #5d99d6;
+}
+table td, table th {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
+
+.docstage-box table,
+.docstage-box table th,
+.docstage-box table td {
+  border: none;
+}
+
+table.modspec {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+}
+table.modspec, table.modspec th, table.modspec td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table.modspec th, table.modspec td {
+  padding: 1em;
+}
+table.modspec td.header {
+  font-weight: 400;
+}
+table.modspec table.plain, table.modspec table.plain th, table.modspec table.plain td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table.modspec {
+  color: #010d16;
+}
+table.modspec tr:nth-child(even) {
+  background: #ffffff;
+}
+table.modspec tr:nth-child(odd) {
+  background: #ffffff;
+}
+table.modspec thead tr th {
+  background-color: #5d99d6;
+}
+table.modspec td, table.modspec th {
+  padding: 1em;
+}
+table.modspec td.header {
+  font-weight: 400;
+}
+
+td > p:first-child, th > p:first-child {
+  margin-top: 0em;
+}
+
+td > p:last-child, th > p:last-child {
+  margin-bottom: 0em;
+}
+
+table > caption {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400;
+}
+
+/* Terms */
+.TermNum {
+  font-weight: 300;
+}
+
+.TermNum, .Terms, .AltTerms {
+  color: #00335b;
+  font-family: "Overpass",sans-serif;
+}
+
+h2.TermNum {
+  margin-bottom: 0;
+}
+
+p.AltTerms {
+  font-size: 24px;
+  margin-top: 1em;
+}
+
+span.AdmittedLabel, span.DeprecatedLabel {
+  color: #00335b;
+  background-color: #CFE2F3;
+  font-size: 70%;
+  vertical-align: top;
+}
+
+/* Links, selection */
+a, a:visited {
+  text-decoration: none;
+  color: #2e81c2;
+}
+
+a:hover {
+  color: #00335b;
+  background: #39CCCC;
+  box-shadow: 3px 0 0 #39CCCC, -3px 0 0 #39CCCC;
+}
+
+*::selection {
+  background: #39CCCC;
+  color: #00335b;
+}
+
+*::-moz-selection {
+  background: #39CCCC;
+  color: #00335b;
+}
+
+/* Bibliograhy */
+p.Biblio, p.NormRef, div.Biblio, div.NormRef {
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.Biblio.note, .Biblio.Note, .NormRef.note, .NormRef.Note {
+  margin-left: 3em;
+}
+
+/* Blocks */
+.SourceTitle, figcaption, summary {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.ListTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  text-align: left;
+}
+
+pre, .sourcecode {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow-y: auto;
+  overflow-x: scroll;
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+}
+
+.Admonition .AdmonitionTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+.Admonition {
+  padding: 1em 1.2em 1.2em 1.2em;
+  margin: 1em 0 1em 0;
+  background-color: #fcad88;
+  border-top: 10px solid #eb5a06;
+  color: #290404;
+}
+.Admonition.AdmonitionImportant {
+  background-color: #f58cff;
+  color: #5d1364;
+  border-top: 10px solid #9503a8;
+}
+.Admonition.AdmonitionWarning {
+  background-color: #ff989d;
+  color: #270204;
+  border-top: 10px solid #e4010c;
+}
+.Admonition p, .Admonition.AdmonitionImportant p, .Admonition.AdmonitionWarning p {
+  margin: 0;
+}
+
+figure, pre, .pseudocode, .sourcecode {
+  background-color: #e1eef1;
+  color: #424242;
+  font-size: 0.8em;
+}
+
+.Note {
+  background-color: #fff8bb;
+  color: #7d760b;
+  padding: 1.2em;
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
+
+.example {
+  background-color: #e1eef1;
+  color: #424242;
+  padding: 1.2em;
+  margin: 2em 0 1em 0;
+  padding-left: 2em;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: -1.5em;
+}
+.example pre, .example .pseudocode {
+  background: none;
+}
+
+.Quote {
+  background-color: #e1eef1;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formula {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.recommend .RecommendationTitle, .recommendtest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.require .RecommendationTitle, .requiretest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.permission .RecommendationTitle, .permissiontest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.RecommendationTestTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+/*
+.recommend {
+  &, .example_label {
+    background-color: #f8ffbd;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.permission {
+  &, .example_label {
+    background-color: #cdfdbe;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.require {
+  &, .example_label {
+    background-color: #d3e6ff;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+*/
+.recommend .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.require .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.permission .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle {
+  font-weight: normal;
+  text-align: left;
+}
+
+#myBtn {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #00335b;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+
+a.anchorjs-link:hover {
+  background: none;
+  color: #2e81c2;
+  box-shadow: none;
+}
+
+@page {
+  margin: 2cm 1cm;
+}
+@media print {
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+    page-break-after: avoid;
+    margin-top: 1.2em;
+  }
+  h1, .h1 {
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+  h1.content, .h1.content {
+    margin-top: 2em;
+    line-height: 2.5em;
+  }
+  h2, .h2 {
+    font-size: 1.2em;
+  }
+  h3, .h3 {
+    font-size: 1em;
+  }
+  .prefatory-section {
+    page-break-before: always;
+  }
+  .note, .pseudocode {
+    page-break-inside: avoid;
+  }
+  .Note {
+    background-color: #fff495;
+    color: #47430c;
+    padding: 5px;
+    margin: 2em 0 1em 0;
+  }
+  .Note p {
+    padding: 0 5px 0 5px;
+  }
+  nav {
+    line-height: 1;
+  }
+}
+/* Footnotes */
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+.footnote {
+  font-size: 0.9em;
+}
+
+span.fmt-hi {
+  background-color: yellow;
+}
+</style><style>pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #1E90FF;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+</style><title>OGC Name Type Specification - definitions - part 1 – basic name</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--TOC script import-->
+<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
+</script>
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
+
+<!--Font awesome import for the link icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<style class="anchorjs"></style>
+<meta name="keywords" content="ogcdoc, OGC document, policy, naming authority, definitions" /><meta name="DC.subject" lang="en" content="ogcdoc, OGC document, policy, naming authority, definitions" xml:lang="en" /><meta name="description" content="The mission of the OGC Naming Authority (OGC-NA) is to provide the means through which OGC resources such as OGC documents, namespaces and ontologies can be controlled and managed such that they can provide clear and well-defined names and definitions. In the terminology defined in ISO 19135, OGC-NA is the Control Body for the register of OGC Names. This document specifies a rule for constructing OGC names that may be used for identifying definitions, as well as rules for formally representing the meanings of the definitions." />
+<meta name="DC.description" lang="en" content="The mission of the OGC Naming Authority (OGC-NA) is to provide the means through which OGC resources such as OGC documents, namespaces and ontologies can be controlled and managed such that they can provide clear and well-defined names and definitions. In the terminology defined in ISO 19135, OGC-NA is the Control Body for the register of OGC Names. This document specifies a rule for constructing OGC names that may be used for identifying definitions, as well as rules for formally representing the meanings of the definitions." xml:lang="en" /><meta name="DC.title" lang="en" content="OGC Name Type Specification - definitions - part 1 – basic name" xml:lang="en" /><link rel="profile" href="http://dublincore.org/documents/2008/08/04/dc-html/" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.language" content="en" />
+<meta name="DC.rights" lang="en" content="CC-BY-4.0" xml:lang="en" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<link rel="DCTERMS.license" href="https://www.ogc.org/license" />
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="draft-band">
+    <p class="document-stage">Draft</p>
+</div>
+
+<div class="document-type-band" id="policy-band">
+    <p class="document-type">OGC Policy</p>
+</div>
+
+
+
+  <div id="toggle"> <span>•</span> </div>
+
+  <header>
+
+<!--<div class="WordSection1">-->
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+  <div class="coverpage-doc-identity">
+
+    <div class="coverpage-title">
+      <span class="title-first">OGC Name Type Specification - definitions - part 1 – basic name</span>
+      <!--<span class="title-second"></span>-->
+    </div>
+  </div>
+
+  <div class="coverpage-logo">
+    <span><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1024.8 354.8" preserveaspectratio="xMidYMin slice">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M270.5,73.63l-.36-.21-26.46-15.45-.27-.17-26.56-15.5-.18-.1-26.64-15.55-.09-.05-11.7-6.83c-9.29-5.42-20.77-5.42-30.06,0l-11.71,6.83-.09.05-26.64,15.55-.18.1-26.56,15.5-.26.16-26.47,15.46-.36.21-14.61,8.53c-5.26,3.07-5.26,10.66,0,13.73l14.61,8.53.35.21,26.48,15.46.26.14,26.56,15.51.18.1,26.64,15.55.09.05,11.7,6.83c9.29,5.42,20.78,5.42,30.06,0l11.7-6.83.09-.05,26.64-15.55.18-.1,26.56-15.51.27-.16,26.47-15.45.35-.21,14.61-8.53c5.26-3.07,5.26-10.66,0-13.73l-14.61-8.53ZM216.85,104.53l-.18.1-26.64,15.55-.09.05-19.21,11.22c-4.64,2.71-10.39,2.71-15.03,0l-19.22-11.22-.09-.05-26.64-15.55-.18-.1-20.68-12.07c-2.63-1.53-2.63-5.33,0-6.87l20.68-12.08.18-.09,26.64-15.56.09-.05,19.22-11.22c4.64-2.71,10.39-2.71,15.03,0l19.21,11.22.09.05,26.64,15.56.18.09,20.68,12.08c2.63,1.53,2.63,5.33,0,6.87l-20.68,12.07Z"></path>
+    <path class="cls-1" d="M292.88,121.08c7.95-4.64,17.94,1.1,17.94,10.3v37.1c0,2.83-1.5,5.44-3.94,6.87l-16.91,9.87c-2.65,1.55-5.98-.36-5.98-3.43v-20.83c0-1.53-1.66-2.49-2.99-1.72l-23.83,13.91-.35.21-26.47,15.45-.27.17-22.62,13.2c-2.44,1.43-3.94,4.04-3.94,6.87v85.62c0,1.53,1.66,2.49,2.99,1.72l23.57-13.77.27.17v-.32l26.47-15.45.35.21v-.41l24.85-14.51c1.22-.71,1.97-2.02,1.97-3.43v-24.37c0-2.83,1.5-5.44,3.94-6.87l16.91-9.87c2.65-1.55,5.98.37,5.98,3.43v24.29l-.53.31.53.31v23.75c0,4.24-2.25,8.16-5.92,10.3l-20.92,12.21-.43.26-26.38,15.4-.36.22-26.46,15.44-.27.17-26.56,15.5-.18.1-14.68,8.57c-5.3,3.09-11.96-.73-11.96-6.87v-137.67c0-2.83,1.5-5.44,3.94-6.87l22.7-13.25.18-.1,26.56-15.5.27-.17,26.46-15.44.36-.22,26.37-15.4.45-.26,8.89-5.19Z"></path>
+    <path class="cls-1" d="M123.05,235.69l.18.09,22.7,13.26c2.44,1.43,3.94,4.04,3.94,6.87v75.23c0,6.14-6.66,9.96-11.96,6.87-29.06-16.97-116.24-67.86-116.24-67.86-3.66-2.14-5.91-6.06-5.91-10.3v-128.46c0-9.21,9.99-14.94,17.94-10.3l8.88,5.18.45.26,26.37,15.4.36.22,26.47,15.45.26.16,26.56,15.5.18.1,22.7,13.25c2.44,1.43,3.94,4.04,3.94,6.87v19.73c0,3.07-3.33,4.98-5.98,3.43l-20.66-12.06-.18-.1-26.56-15.5-.26-.16-26.48-15.46-.35-.21-23.83-13.91c-1.33-.77-2.99.18-2.99,1.72v86.77c0,2.12,1.13,4.08,2.96,5.15l23.86,13.93.35.21,26.48,15.46.26.15,23.57,13.77c1.33.77,2.99-.18,2.99-1.72v-25.47c0-1.41-.75-2.72-1.97-3.43l-20.91-12.2c-2.44-1.43-3.94-4.04-3.94-6.87v-19.72c0-3.07,3.33-4.98,5.98-3.43l20.84,12.17Z"></path>
+  </g>
+  <path class="cls-1" d="M460.19,117.51c-21.6,0-37.47-15.77-37.47-36.96s15.87-36.96,37.47-36.96,37.37,15.77,37.37,36.96-15.77,36.96-37.37,36.96ZM485.78,80.55c0-14.64-10.85-25.7-25.59-25.7s-25.59,11.16-25.59,25.7,10.95,25.7,25.59,25.7c14.74-.1,25.59-10.95,25.59-25.7Z"></path>
+  <path class="cls-1" d="M539.12,59.97c16.38,0,28.36,12.29,28.36,28.77s-11.98,28.77-28.36,28.77c-7.06,0-13.31-2.46-18.22-6.65v24.98h-11.26V61.2h7.68l2.05,6.76c4.91-5.02,11.88-7.99,19.76-7.99ZM556.01,88.74c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.58,18.02,18.02,18.02,17.81-7.68,17.81-18.02Z"></path>
+  <path class="cls-1" d="M631.47,88.85c0,1.33-.1,2.46-.31,3.79h-44.43c1.43,8.91,7.78,14.33,16.79,14.33,6.55,0,11.88-2.97,14.74-7.99h11.88c-4.4,11.57-14.33,18.63-26.62,18.63-16.07,0-28.15-12.49-28.15-28.77s12.18-28.77,28.15-28.77c16.18-.1,27.95,12.8,27.95,28.77ZM587.14,83.42h33.07c-2.05-8.29-8.29-13.21-16.69-13.21s-14.44,5.02-16.38,13.21Z"></path>
+  <path class="cls-1" d="M672.42,60.08c12.8,0,20.78,9.62,20.78,23.04v33.07h-11.26v-30.71c0-9.93-4.3-15.25-12.59-15.25s-14.74,6.86-14.74,16.59v29.38h-11.26v-54.98h7.88l2.25,7.68c4.2-5.43,10.95-8.8,18.94-8.8Z"></path>
+  <path class="cls-1" d="M495,178.12c-.2,21.81-14.95,37.47-35.83,37.47s-36.34-15.56-36.34-36.96,15.25-36.75,36.04-36.75c17.3,0,31.84,10.85,35.01,26.41h-12.08c-3.07-9.21-11.98-15.15-22.73-15.15-14.33,0-24.47,10.54-24.47,25.49s9.83,25.49,24.47,25.49c11.36,0,20.58-6.45,23.14-16.07h-25.39v-9.93h38.19Z"></path>
+  <path class="cls-1" d="M559.29,186.92c0,1.33-.1,2.46-.2,3.79h-44.53c1.43,8.91,7.78,14.33,16.79,14.33,6.55,0,11.88-2.97,14.74-7.99h11.88c-4.4,11.57-14.33,18.63-26.62,18.63-16.07,0-28.15-12.49-28.15-28.77s12.18-28.77,28.15-28.77c16.07-.1,27.95,12.69,27.95,28.77ZM514.96,181.5h33.07c-2.05-8.29-8.29-13.21-16.69-13.21-8.29-.2-14.64,5.02-16.38,13.21Z"></path>
+  <path class="cls-1" d="M596.56,215.49c-16.69,0-29.18-12.29-29.18-28.77s12.49-28.77,29.18-28.77,29.28,12.29,29.28,28.77-12.59,28.77-29.28,28.77ZM614.37,186.82c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02c10.34-.1,17.81-7.58,17.81-18.02Z"></path>
+  <path class="cls-1" d="M633.62,196.75h10.95c.2,5.84,5.12,8.8,11.77,8.8,6.04,0,10.75-2.56,10.75-7.17,0-5.22-5.84-6.35-12.59-7.47-9.21-1.54-19.96-3.58-19.96-16.28,0-9.83,8.5-16.59,21.19-16.59s20.99,6.96,21.19,17.61h-10.75c-.31-5.22-4.1-7.99-10.75-7.99-6.25,0-10.14,2.56-10.14,6.65,0,4.81,5.53,5.84,12.18,6.86,9.32,1.54,20.48,3.38,20.48,16.79,0,10.65-8.91,17.61-22.22,17.61-13-.1-21.81-7.47-22.11-18.84Z"></path>
+  <path class="cls-1" d="M719.82,158.05c16.48,0,28.36,12.29,28.36,28.77s-12.08,28.77-28.36,28.77c-7.06,0-13.31-2.46-18.22-6.65v24.88h-11.26v-74.53h7.68l2.05,6.76c5.02-5.02,11.88-7.99,19.76-7.99ZM736.71,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02,17.81-7.68,17.81-18.02Z"></path>
+  <path class="cls-1" d="M814.72,159.28v54.77h-9.01l-1.13-6.76c-4.91,5.02-11.88,7.99-19.86,7.99-16.28,0-28.46-12.29-28.46-28.77s12.18-28.77,28.46-28.77c7.99,0,14.95,3.07,20.07,8.19l1.33-6.86,8.6.2ZM803.46,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02c10.24-.2,17.81-7.78,17.81-18.02Z"></path>
+  <path class="cls-1" d="M861.41,203.92v10.24h-8.4c-11.98,0-19.45-7.37-19.45-19.55v-25.7h-9.83v-2.25l19.04-20.37h1.95v12.8h16.28v9.73h-16.18v24.78c0,6.65,3.58,10.24,10.24,10.24h6.35v.1Z"></path>
+  <path class="cls-1" d="M872.16,139.21h11.67v11.67h-11.67v-11.67ZM872.46,159.28h11.26v54.77h-11.26v-54.77Z"></path>
+  <path class="cls-1" d="M954.16,159.28v54.77h-9.01l-1.13-6.76c-4.91,5.02-11.88,7.99-19.96,7.99-16.28,0-28.46-12.29-28.46-28.77s12.18-28.77,28.46-28.77c7.99,0,15.05,3.07,20.07,8.19l1.33-6.86,8.7.2ZM942.9,186.82c0-10.34-7.47-18.02-17.81-18.02s-18.02,7.78-18.02,18.02,7.68,18.02,18.02,18.02c10.34-.2,17.81-7.78,17.81-18.02Z"></path>
+  <path class="cls-1" d="M970.23,139.62h11.26v74.53h-11.26v-74.53Z"></path>
+  <path class="cls-1" d="M422.82,276.71c0-21.29,15.56-36.75,36.45-36.75,16.79,0,30.3,10.44,33.99,26.52h-11.77c-3.38-9.42-11.67-15.15-22.22-15.15-14.23,0-24.67,10.75-24.67,25.49s10.44,25.49,24.67,25.49c10.85,0,19.25-6.04,22.42-16.18h11.77c-3.79,16.69-17.2,27.44-34.3,27.44-20.78-.1-36.34-15.77-36.34-36.86Z"></path>
+  <path class="cls-1" d="M530.11,313.46c-16.69,0-29.28-12.29-29.28-28.77s12.59-28.77,29.28-28.77,29.18,12.29,29.18,28.77c.1,16.59-12.39,28.77-29.18,28.77ZM547.93,284.69c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02,17.81-7.47,17.81-18.02Z"></path>
+  <path class="cls-1" d="M600.45,256.13c12.8,0,20.78,9.62,20.78,23.04v33.07h-11.26v-30.71c0-9.93-4.3-15.25-12.59-15.25s-14.74,6.86-14.74,16.59v29.38h-11.26v-54.87h7.88l2.25,7.68c3.99-5.63,10.75-8.91,18.94-8.91Z"></path>
+  <path class="cls-1" d="M632.39,294.83h10.95c.2,5.84,5.12,8.8,11.77,8.8,6.04,0,10.75-2.56,10.75-7.17,0-5.22-5.84-6.35-12.59-7.47-9.21-1.54-19.96-3.58-19.96-16.28,0-9.83,8.5-16.59,21.19-16.59s20.99,6.96,21.19,17.61h-10.75c-.31-5.22-4.1-7.99-10.75-7.99-6.25,0-10.14,2.56-10.14,6.65,0,4.81,5.53,5.84,12.18,6.86,9.32,1.54,20.48,3.38,20.48,16.79,0,10.65-8.91,17.61-22.22,17.61-13.21-.2-21.91-7.47-22.11-18.84Z"></path>
+  <path class="cls-1" d="M714.29,313.46c-16.69,0-29.28-12.29-29.28-28.77s12.59-28.77,29.28-28.77,29.18,12.29,29.18,28.77c.1,16.59-12.39,28.77-29.18,28.77ZM732.1,284.69c0-10.54-7.47-18.02-17.81-18.02s-17.81,7.47-17.81,18.02,7.47,18.02,17.81,18.02,17.81-7.47,17.81-18.02Z"></path>
+  <path class="cls-1" d="M786.67,256.95v10.65h-5.94c-9.32,0-13.92,5.32-13.92,15.25v29.28h-11.26v-54.77h7.58l1.95,7.47c3.89-5.22,9.32-7.78,16.79-7.78l4.81-.1Z"></path>
+  <path class="cls-1" d="M826.29,301.89v10.24h-8.4c-11.98,0-19.35-7.37-19.35-19.55v-25.7h-9.83v-2.25l19.04-20.37h1.95v12.8h16.28v9.73h-16.18v24.78c0,6.65,3.58,10.24,10.24,10.24h6.25v.1Z"></path>
+  <path class="cls-1" d="M836.94,237.19h11.67v11.67h-11.67v-11.67ZM837.25,257.26h11.26v54.77h-11.26v-54.77Z"></path>
+  <path class="cls-1" d="M863.66,288.99v-31.74h11.26v30.1c0,9.62,5.22,15.25,13.72,15.25s13.62-5.84,13.62-15.25v-30.1h11.26v31.74c0,14.74-9.73,24.47-24.88,24.47s-24.98-9.73-24.98-24.47Z"></path>
+  <path class="cls-1" d="M989.69,256.13c11.47,0,19.35,8.8,19.35,21.29v34.81h-11.26v-32.15c0-8.8-3.89-13.82-10.65-13.82-7.27,0-12.8,6.65-12.8,15.97v30.1h-10.85v-32.15c0-8.8-3.79-13.82-10.65-13.82-7.27,0-12.9,6.65-12.9,15.97v30.1h-11.26v-55.08h7.99l1.95,7.17c4.1-5.22,10.34-8.29,17.1-8.29,7.37,0,13.31,3.58,16.38,9.62,3.79-6.14,10.54-9.73,17.61-9.73Z"></path>
+</svg></span>
+  </div>
+
+  <!--
+  <div class="coverpage-tc-name">
+    <span>Technical</span>
+  </div>
+  -->
+
+  <div class="authors">
+    
+    
+    
+
+    
+    
+    <span>Gobe Hobona <span class="roletag">Editor</span></span>
+    
+    <span>Simon Cox <span class="roletag">Editor</span></span>
+    
+    
+  </div>
+
+    <div class="coverpage-metadata">
+      <span class="label">Submission Date: </span> <span class="value">2029-03-28</span>
+      <span class="label">Approval Date: </span> <span class="value">2029-05-29</span>
+      <span class="label">Publication Date: </span> <span class="value">2029-06-03</span>
+      <span class="label">External identifier of this OGC® document: <span class="docnumber value">http://www.opengis.net/doc/POL-NTS/DEF-1/1.3</span></span>
+      <span class="label">Internal identifier of this OGC® document: <span class="docnumber value">09-048r6</span></span>
+      
+      
+    </div>
+
+    <div class="coverpage-alt-formats">
+      
+      <span class="label">Version: </span> <span class="value">27.0</span><br />
+      
+    
+    </div>
+
+  </div>
+
+    <div class="wrapper-top-bottom"></div>
+
+  <div class="WordSection11">
+  <div class="coverpage-stage-block">
+    <span class="coverpage-stage" id="policy">OGC Policy</span>
+  </div>
+
+  <div class="coverpage-stage-block">
+    <p><span class="coverpage-maturity" id="draft">Draft</span></p>
+  </div>
+</div>
+
+  <div class="coverpage-warning">
+    <div class="boilerplate-legal">
+
+<div id="_7e312e4d-8814-893e-f10e-c3e51489bd3c"><h1 class="IntroTitle"><a class="anchor" href="#_7e312e4d-8814-893e-f10e-c3e51489bd3c"></a><a class="header" href="#_7e312e4d-8814-893e-f10e-c3e51489bd3c">Notice</a></h1>
+
+<p id="_9b894c3d-7c8b-fb29-c502-07bab3a7a276">This document is not an OGC Standard. This document is an OGC Policy and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+
+<p id="_7dd2e025-00fe-425f-0a1c-a52493226acc">Further, an OGC Policy should not be referenced as required or mandatory technology in procurements.</p>
+</div>
+</div>
+ </div>
+         
+
+
+<div class="docstage-box">
+  <table>
+    <tr><td>Document number:</td><td>09-048r6</td></tr>
+    <tr><td>Document type:</td><td>OGC Policy</td></tr>
+    <tr><td align="right">Document subtype:</td><td align="right"></td></tr>
+    <tr><td align="right">Document stage:</td><td align="right">Draft</td></tr>
+    <tr><td align="right">Document language:</td><td align="right">English</td></tr>
+  </table>
+</div>
+
+<div class="info-section">
+<div class="copyright">
+  <div class="boilerplate-copyright">
+
+<div id="_5fd8eaf0-67f0-99c8-cc0f-4aa9014be8dd"><h1 class="IntroTitle"><a class="anchor" href="#_5fd8eaf0-67f0-99c8-cc0f-4aa9014be8dd"></a><a class="header" href="#_5fd8eaf0-67f0-99c8-cc0f-4aa9014be8dd">Copyright notice</a></h1>
+
+<p id="_80f87da6-d040-2990-4091-2d47560da00c" style="text-align:center;">Copyright © 2029 Open Geospatial Consortium<br /> To obtain additional rights of use, visit <a href="https://www.ogc.org/legal">https://www.ogc.org/legal</a></p>
+</div>
+
+<div id="_6908548e-204b-56e7-9062-6924cccf2315"><h1 class="IntroTitle"><a class="anchor" href="#_6908548e-204b-56e7-9062-6924cccf2315"></a><a class="header" href="#_6908548e-204b-56e7-9062-6924cccf2315">Note</a></h1>
+
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</div>
+</div>
+</div>
+
+<div class="rule"></div>
+</div>
+  </div>
+</header></div><br /><div class="prefatory-section"><div class="license">
+  <div class="boilerplate-license">
+
+<div id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7"><h1 class="IntroTitle"><a class="anchor" href="#_45f6bdf5-80f3-f775-9740-2adafc90b1f7"></a><a class="header" href="#_45f6bdf5-80f3-f775-9740-2adafc90b1f7">License Agreement</a></h1>
+
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <a href="https://www.ogc.org/license">https://www.ogc.org/license</a></p>
+</div>
+</div>
+
+
+
+</div>
+
+<nav>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_13d7055e-30fc-845a-c60e-8972faf092d9"></a><a class="header" href="#_13d7055e-30fc-845a-c60e-8972faf092d9">Contents</a></h1><ul><li class="h1"><a href="#_25e34fd5-d649-b291-9c59-a529ab1a94c2">      
+  
+  I.  Abstract
+</a></li>
+<li class="h1"><a href="#_3be6b4ea-2342-78df-d912-def9cc42bd29">      
+  
+  II.  Keywords
+</a></li>
+<li class="h1"><a href="#_b4ae0685-ec0f-a8b2-2b70-790430757c77">      
+  
+  III.  Preface
+</a></li>
+<li class="h1"><a href="#_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b">      
+  
+  IV.  Security considerations
+</a></li>
+<li class="h1"><a href="#_20cdc9ef-eff8-899b-6a09-43caa91e8f79">      
+  
+  V.  Submitting Organizations
+</a></li>
+<li class="h1"><a href="#_7e1e502b-fd1f-f05e-8588-3004114a45d8">      
+  
+  VI.  Submitters
+</a></li>
+<li class="h1"><a href="#_b52692e9-a023-858a-8c1e-67ec6187c92b">      
+  
+  1.  Scope
+</a></li>
+<li class="h1"><a href="#Conformance">      
+  
+  2.  Conformance
+</a></li>
+<li class="h1"><a href="#_3f14c2ed-0265-4af9-96a3-0aa3f3741a50">      3.  Normative references</a></li>
+<li class="h1"><a href="#_b68dcd45-0d29-c1f6-1727-0ea64c41fdd2">      
+  
+  4.  Terms and definitions
+</a></li>
+<li class="h2"><a href="#_cc1c3716-cbc6-d96e-ec65-acf63b4d5176">      
+  
+  4.1.  Terms and definitions
+</a></li>
+<li class="h1"><a href="#conventions">      
+  
+  5.  Conventions
+</a></li>
+<li class="h1"><a href="#naming_rule">      
+  
+  6.  Naming Rule
+</a></li>
+<li class="h2"><a href="#_7f91baf2-1171-263b-32fd-3f874cbe161b">      
+  
+  6.1.  OGC name schemes
+</a></li>
+<li class="h2"><a href="#_852037f4-d3cd-bef9-f900-aea5fe2d7853">      
+  
+  6.2.  Production rule for definition URIs
+</a></li>
+<li class="h2"><a href="#_407d30d2-faf8-84d4-2370-2079b28f9386">      
+  
+  6.3.  Compact URIs
+</a></li>
+<li class="h1"><a href="#name_assignment">      
+  
+  7.  Name Assignment and Resolution
+</a></li>
+<li class="h2"><a href="#_8123e431-f891-8b5a-7c09-433977f8d794">      
+  
+  7.1.  Definition types
+</a></li>
+<li class="h2"><a href="#_20b3c2a7-4074-0ba7-a24e-d6a9bb363c04">      
+  
+  7.2.  Authorities
+</a></li>
+<li class="h2"><a href="#_188c1666-a49c-2612-e6ef-94342ca561db">      
+  
+  7.3.  Names
+</a></li>
+<li class="h2"><a href="#_9914000c-5d1c-68cf-ebf3-1a9d08f6b80a">      
+  
+  7.4.  Names for EPSG definitions
+</a></li>
+<li class="h2"><a href="#_74e07f05-0ec7-0650-39d9-3eb4eeff28d7">      
+  
+  7.5.  Description
+</a></li>
+<li class="h2"><a href="#_4bdf5c8e-d59f-07b8-f06f-11df3e8d3406">      
+  
+  7.6.  Resolution of the Same Definition to Different Encodings
+</a></li>
+<li class="h2"><a href="#_4f5c6795-7233-59ed-5ae6-3ac3cbd6dd23">      
+  
+  7.7.  Assigning and Handling Name Aliases
+</a></li>
+<li class="h1"><a href="#annex_background">      Annex A  Background</a></li>
+<li class="h2"><a href="#_3746502c-c629-641f-395b-770661f16f00">      
+  
+  A.1.  Introduction
+</a></li>
+<li class="h2"><a href="#_589a5b13-c6e7-bd3f-3e30-7c7f7783d04f">      
+  
+  A.2.  URNs for Coordinate Reference Systems
+</a></li>
+<li class="h2"><a href="#_3931b59a-46a6-2149-eca4-cd07115aef7d">      
+  
+  A.3.  URNs and URLs
+</a></li>
+<li class="h2"><a href="#_92c11b6f-76f1-a9aa-f422-469fde10f1f1">      
+  
+  A.4.  URN and schema component designators
+</a></li>
+<li class="h1"><a href="#_0714178c-dde6-07a8-ca8e-c73952e03b3a">      Annex B  Revision History</a></li>
+<li class="h1"><a href="#_9f95963c-e5c7-43e5-abf7-38e4e91ec015">      Bibliography</a></li></ul></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
+
+
+
+
+
+<div class="boilerplate-feedback">
+
+</div>
+</div><br /><br /><div id="_25e34fd5-d649-b291-9c59-a529ab1a94c2"><h1 class="AbstractTitle" id="_64ed9e04-6c01-4edb-b2bb-ba52c6697d72"><a class="anchor" href="#_25e34fd5-d649-b291-9c59-a529ab1a94c2"></a><a class="header" href="#_25e34fd5-d649-b291-9c59-a529ab1a94c2">I.  Abstract</a></h1><p id="_e4e3e8d4-3d0d-3604-9f5a-c7669e135e9e">The mission of the OGC Naming Authority (OGC-NA) is to provide the means through which OGC resources such as OGC documents, namespaces and ontologies can be controlled and managed such that they can provide clear and well-defined names and definitions. In the terminology defined in ISO 19135, OGC-NA is the Control Body for the register of OGC Names. This document specifies a rule for constructing OGC names that may be used for identifying definitions, as well as rules for formally representing the meanings of the definitions.</p></div><div class="Section3" id="_3be6b4ea-2342-78df-d912-def9cc42bd29"><h1 class="IntroTitle" id="_4f7f95da-c167-4a85-9953-72d82dbf16a1"><a class="anchor" href="#_3be6b4ea-2342-78df-d912-def9cc42bd29"></a><a class="header" href="#_3be6b4ea-2342-78df-d912-def9cc42bd29">II.  Keywords</a></h1><p>The following are keywords to be used by search engines and document catalogues.</p><p>ogcdoc, OGC document, policy, naming authority, definitions</p></div><br /><div id="_b4ae0685-ec0f-a8b2-2b70-790430757c77"><h1 class="ForewordTitle" id="_d4cd09f8-c8fe-47c2-befc-c95a5881de1b"><a class="anchor" href="#_b4ae0685-ec0f-a8b2-2b70-790430757c77"></a><a class="header" href="#_b4ae0685-ec0f-a8b2-2b70-790430757c77">III.  Preface</a></h1><p id="_71cfbd01-1a98-470f-a176-5de7e109ce64">This document specifies a rule for constructing OGC names that may be used for identifying definitions.</p></div><div class="Section3" id="_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b"><h1 class="IntroTitle" id="_e56d8242-500e-4ebd-80a0-b4ca76d251ed"><a class="anchor" href="#_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b"></a><a class="header" href="#_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b">IV.  Security considerations</a></h1><p id="_927733ee-e695-c49f-5120-5f08eaf68e0c">No security considerations have been made for this document.</p></div><div class="Section3" id="_20cdc9ef-eff8-899b-6a09-43caa91e8f79"><h1 class="IntroTitle" id="_e4bc9557-9ece-4653-b49f-236a0ae69826"><a class="anchor" href="#_20cdc9ef-eff8-899b-6a09-43caa91e8f79"></a><a class="header" href="#_20cdc9ef-eff8-899b-6a09-43caa91e8f79">V.  Submitting Organizations</a></h1><p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p><div class="ul_wrap"><ul id="_55b1d644-2c90-d993-089f-dfd7964f8727"><li id="_71aeb802-db92-87b3-8b15-2a8baa829f5e">OGC</li>
+<li id="_ca40f3e4-03b5-e45c-b281-80d8736e19c7">CSIRO</li></ul></div></div><div class="Section3" id="_7e1e502b-fd1f-f05e-8588-3004114a45d8"><h1 class="IntroTitle" id="_041a271c-816f-4055-a6cb-9e2b88e14091"><a class="anchor" href="#_7e1e502b-fd1f-f05e-8588-3004114a45d8"></a><a class="header" href="#_7e1e502b-fd1f-f05e-8588-3004114a45d8">VI.  Submitters</a></h1><p id="_6e1b734b-e32c-864b-59a1-81792b76695c">All questions regarding this submission should be directed to the editor or the submitters:</p><table id="_4dbdb442-31bb-137d-96ce-71a5c0489d77" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Name</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Affiliation</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Gobe Hobona</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">OGC</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Simon Cox</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">CSIRO</td></tr></tbody></table></div><div id="_b52692e9-a023-858a-8c1e-67ec6187c92b"><h1 id="_aad471cf-6dba-439d-8fb6-3d64d536ae92"><a class="anchor" href="#_b52692e9-a023-858a-8c1e-67ec6187c92b"></a><a class="header" href="#_b52692e9-a023-858a-8c1e-67ec6187c92b">1.  Scope</a></h1><p id="_ec749b49-e725-3092-bd2d-f36d26f1401c">An OGC name may be provided for a definition of a type of object broadly classified as a “concept” or system parameter, including:</p><div class="ul_wrap"><ul id="_44c70118-489d-53d4-a33f-40c0b456e8e7"><li id="_eda49ff2-df8d-0896-804b-1c3f92bc0be1"><p id="_101bad15-b271-f860-82bd-8d3d6ef6cf81">Coordinate Reference Systems (CRSs) and related objects.</p>
+</li>
+<li id="_a5c0ee60-4771-c7ac-184c-a7459d53438a"><p id="_3261d7f2-98c3-e05a-5a44-023635a0df1a">Data types</p>
+</li>
+<li id="_4d4bdb87-3e24-5c48-ca6f-eb9235c6d485"><p id="_df0aed4c-3ba4-e6a3-8027-cd1f03f03d28">Feature and property types</p>
+</li>
+<li id="_8fa7e4f6-e200-e5b3-debe-7d1846215ca2"><p id="_ff4af573-5251-f612-2aee-843c11d366c3">Functions</p>
+</li>
+<li id="_976e2897-83ae-e0b7-15eb-eb2fe58e1c23"><p id="_35f32558-01a6-27ec-1591-20028c7f8c50">Nil values</p>
+</li>
+<li id="_f4f384d1-fadd-4466-8e23-86c436c64d92"><p id="_6e499cea-34ca-a6e1-7c74-04ecef900203">Units of measure</p>
+</li>
+</ul></div><p id="_cb58fd62-9255-dbbf-ca9f-fd32b63fd3ac">The precise scope of definitions that may be identified with OGC Names is provided by the set of items in the register at <a href="http://www.opengis.net/register/ogc-na/def-type">http://www.opengis.net/register/ogc-na/def-type</a></p><p id="_0b973bce-a8e6-e6c7-4733-d3126c8f57e4">Note that “Definitions” may be contrasted with “instances”, which shall use names constructed following rules provided in other OGC Name Type Specifications.</p></div><div id="Conformance"><h1 id="_03605614-ea8c-4352-86cd-119e63e655d7"><a class="anchor" href="#Conformance"></a><a class="header" href="#Conformance">2.  Conformance</a></h1><p id="_515c318b-4bf0-d77e-93c0-f04a996467fc">This policy defines part 1 of the OGC name-type specification for definitions.</p><p id="_dd2c6767-74be-273d-487b-eb186185852a">Conformance with this policy shall be checked using the naming rule and naming assignment policy defined in this document.</p></div><div><h1 id="_3f14c2ed-0265-4af9-96a3-0aa3f3741a50">3.  Normative references</h1>
+<p id="_49996d2b-65c1-916b-9bbf-42b933aa0025">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+<p id="OGC_08-131r3" class="NormRef">Policy SWG, Open Geospatial Consortium: OGC 08-131r3, <i>The Specification Model — Standard for Modular specifications</i>. Open Geospatial Consortium (2009). <a href="https://docs.ogc.org/pol/08-131r3/08-131r3/pdf">https://docs.ogc.org/pol/08-131r3/08-131r3/pdf</a>.</p>
+<p id="OGC_06-121r9" class="NormRef">Arliss Whiteside, Jim Greenwood, Open Geospatial Consortium: OGC 06-121r9, <i>OGC Web Service Common Implementation Specification</i>. Open Geospatial Consortium (2010). <a href="https://docs.ogc.org/is/06-121r9/06-121r9/pdf">https://docs.ogc.org/is/06-121r9/06-121r9/pdf</a>.</p>
+</div><div id="_b68dcd45-0d29-c1f6-1727-0ea64c41fdd2"><h1 id="_43b1d812-661c-4af0-a555-68ea68bee991"><a class="anchor" href="#_b68dcd45-0d29-c1f6-1727-0ea64c41fdd2"></a><a class="header" href="#_b68dcd45-0d29-c1f6-1727-0ea64c41fdd2">4.  Terms and definitions</a></h1><p id="_fd16447f-e831-b957-4070-3e82ddcd6f73">This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p><p id="_316a9967-2d19-a471-57e7-e352a4ce176b">This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p><p id="_a605e310-fb97-016b-65e8-0d636b9ef70c">For the purposes of this document, the following additional terms and definitions apply.</p><div id="_cc1c3716-cbc6-d96e-ec65-acf63b4d5176"><h2 id="_e36694eb-9a0b-4ba4-8bad-82de770c43cd"><a class="anchor" href="#_cc1c3716-cbc6-d96e-ec65-acf63b4d5176"></a><a class="header" href="#_cc1c3716-cbc6-d96e-ec65-acf63b4d5176">4.1.  Terms and definitions</a></h2>
+
+<div id="term-Concept"><h3 class="TermNum" style="text-align:left;" id="_aa790b92-b56a-497a-b6fe-895056f3044a"><a class="anchor" href="#term-Concept"></a><a class="header" href="#term-Concept">4.1.1. <b>
+  <dfn>Concept</dfn>
+</b></a></h3></div>
+<p id="_95cfdda4-e28e-9844-18a9-5021d576715b">unit of knowledge created by a unique combination of characteristics (source: ISO 1087‑1:2000)</p>
+
+
+<div id="term-control-body"><h3 class="TermNum" style="text-align:left;" id="_b629014f-cdec-4f28-94e8-7232c4e23a1c"><a class="anchor" href="#term-control-body"></a><a class="header" href="#term-control-body">4.1.2. <b>
+  <dfn>control body</dfn>
+</b></a></h3></div>
+<p id="_9462d3c1-f42d-78ec-37b8-ba79762496c1">group of technical experts that makes decisions regarding the content of a register (source: ISO 19135)</p>
+
+
+<div id="term-register"><h3 class="TermNum" style="text-align:left;" id="_f584d76b-e2c7-4300-98b4-99b67a71526a"><a class="anchor" href="#term-register"></a><a class="header" href="#term-register">4.1.3. <b>
+  <dfn>register</dfn>
+</b></a></h3></div>
+<p id="_61a67edb-97c7-b3ab-699a-6545ec5d2b8b">set of files containing identifiers assigned to items with descriptions of the associated items (source: ISO 19135)</p>
+
+</div></div><div id="conventions"><h1 id="_c544545f-7a77-4fe4-984f-859d5658f83d"><a class="anchor" href="#conventions"></a><a class="header" href="#conventions">5.  Conventions</a></h1><p id="_f7738e69-658c-6645-6cad-e1765c1b25ef">This document uses the normative terms (SHALL, SHOULD, etc) defined in Subclause 5.3 of [OGC 06-121r3], which is based on the ISO/IEC Directives, Part 2: Rules for the structure and drafting of International Standards. In particular, the word ‘shall’ (not ‘must’) is the verb form used to indicate a requirement to be strictly followed to comply with this specification.</p><p id="_68b41325-c12b-387c-e556-bce7ec76325d">Name production rules in this document are expressed using ABNF (IETF RFC 5324).</p></div><div id="naming_rule"><h1 id="_e8ccda63-150d-4fd5-84f6-ab9eab79287d"><a class="anchor" href="#naming_rule"></a><a class="header" href="#naming_rule">6.  Naming Rule</a></h1><p id="_e2f88925-c57f-8379-1420-93a971691bfc">This section describes the naming rule.</p><div id="_7f91baf2-1171-263b-32fd-3f874cbe161b"><h2 id="_5d527676-0685-43c8-bb73-9727bb2342d3"><a class="anchor" href="#_7f91baf2-1171-263b-32fd-3f874cbe161b"></a><a class="header" href="#_7f91baf2-1171-263b-32fd-3f874cbe161b">6.1.  OGC name schemes</a></h2>
+
+<p id="_79942ed5-f702-d031-4084-987234939417">Two URI schemes <a href="https://datatracker.ietf.org/doc/html/rfc3986">IETF RFC 3986</a> are defined by OGC to provide persistent names for resources of interest in geographic information infrastructures. The generic syntax for OGC names is described in <a href="https://docs.opengeospatial.org/pol/09-046r6.html">OGC Naming Authority – Procedures</a>.</p>
+
+<p id="_a90818e0-db77-ee4c-3af8-94d588a425d5">The generic syntax for OGC http URIs is</p>
+
+<details open="open"><figure id="_60fa90c7-4fa7-4009-8388-03c81cf8c5f3" class="sourcecode" spellcheck="false" translation="no"><pre>  URI = "http://www.opengis.net/" OGCResource "/" ResourceSpecificPath</pre></figure></details>
+
+
+<p id="_48bf3516-65ee-7e93-4289-e883999c34f4">The generic syntax for OGC URNs is <a href="https://datatracker.ietf.org/doc/rfc5165/">IETF RFC 5165</a></p>
+
+<details open="open"><figure id="_b5b6043c-4e07-7c84-b1d6-db7d66164336" class="sourcecode" spellcheck="false" translation="no"><pre>  URN = "urn:ogc:" OGCResource ":" ResourceSpecificString</pre></figure></details>
+
+
+<p id="_2c1873ba-b554-9057-dba0-853b30f70d5b">The following ABNF adapted from <a href="https://datatracker.ietf.org/doc/html/rfc3986">IETF RFC 3986</a> provides some basic definitions required in the rest of this document.</p>
+
+<details open="open"><figure id="_84d2f50a-1b4a-490a-c668-6dc081c2061e" class="sourcecode" spellcheck="false" translation="no"><pre>  segment       = *pchar<br />  segment-nc    = *pchar-nc<br />  segment-nz    = 1*pchar<br />  segment-nz-nc = 1*pchar-nc<br />  pchar         = unreserved / pct-encoded / sub-delims / ":" / "@"<br />  pchar-nc      = unreserved / pct-encoded / sub-delims / "@"<br />  pct-encoded   = "%" HEXDIG HEXDIG<br />  unreserved    = ALPHA / DIGIT / "-" / "." / "_" / "~"<br />  reserved      = gen-delims / sub-delims<br />  gen-delims    = ":" / "/" / "?" / "#" / "[" / "]" / "@"<br />  sub-delims    = "!" / "$" / "&#x26;" / "'" / "(" / ")"<br />                  / "*" / "+" / "," / ";" / "="</pre></figure></details>
+
+</div><div id="_852037f4-d3cd-bef9-f900-aea5fe2d7853"><h2 id="_12bbcd2e-abcf-4204-999d-585ec1eeac55"><a class="anchor" href="#_852037f4-d3cd-bef9-f900-aea5fe2d7853"></a><a class="header" href="#_852037f4-d3cd-bef9-f900-aea5fe2d7853">6.2.  Production rule for definition URIs</a></h2>
+
+<p id="_bf05c971-fbb5-4429-7635-28a28552b7c3">The basic form for an OGC name that identifies a definition shall be produced using the following rule:</p>
+
+<details open="open"><figure id="_32f17df0-64b0-e01a-24c4-e3dac65919bc" class="sourcecode" spellcheck="false" translation="no"><pre>  OGCResource   = "def"<br />  ResourceSpecificPath = definition-type "/" authority "/" version "/" code<br />  ResourceSpecificString = definition-type ":" authority ":" versionURN ":" codeURN<br />  definition-type = segment-nz-nc ; a token from the register of OGC definition types1<br />  authority     = segment-nz-nc ; a token from the register of OGC authorities2<br />  version       = segment-nz-nc / "0" ; use 0 for un-versioned names<br />  code          = segment-nz-nc *( "/" segment-nz-nc )<br />  versionURN    = segment-nc ; this may be a zero-length string<br />  codeURN       = segment-nz-nc *( ":" segment-nz-nc )</pre></figure></details>
+
+
+<p id="_b02482e3-5e04-6366-ce0d-85402a7e9f50">“version” or “versionURN” is an optional field. For un-versioned definitions:</p>
+
+<div class="ul_wrap"><ul id="_49c2be51-b4f8-317b-d60b-1a24079c9d05"><li id="_1c9c8a74-1b00-ba9c-4f3f-10a8a5cb54ce"><p id="_94c03820-1df2-6ad8-39ba-31ca2ddc979e">within the http URI form the version field shall be “0”</p>
+</li>
+<li id="_e5f8b6d2-a86f-4e3f-3c23-973bcf4cef4d"><p id="_0d25e9dc-31b4-f5eb-147e-fe147fe08271">within the URN form versionURN shall be a zero-length string—so an un-versioned definition can be detected by a pair of colons “::”.</p>
+</li>
+</ul></div>
+
+<p id="_abfe50c0-72a9-f0a4-c51e-ed8beeb46327">The actual code may be composed of a sequence of fields delimited by “/” in the http URI form, or “:” in the URN form.</p>
+
+<p id="_3fcab615-98f7-c90e-4c70-b16fc1fc7cd5">Note that the register of definition types (<a href="http://www.opengis.net/register/ogc-na/def-type">http://www.opengis.net/register/ogc-na/def-type</a>) was previously presented as Table 2 in the OGC Best Practice Definition identifier URNs in OGC namespace OGC 07-092r1.</p>
+
+<p id="_1826e109-c1c0-c021-c3c1-6607c60b861d">Note that the register of authorities (<a href="http://www.opengis.net/register/ogc-na/authority">http://www.opengis.net/register/ogc-na/authority</a>) was previously presented as Table 1 in the OGC Best Practice Definition identifier URNs in OGC namespace OGC 07-092r1</p>
+</div><div id="_407d30d2-faf8-84d4-2370-2079b28f9386"><h2 id="_9e9045b7-4be4-4df6-b2fd-eb451f3f32ae"><a class="anchor" href="#_407d30d2-faf8-84d4-2370-2079b28f9386"></a><a class="header" href="#_407d30d2-faf8-84d4-2370-2079b28f9386">6.3.  Compact URIs</a></h2>
+
+<p id="_c194aa00-bd13-8d77-8d82-e5f8905b594c">Compact URIs (<a href="https://www.w3.org/TR/curie/#P_curie">CURIEs</a>) are an abbreviation for strings that are intended to represent URIs. Their purpose is to support the definition of scoped names that map to URIs.</p>
+
+<p id="_8c89d0e4-a31a-4188-7039-c0add1ee180b">The URI of <b>any</b> definition registered in OGC-NA controlled registers may be represented in shortened form through use of CURIEs.</p>
+
+<div id="_4c4b5eac-8766-996d-b467-0368ca5c93ff"><h3><a class="anchor" href="#_4c4b5eac-8766-996d-b467-0368ca5c93ff"></a><a class="header" href="#_4c4b5eac-8766-996d-b467-0368ca5c93ff">6.3.1.  Register of CURIEs</a></h3>
+
+<p id="_0e488196-e1d7-dc6c-ed08-ce91df12c78d">The OGC-NA maintains a register of CURIEs at <a href="http://www.opengis.net/def/curie">http://www.opengis.net/def/curie</a>. The register shall be used as a look-up for CURIEs commonly used in OGC Standards.</p>
+
+<p id="_ffb2d080-7d66-c8d8-c4fe-21dae7832f9f">CURIEs recorded in the register shall be treated as case sensitive.</p>
+</div>
+
+<div id="_d78ec8b9-abc9-9f33-2603-03924d8bb5a6"><h3><a class="anchor" href="#_d78ec8b9-abc9-9f33-2603-03924d8bb5a6"></a><a class="header" href="#_d78ec8b9-abc9-9f33-2603-03924d8bb5a6">6.3.2.  Use of Safe CURIEs</a></h3>
+
+<p id="_4f2e9d84-2e3f-0794-3d68-d26aedf88a29">OGC Standards should only allow <a href="https://www.w3.org/TR/curie/#P_safe_curie">safe CURIEs</a>, unless support for other forms of CURIEs is inherited from another standard (e.g. GeoSPARQL inherits its support of CURIEs from SPARQL). Safe CURIEs are specified in square brackets. For example, the safe CURIE <tt>[EPSG:3857]</tt> may be used in an API request such as : <tt>https://example.org/foo/collections/bar/items?crs=<a id="EPSG_3857"></a></tt></p>
+</div>
+
+<div id="_dc2d6741-366c-94c3-026f-46f680fd8084"><h3><a class="anchor" href="#_dc2d6741-366c-94c3-026f-46f680fd8084"></a><a class="header" href="#_dc2d6741-366c-94c3-026f-46f680fd8084">6.3.3.  Applying CURIEs to Coordinate Reference Systems</a></h3>
+
+<p id="_e1cea8f7-76cd-e9a5-675e-bed079dc3529">CURIEs representing a shortened form of the URI of a registered Coordinate Reference System (CRS) may be used as an alternative to the full URI by following the syntax below:</p>
+
+<p id="_da62067d-66cc-6e9b-84da-9c0e51ef8b61"><tt>{authority}:{identifier} == link:++http://www.opengis.net/def/crs/{authority}/0/{identifier}</tt>++[]</p>
+
+<p id="_f731a96d-fadf-99f6-bbc6-3c69fe0f85aa">For example, EPSG:4326 may be used to represent <a href="http://www.opengis.net/def/crs/EPSG/0/4326">http://www.opengis.net/def/crs/EPSG/0/4326</a></p>
+
+<p id="_68bb6e1f-1a41-3a69-1356-8ee72abd50c5">When a CURIE is used to represent a CRS, the following shall apply:</p>
+
+<div class="ol_wrap"><ol type="a" id="_d041582e-a7d1-67ff-cc24-3dc1f57f4a31"><li id="_951c5d93-09d9-2405-fb2f-96745c5a7011"><p id="_42039469-46aa-e2fb-28dc-b01fe9a89999">The version segment of the URI is assumed to be equal to <tt>0</tt></p>
+</li>
+<li id="_7606ca85-244b-5a60-4ee1-8e8a5494a839"><p id="_afa86f2a-2bb7-749e-73b6-4ee7c28d3313">The definition-type segment shall be assumed to be equal to <tt>crs</tt>.</p>
+</li>
+<li id="_63e321c6-e0eb-c09d-ebc0-9fe1e3664241"><p id="_d4e60f6c-5f07-5b7c-c4c8-5514cd2eae26">The definition segment shall be assumed to be equal to <tt>def</tt>.</p>
+</li>
+</ol></div>
+
+<p id="_87c38bfb-063a-5436-ea6d-0e1d742a0145">Therefore “EPSG” as a prefix shall expand to <tt><a href="http://www.opengis.net/def/crs/EPSG/0/">http://www.opengis.net/def/crs/EPSG/0/</a></tt>.</p>
+</div>
+</div></div><div id="name_assignment"><h1 id="_4d059715-a0c4-46af-90c8-1bcbba531a4d"><a class="anchor" href="#name_assignment"></a><a class="header" href="#name_assignment">7.  Name Assignment and Resolution</a></h1><p id="_e1ff9414-9ffe-51e7-43d2-7c0bda9c5da9">This section describes the name assignment policy.</p><div id="_8123e431-f891-8b5a-7c09-433977f8d794"><h2 id="_9c06c369-fd4f-4618-a74e-d13945cdae29"><a class="anchor" href="#_8123e431-f891-8b5a-7c09-433977f8d794"></a><a class="header" href="#_8123e431-f891-8b5a-7c09-433977f8d794">7.1.  Definition types</a></h2>
+
+<p id="_f90a3b1c-aa1d-73bf-dee8-a09c0e52edf1">The register of definition types <a href="http://www.opengis.net/register/ogc-na/def-type">http://www.opengis.net/register/ogc-na/def-type</a> is controlled by OGC-NA. Changes to this register (additions, deletions, and supersession) shall be initiated by a submission to the OGC Naming Authority <a href="mailto:names@opengeospatial.org">names@opengeospatial.org</a>.</p>
+</div><div id="_20b3c2a7-4074-0ba7-a24e-d6a9bb363c04"><h2 id="_301413a9-e4c1-4ee3-adb1-99011f9d4b7c"><a class="anchor" href="#_20b3c2a7-4074-0ba7-a24e-d6a9bb363c04"></a><a class="header" href="#_20b3c2a7-4074-0ba7-a24e-d6a9bb363c04">7.2.  Authorities</a></h2>
+
+<p id="_3d682db1-7410-bb6a-b883-159eaf4976ab">The register of authorities <a href="http://www.opengis.net/register/ogc-na/authority">http://www.opengis.net/register/ogc-na/authority</a> is controlled by OGC-NA. Changes to this register (additions, deletions, and supersession) shall be initiated by a submission to the OGC Naming Authority <a href="mailto:names@opengeospatial.org">names@opengeospatial.org</a>.</p>
+</div><div id="_188c1666-a49c-2612-e6ef-94342ca561db"><h2 id="_c735dd2c-cf7b-461b-a16a-24e89b05a7cd"><a class="anchor" href="#_188c1666-a49c-2612-e6ef-94342ca561db"></a><a class="header" href="#_188c1666-a49c-2612-e6ef-94342ca561db">7.3.  Names</a></h2>
+
+<p id="_753679e7-e8ae-d2dd-8bd6-909d0f2cfee6">The register of names <a href="http://www.opengis.net/def/">http://www.opengis.net/def/</a> is controlled by OGC-NA. Changes to this register (addition, deletion, and supersession) shall be initiated by a submission to the OGC Naming Authority <a href="mailto:names@opengeospatial.org">names@opengeospatial.org</a>.</p>
+</div><div id="_9914000c-5d1c-68cf-ebf3-1a9d08f6b80a"><h2 id="_eec4a67a-ecca-4cd1-8f6e-6a73874a9171"><a class="anchor" href="#_9914000c-5d1c-68cf-ebf3-1a9d08f6b80a"></a><a class="header" href="#_9914000c-5d1c-68cf-ebf3-1a9d08f6b80a">7.4.  Names for EPSG definitions</a></h2>
+
+<p id="_e20f0415-f057-4e37-5af7-3feaf7eb7da6">http URI form:</p>
+
+<p id="_28054347-66be-cd7b-e31d-1e887af65449"><a href="http://www.opengis.net/def/definitionType/EPSG/0/code">http://www.opengis.net/def/definitionType/EPSG/0/code</a></p>
+
+<p id="_14852b80-7acf-4074-3c6d-dc64d38776b4">URN form:</p>
+
+<p id="_5d8e7521-c0a0-3a3c-542d-77dfa75e4fb6">urn:ogc:def:definitionType:EPSG::code</p>
+
+<p id="_27ff7788-556b-6ca6-eb8f-61c5d9a8d381">In this case, the ‘authority’ part of the URI is ‘EPSG’. The ‘code’ part of the URI is the EPSG ‘code’ unique identifier of the referenced definition. Alternately, the ‘code’ part of the URI can be the EPSG ‘name’ unique identifier.  In this case, omission of the version number is recommended, as this is not required to identify a referenced record in the EPSG dataset and may even lead to confusion if a version number is provided.</p>
+
+<p id="_9fbe2a4a-1bf2-7b79-2534-0a1b2be0d426">The policy of the Survey and Positioning Committee of the International Association of Oil and Gas Producers (IOGP) is to not delete any entities.  However, if a record is found to be incorrect, that record is deprecated and replaced. When this is done, the deprecation field of the deprecated record is changed from “false” to “true”. (In some implementations, “false” may be “0” or “no”, and “true” may be “1” or “yes”). Deprecated records are also termed ‘invalid records’. When retrieving any geodetic parameters from the EPSG dataset a user therefore needs to verify whether the record(s) is / are valid or invalid. The user then has two options: (1) follow the links provided and use the valid replacing record(s), a course typically followed when spatially referencing a new dataset, or (2) retrieve the invalid, deprecated record(s) in order to undo the effects of this error in an existing spatial dataset that had been spatially referenced using the incorrect records. Note that spatial referencing using (an) invalid EPSG entities will only generate errors if the data is subsequently subjected to coordinate conversions and/or transformations.</p>
+
+<p id="_73486f94-c342-c43a-3129-32a9aa53e427">Example 1 The http URI value for EPSG CRS 3163 is:</p>
+
+<p id="_90ca768d-a97b-ca52-94b7-3672e379e2a3"><a href="http://www.opengis.net/def/crs/EPSG/0/3163">http://www.opengis.net/def/crs/EPSG/0/3163</a></p>
+
+<p id="_a38b7066-7cae-f031-ae49-f79f69e79062">Example 2 The http URI value for the “WGS 84 longitude-latitude” CRS specified in Subclause B.3 of WMS 1.3 (previously referenced as CRS:84) is:</p>
+
+<p id="_9a0276e9-61b0-dd6a-bf8f-8140ce53e014"><a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84">http://www.opengis.net/def/crs/OGC/1.3/CRS84</a></p>
+
+<p id="_9d162093-9517-fbc0-8d25-d1e519d6dd49">Example 3 The URN value for EPSG CRS 3163 is:</p>
+
+<p id="_f3b7706a-b26b-b167-81e9-d6a792945ca0">urn:ogc:def:crs:EPSG::3163</p>
+
+<p id="_7fa1cfdb-29bf-d256-d85c-7c5b41d219bf">Example 4 The URN value for the “WGS 84 longitude-latitude” CRS specified in Subclause B.3 of WMS 1.3 (previously referenced as “CRS:84”) is:</p>
+
+<p id="_55bcae79-2eb0-1f10-2b89-bb7d8c7931e9">urn:ogc:def:crs:OGC:1.3:CRS84</p>
+</div><div id="_74e07f05-0ec7-0650-39d9-3eb4eeff28d7"><h2 id="_e896fe0f-f5fb-4eac-b4f2-afde9e2f1308"><a class="anchor" href="#_74e07f05-0ec7-0650-39d9-3eb4eeff28d7"></a><a class="header" href="#_74e07f05-0ec7-0650-39d9-3eb4eeff28d7">7.5.  Description</a></h2>
+
+<p id="_656a3248-8498-7f38-2a07-c606360d30b9">Each definition shall be described using the Simple Knowledge Organization System (SKOS) vocabulary of the World Wide Web (W3C) consortium. Other vocabularies may also be used <b>in addition</b> to SKOS.</p>
+
+<p id="_6c5262db-5eae-c764-141a-d894d889bb02">The following predicates are mandatory for resources:</p>
+
+<div class="ul_wrap"><ul id="_9f6ea554-a16b-ca93-aa62-9c64d7632416"><li id="_eb4e8ed7-52d9-c983-f98a-5ce0c1cc7dba"><p id="_bd4189db-3b44-663e-94bf-fa3ff398e3a1"><b>skos:prefLabel</b> for providing a human-readable version of a resource’s name</p>
+</li>
+<li id="_e0448a9e-60d0-9504-44e3-9e1cab35782c"><p id="_38563572-d5da-1adf-e8c3-e752f6601fd6"><b>dcterms:created</b> for stating the date the resource was created in the register</p>
+</li>
+<li id="_6c031b2d-efbf-8b62-2790-cee9273962f4"><p id="_851e1246-4385-0657-d7fd-488e26571e45"><b>dcterms:modified</b> for stating the date the resource was modified in the register (mandatory if the resource has been modified)</p>
+</li>
+<li id="_d986717e-1704-a3cc-a17a-2854fba76160"><p id="_0638f707-6fee-75c4-16cb-1773710ab1bb"><b>policy:status</b> for indicating whether the resource is valid, retired, superseded, or under consideration</p>
+</li>
+<li id="_040ec040-67ac-a9ce-7bfa-3905379910a0"><p id="_c45bce9e-9362-c936-6be6-e63e9236b6bf"><b>skos:definition</b> for providing a human-readable description of the resource</p>
+</li>
+<li id="_c95a3e2c-0188-3ac8-3981-463535ebd5cc"><p id="_ff108ac6-deca-af07-de9c-b745d6ef0f00"><b>rdfs:label</b> for providing a human-readable version of a resource’s name (used for compatibility with non-SKOS systems)</p>
+</li>
+</ul></div>
+
+<p id="_1751d249-c16d-1990-a9de-765362bca867">An example of a definition described in SKOS is shown below.</p>
+
+<details open="open"><figure id="_ae07bde3-7ede-d6eb-0291-85c75eb72856" class="sourcecode" spellcheck="false" translation="no"><pre>@prefix dcterms: &#x3c;http://purl.org/dc/terms/&#x3e; .<br />@prefix owl: &#x3c;http://www.w3.org/2002/07/owl#&#x3e; .<br />@prefix policy: &#x3c;http://www.opengis.net/def/metamodel/ogc-na/&#x3e; .<br />@prefix status: &#x3c;http://www.opengis.net/def/status/&#x3e; .<br />@prefix rdf: &#x3c;http://www.w3.org/1999/02/22-rdf-syntax-ns#&#x3e; .<br />@prefix rdfs: &#x3c;http://www.w3.org/2000/01/rdf-schema#&#x3e; .<br />@prefix skos: &#x3c;http://www.w3.org/2004/02/skos/core#&#x3e; .<br />@prefix xsd: &#x3c;http://www.w3.org/2001/XMLSchema#&#x3e; .<br /><br />&#x3c;http://www.opengis.net/def/serviceType/ogc/wcs/2.0&#x3e;<br />  rdf:type skos:Concept ;<br />  dcterms:created   "2018-03-13"^^xsd:date ;<br />  dcterms:modified  "2018-04-16"^^xsd:date ;<br />  policy:status     status:valid ;<br />  skos:broader &#x3c;http://www.opengis.net/def/serviceType/ogc/wcs&#x3e;;<br />  rdfs:label "OGC Web Coverage Service 2.0"^^xsd:string ;<br />  rdfs:seeAlso &#x3c;http://www.opengis.net/spec/wcs/2.0&#x3e; ;<br />  skos:prefLabel "OGC Web Coverage Service 2.0"@en ;<br />  skos:definition "A Web Coverage Service (WCS) offers multi-dimensional coverage data for access over the Internet" .</pre></figure></details>
+
+</div><div id="_4bdf5c8e-d59f-07b8-f06f-11df3e8d3406"><h2 id="_10e84970-6145-4a69-b537-9f3a0439cc91"><a class="anchor" href="#_4bdf5c8e-d59f-07b8-f06f-11df3e8d3406"></a><a class="header" href="#_4bdf5c8e-d59f-07b8-f06f-11df3e8d3406">7.6.  Resolution of the Same Definition to Different Encodings</a></h2>
+
+<p id="_5062dfc1-583a-0f2e-07a2-3c9aa6a0e83f">The definition of a resource may be accessed in any number of encodings that are supported by a resolution service or resolver. A resolution service and a client application shall negotiate the encoding format to use through the content negotiation process defined in <a href="http://docs.ogc.org/DRAFTS/19-072.html#rfc7231">IETF RFC 7231</a>. A non-exhaustive list of example encodings relevant to different resources is below:</p>
+
+<div class="ul_wrap"><ul id="_3787936c-60cc-a28e-30ac-d700b1e994f4"><li id="_d3a141f7-67d1-0731-4a4b-675164b7623f"><p id="_0dca8003-c4e8-dec3-9e7f-2e850e4906b9">Geography Markup Language (GML): Supports the encoding on features, coordinate reference systems, and codelists.</p>
+</li>
+<li id="_948b0fd0-b3f3-6a25-ec6f-b04d9101a680"><p id="_4e8cc9a2-3bea-bbd2-1c55-f9e27fc75466">Well Known Text (WKT): Supports the encoding on features, and coordinate reference systems.</p>
+</li>
+<li id="_cc3d9c9e-f9e5-af4c-3b5d-cf328bd8fe7b"><p id="_bc13e4e3-a673-4d12-eaaf-f92974792d95">Simple Knowledge Organization System (SKOS) in Resource Description Framework (RDF): Supports the encoding concepts, glossaries, and thesauri</p>
+</li>
+</ul></div>
+</div><div id="_4f5c6795-7233-59ed-5ae6-3ac3cbd6dd23"><h2 id="_83005aaf-ae56-4780-86a8-362373ef7370"><a class="anchor" href="#_4f5c6795-7233-59ed-5ae6-3ac3cbd6dd23"></a><a class="header" href="#_4f5c6795-7233-59ed-5ae6-3ac3cbd6dd23">7.7.  Assigning and Handling Name Aliases</a></h2>
+
+<p id="_303ab40e-5f4e-1ca6-8af9-60ad04267bcb">Where the URI of a named resource has an alias, the OGC-NA shall entail copies of all the properties for both forms of URI, and create inverse <a href="https://www.w3.org/TR/owl-ref/#sameAs-def">sameAs</a> relationships. For example, upon registering the resource <tt>example-B</tt> as an alias of <tt>example-A</tt>,</p>
+
+<div class="ul_wrap"><ul id="_38228c1a-e215-6819-60ec-6f840a5fdfb9"><li id="_266a83fc-eb0e-84bd-d838-b0631afa319e"><p id="_624119f3-d93b-bfc0-cec4-9cf681a39bf5">all of the properties of  <tt>example-A</tt> shall be copied to <tt>example-B</tt></p>
+</li>
+<li id="_8ad47ff1-fd33-e4c0-d255-cf8606827470"><p id="_dd492bdb-ad83-000f-6c0d-57e574b824f0">the statement that <tt>example-B</tt> is sameAs <tt>example-A</tt> shall be declared</p>
+</li>
+<li id="_ff026e85-aa1f-fdb1-f360-72c04646d987"><p id="_4f5e4968-00a3-d078-e54c-1a60fbe300b4">the statement that <tt>example-A</tt> is sameAs <tt>example-B</tt> shall be declared</p>
+</li>
+</ul></div>
+</div></div><br /><div id="annex_background" class="Section3"><h1 class="Annex" id="_c4406367-aef6-40ed-a1c1-e41727564685"><a class="anchor" href="#annex_background"></a><a class="header" href="#annex_background"><b>Annex A</b><br />(informative)<br /><b>Background</b></a></h1><p style="display:none;" class="variant-title-toc">Annex A  Background</p><div id="_3746502c-c629-641f-395b-770661f16f00"><h2 id="_02526b1d-ffff-4c1e-9f30-0447d345497e"><a class="anchor" href="#_3746502c-c629-641f-395b-770661f16f00"></a><a class="header" href="#_3746502c-c629-641f-395b-770661f16f00">A.1.  Introduction</a></h2>
+
+<p id="_7019b9e2-2cf8-b074-e431-b1f37212e7b6">This annex includes useful information from the previous document OGC 07-092r3</p>
+</div><div id="_589a5b13-c6e7-bd3f-3e30-7c7f7783d04f"><h2 id="_121ecf03-53be-4729-b6b9-9607f03e34be"><a class="anchor" href="#_589a5b13-c6e7-bd3f-3e30-7c7f7783d04f"></a><a class="header" href="#_589a5b13-c6e7-bd3f-3e30-7c7f7783d04f">A.2.  URNs for Coordinate Reference Systems</a></h2>
+
+<p id="_85499cca-885a-94e7-bb1e-a74d50116033">One frequent use of URNs is referencing the CRS for an OGC Web Service input or output; another use is referencing the CRS for a feature geometry or a bounding box. These URNs are used to identify the referenced CRS, not to transfer a definition of that CRS. Most of this material is also applicable to referencing CRS components and Coordinate Operations and their components, often referred to as objects.</p>
+
+<p id="_be00128f-69e3-9c81-a1a2-67b5193c7b22"><b>NOTE 1:</b> Subclause D.14 of [OGC 06-121r3] summarizes many of the requirements considered when specifying how to reference CRSs.</p>
+
+<p id="_1473bc2f-498e-ee1f-aa7e-0773f7d11e9f">Document [OGC 06-121r3] specifies that each specific OWS shall always reference a CRS by using an XML attribute or element with the type anyURI. Such an anyURI value can be used to reference a CRS whether the definition of that CRS is included in the same data transfer, is NOT included in the same data transfer, cannot be electronically accessed, or can be electronically accessed.</p>
+
+<p id="_6522a51e-be40-1b88-469d-9b78a7521a5c"><b>NOTE 2:</b> In XML Schemas, the anyURI data type is the standard way to briefly reference (or cite) a value specified elsewhere. XML attributes with the type anyURI include the GML defined attributes named gml:srsName, gml:uom, xlink:href, and gml:codeSpace.</p>
+
+<p id="_70f82095-41ba-d899-49e5-4d4675bcb424">When using an XML attribute or element with the type anyURI to reference a CRS, CRS-related, or other object, that URI shall have a value which uses one of two alternative URI formats:</p>
+
+<p id="_927aca37-170b-7c2e-90f0-3a0ad9f36cfc">a) Universal Resource Locator (URL), with standard form. The URL format should be used whenever the referenced definition is known to be electronically available using this standard URL.</p>
+
+<p id="_c5a06d2e-1282-5ba7-4a89-f21420205d92">b) Universal Resource Name (URN), with a specified form. The URN format shall be used whenever the referenced definition is not, or might not be, available using a URL. This URN shall reference data that is specified by some ‘authority’ and is ‘well-known’ to both client and server software, including multiple clients and multiple servers.</p>
+
+<p id="_3fe5121e-bdbc-0581-62b5-c1aa0487d500"><b>NOTE 3:</b> Two widely-used forms of URI are URL and URN. We are specifying using URNs as the way of citing CRS-related definitions that are “well-known” but are not adequately electronically available using a URL.</p>
+
+<p id="_bdb4b63b-b9e2-4b85-eab5-be24fd0a536f">Subclause 10.3.2 of the OWS Common specification [OGC 06-121r3] specifies when and how to use URLs to reference a CRS or CRS-related object. Use of URNs is expected to be more common than use of URLs, and specific OWS Implementation Specifications are expected to use many standard URN values.</p>
+</div><div id="_3931b59a-46a6-2149-eca4-cd07115aef7d"><h2 id="_c7fc07e9-1485-44d7-9923-7e4148cdf349"><a class="anchor" href="#_3931b59a-46a6-2149-eca4-cd07115aef7d"></a><a class="header" href="#_3931b59a-46a6-2149-eca4-cd07115aef7d">A.3.  URNs and URLs</a></h2>
+
+<p id="_9d98c81a-f217-79c9-ec11-2df6b0715de8">URNs [IETF RFC 2141] are a kind of URI [IETF RFC 2396], and may be used as the value of references where a URI is required. This is often the case in GML-based encodings (e.g., the standard XML attributes xlink:href, xlink:role, xlink:arcrole, srsName, uom, codeSpace) and in OGC Web Services (OWS) operation requests and responses.</p>
+
+<p id="_2eca34df-863d-4da6-4b5f-8d0f2ab5a8cb">A URN serves as a persistent identifier of a resource or concept. A detailed description of the resource may also be available online, with a resource locator (URL) providing an access point. In general, there is no direct mapping or algorithm to obtain a URL for the resource designated by a URN. URNs are intended to be more persistent than URLs, so that they remain valid even if a resource description is relocated. However, a resolution service or resolver is expected to provide a URL corresponding to a URN.</p>
+</div><div id="_92c11b6f-76f1-a9aa-f422-469fde10f1f1"><h2 id="_296586cd-e7d4-4a7f-b1ef-d7381440391b"><a class="anchor" href="#_92c11b6f-76f1-a9aa-f422-469fde10f1f1"></a><a class="header" href="#_92c11b6f-76f1-a9aa-f422-469fde10f1f1">A.4.  URN and schema component designators</a></h2>
+
+<p id="_d0db071d-5a0f-61c5-7ebd-cd002d0362d7">In a few places in OWS interfaces, an identifier for an XML component is required. In these cases, it is important that the identifier reference the actual schema definition, which may then be used as the template for an OWS request or response.</p>
+
+<p id="_37b97488-30a1-938b-7a6b-10660fea9622">A number of options are available for identification of schema components. The W3C XML Schema recommendation provides QName (qualified name – see XML Schema Part 2, clause 3.2.18). A QName has the lexical form ns:name where ‘ns’ is an XML namespace prefix for which a namespace declaration is in scope. The QName thus corresponds with an identifier tuple {namespace, local name} where ‘namespace’ is the fully scoped identifier for the XML namespace. In contrast, a URN identifier is complete, and does not depend on context for resolution of the namespace prefix.</p><div id="_c70d5817-40b0-fa6b-f4d7-b142937bc291" class="Note"><p><span class="note_label">NOTE:  </span>The W3C XML activity is currently considering a more complete scheme for identification of schema components, documented in the working draft XML Schema: Component Designators <a href="http://www.w3.org/TR/xmlschema-ref/">http://www.w3.org/TR/xmlschema-ref/</a>.</p></div>
+
+
+
+<p id="_685bd880-01f5-a354-54ef-7d78c8194ad4">In OWS interfaces, XML components are generally identified using a QName.</p>
+
+<p id="_26910d27-af63-1343-c7fe-ad88855827b0">While there is some overlap of the meaning of schema component designators with the OGC URN scheme used for dataTypes and featureTypes, it should be understood that a URN identifies the concept, and not just its XML and XML Schema implementation. Of course, the concepts denoted by identifiers from the featureType branch generally have XML Schema implementations, so direct mappings are implied. Note that the mapping may be one-to-many, for example to manage versioning of the XML schema implementation independent of versioning of the concept.</p>
+</div></div><br /><div id="_0714178c-dde6-07a8-ca8e-c73952e03b3a" class="Section3"><h1 class="Annex" id="_f6533c50-b250-4cd3-8be3-cacf574800b8"><a class="anchor" href="#_0714178c-dde6-07a8-ca8e-c73952e03b3a"></a><a class="header" href="#_0714178c-dde6-07a8-ca8e-c73952e03b3a"><b>Annex B</b><br />(informative)<br /><b>Revision History</b></a></h1><p style="display:none;" class="variant-title-toc">Annex B  Revision History</p><table id="_2260ced5-7a46-e72d-fb01-f45ff7d36e10" class="MsoISOTable" style="border-width:1px;border-spacing:0;width:90%;"><caption>Table B.1</caption><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Date</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Release</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Editor</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Primary clauses modified</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Description</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2008-12-04</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">0.1</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Simon Cox</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Initial draft document</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2008-12-11</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">0.1</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Arliss Whiteside</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Cover, i, ii, iii, 2, 3, 5, A</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Corrected format, inserted comments, and extended</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2009-04-01</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">0.1</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Simon Cox</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">all</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Minor tweaks and corrections for consistency with the other OGC-NA documents.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2009-05-15</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">0.2</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">David Burggraf</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">all</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Moved all references to parameterized and compound name form of URN definitions with the intention of specifying these forms in the separate documents OGC 09-054 and OGC 09-055, respectively.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2009-05-21</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">0.2</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Simon Cox</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2, 3</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Additional normative references; Replace EBNF with ABNF</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2010-01-31</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">1.1.0</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Simon Cox</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">all</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">ABNF revised to match RFC 3986; http URI syntax made explicit</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2010-02-28</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">1.1.1</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Simon Cox</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">3.2</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Specific token “0” to be used for un-versioned http URIs.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2010-03-31</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">1.1.2</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Simon Cox</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">3.2</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Amend ABNF to allow an unlimited set of fields separated by either : or / .</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2018-05-16</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">1.2</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Gobe Hobona</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">all</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Conversion to asciidoctor asciidoc. Updated URL of def-type list. Added the Description section and SKOS example.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2021-06-25</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">1.3</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Gobe Hobona</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">6.3</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Added clause on Shortened Names of CRS’s. Fixes <a href="https://github.com/opengeospatial/NamingAuthority/issues/92">Issue 92</a>.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">2022-02-16</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">1.3</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Gobe Hobona</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">6.2</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Changed statement about version number to “version” or “versionURN” is an optional field. Fixes <a href="https://github.com/opengeospatial/NamingAuthority/issues/143">Issue 143</a>.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">2022-02-16</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">1.3</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Gobe Hobona</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">all</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Conversion to metanorma asciidoc.</td></tr></tbody></table></div><br /><div><h1 class="Section3" id="_9f95963c-e5c7-43e5-abf7-38e4e91ec015">Bibliography</h1>
+<p id="OGC_09-046r6" class="Biblio">[1]  Gobe Hobona, Simon Cox, Open Geospatial Consortium: OGC 09-046r6, <i>OGC Naming Authority — Procedures</i>. Open Geospatial Consortium (2021). <a href="http://www.opengis.net/doc/POL/OGC-NA/1.3">http://www.opengis.net/doc/POL/OGC-NA/1.3</a>.</p><p id="rfc2141" class="Biblio">[2]  Moats R, Internet Engineering Task Force: IETF RFC 2141, <i>URN Syntax</i>. RFC Publisher (1997). <a href="https://www.rfc-editor.org/info/rfc2141">https://www.rfc-editor.org/info/rfc2141</a>.</p><p id="rfc2616" class="Biblio">[3]  Fielding R, Gettys J, Mogul J, Frystyk H, Masinter L, Leach P, Berners-Lee T, Internet Engineering Task Force: IETF RFC 2616, <i>Hypertext Transfer Protocol — HTTP/1.1</i>. RFC Publisher (1999). <a href="https://www.rfc-editor.org/info/rfc2616">https://www.rfc-editor.org/info/rfc2616</a>.</p><p id="rfc3986" class="Biblio">[4]  Berners-Lee T, Fielding R, Masinter L: IETF RFC 3986, <i>Uniform Resource Identifier (URI): Generic Syntax</i>. RFC Publisher (2005). <a href="https://www.rfc-editor.org/info/rfc3986">https://www.rfc-editor.org/info/rfc3986</a>.</p><p id="rfc4395" class="Biblio">[5]  Hansen T, Hardie T, Masinter L: IETF RFC 4395, <i>Guidelines and Registration Procedures for New URI Schemes</i>. RFC Publisher (2006). <a href="https://www.rfc-editor.org/info/rfc4395">https://www.rfc-editor.org/info/rfc4395</a>.</p><p id="rfc5141" class="Biblio">[6]  Goodwin J, Apel H: IETF RFC 5141, <i>A Uniform Resource Name (URN) Namespace for the International Organization for Standardization (ISO)</i>. RFC Publisher (2008). <a href="https://www.rfc-editor.org/info/rfc5141">https://www.rfc-editor.org/info/rfc5141</a>.</p><p id="rfc5165" class="Biblio">[7]  Reed C: IETF RFC 5165, <i>A Uniform Resource Name (URN) Namespace for the Open Geospatial Consortium (OGC)</i>. RFC Publisher (2008). <a href="https://www.rfc-editor.org/info/rfc5165">https://www.rfc-editor.org/info/rfc5165</a>.</p><p id="rfc5234" class="Biblio">[8]  Overell P: IETF RFC 5234, <i>Augmented BNF for Syntax Specifications: ABNF</i>. RFC Publisher (2008). <a href="https://www.rfc-editor.org/info/rfc5234">https://www.rfc-editor.org/info/rfc5234</a>.</p><p id="ISO1087_1" class="Biblio">[9]  International Organization for Standardization (committee): ISO 1087-1:2000, <i>Terminology work — Vocabulary — Part 1: Theory and application</i>. International Organization for Standardization, Geneva (2000). <a href="https://www.iso.org/standard/20057.html">https://www.iso.org/standard/20057.html</a>.</p><p id="OGC_14-065" class="Biblio">[10]  OGC 05-020r25, Technical Committee Policies and Procedures, <a href="http://docs.opengeospatial.org/pol/05-020r25/05-020r25.html">http://docs.opengeospatial.org/pol/05-020r25/05-020r25.html</a> (2017)</p><p id="W3C_CURIEs" class="Biblio">[11]  W3C: W3C curie, <i>CURIE Syntax 1.0</i>. World Wide Web Consortium <a href="https://www.w3.org/TR/curie/">https://www.w3.org/TR/curie/</a>.</p><p id="W3C_SKOS" class="Biblio">[12]  W3C: W3C skos-reference, <i>SKOS Simple Knowledge Organization System Reference</i>. World Wide Web Consortium <a href="https://www.w3.org/TR/skos-reference/">https://www.w3.org/TR/skos-reference/</a>.</p><p id="OGCDEF" class="Biblio">[13]  OGC Definitions Server, Available at <a href="http://www.opengis.net/def">http://www.opengis.net/def</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></main><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
+  <script>
+    $("#toc").on('click', 'li', function(e) {
+    $(this).parent().find('li.toc-active').removeClass('toc-active');
+    $(this).addClass('toc-active');
+});
+  </script>
+
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      if(!jqNav.length || !jqToggle.length) {
+        return;
+      }
+
+      const navWidthExpanded = jqNav.outerWidth();
+      const bodyPaddingLeftExpanded =
+        parseFloat(jqBody.css('paddingLeft')) > 0 ?
+          jqBody.css('paddingLeft') : navWidthExpanded + 'px';
+      const expandedToggleLeft = navWidthExpanded + 'px';
+      let bandWidth = 0;
+
+      $('.document-stage-band:visible, .document-type-band:visible')
+        .each(function() {
+          const bounds = this.getBoundingClientRect();
+          bandWidth = Math.max(bandWidth, bounds.right);
+        });
+
+      const toggleWidth = jqToggle.outerWidth();
+      const collapsedToggleLeft = bandWidth + 'px';
+      const collapsedBodyPaddingLeft = bandWidth + toggleWidth + 'px';
+      jqToggle.css({
+        'left': jqNav.is(':visible') ? expandedToggleLeft : collapsedToggleLeft,
+        'top': '0px'
+      });
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const navLeft = isNavVisible ? '-' + navWidthExpanded + 'px' : '0px';
+        const bodyPaddingLeft =
+          isNavVisible ? collapsedBodyPaddingLeft : bodyPaddingLeftExpanded;
+        const toggleLeft =
+          isNavVisible ? collapsedToggleLeft : expandedToggleLeft;
+
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+        jqToggle.stop(true, true);
+
+        if(!isNavVisible) {
+          jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
+        });
+        jqBody.animate({'paddingLeft': bodyPaddingLeft}, animationSpeed);
+        jqToggle.animate({'left': toggleLeft}, animationSpeed);
+      });
+    })();
+  </script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div ></div>", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
+  <script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+//
+// AnchorJS - v4.2.2 - 2020-04-20
+// https://www.bryanbraun.com/anchorjs/
+// Copyright (c) 2020 Bryan Braun; Licensed MIT
+//
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+// @license-end
+  </script>
+    <script>
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+<script>
+const activeBtns = document.querySelectorAll('.collapsible.active')
+
+// check if there are any active buttons, and open the content for each of them as default
+if (activeBtns.length) {
+    activeBtns.forEach(btn => {
+        const content = btn.nextElementSibling
+        content.style.maxHeight = content.scrollHeight + 'px'
+    })
+}
+</script>
+
+</html>
