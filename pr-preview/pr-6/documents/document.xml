@@ -1,0 +1,1684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.9" schema-version="v2.1.6" flavor="ogc">
+<bibdata type="standard">
+<title language="en" type="main">OGC Name Type Specification - definitions - part 1 – basic name</title>
+<docidentifier type="ogc-internal" primary="true">09-048r6</docidentifier><docidentifier type="ogc-external">http://www.opengis.net/doc/POL-NTS/DEF-1/1.3</docidentifier><docnumber>09-048r6</docnumber><date type="published"><on>2029-06-03</on></date><date type="issued"><on>2029-05-29</on></date><date type="received"><on>2029-03-28</on></date><contributor><role type="author"/><organization>
+<name>OGC</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>CSIRO</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Gobe Hobona</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Simon Cox</completename></name>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Open Geospatial Consortium</name>
+<subdivision type="Committee">
+<name>technical</name>
+</subdivision><abbreviation>OGC</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></contributor><edition>27.0</edition><language>en</language><script>Latn</script><abstract><p>The mission of the OGC Naming Authority (OGC-NA) is to provide the means through which OGC resources such as OGC documents, namespaces and ontologies can be controlled and managed such that they can provide clear and well-defined names and definitions. In the terminology defined in ISO 19135, OGC-NA is the Control Body for the register of OGC Names. This document specifies a rule for constructing OGC names that may be used for identifying definitions, as well as rules for formally representing the meanings of the definitions.</p>
+</abstract><status><stage>draft</stage></status><copyright><from>2029</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>policy</keyword><keyword>naming authority</keyword><keyword>definitions</keyword><ext><doctype>policy</doctype><flavor>ogc</flavor></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>false</stage-published></semantic-metadata>
+<presentation-metadata><document-scheme>2026</document-scheme><color-admonition-caution>rgb(79, 129, 189)</color-admonition-caution><color-admonition-editor>rgb(79, 129, 189)</color-admonition-editor><color-admonition-important>rgb(79, 129, 189)</color-admonition-important><color-admonition-note>rgb(79, 129, 189)</color-admonition-note><color-admonition-safety-precaution>rgb(79, 129, 189)</color-admonition-safety-precaution><color-admonition-tip>rgb(79, 129, 189)</color-admonition-tip><color-admonition-todo>rgb(79, 129, 189)</color-admonition-todo><color-admonition-warning>rgb(79, 129, 189)</color-admonition-warning><color-background-definition-description>rgb(242, 251, 255)</color-background-definition-description><color-background-definition-term>rgb(215, 243, 255)</color-background-definition-term><color-background-page>rgb(33, 55, 92)</color-background-page><color-background-table-header>rgb(33, 55, 92)</color-background-table-header><color-background-table-row-even>rgb(252, 246, 222)</color-background-table-row-even><color-background-table-row-odd>rgb(254, 252, 245)</color-background-table-row-odd><color-background-term-admitted-label>rgb(223, 236, 249)</color-background-term-admitted-label><color-background-term-deprecated-label>rgb(237, 237, 238)</color-background-term-deprecated-label><color-background-term-preferred-label>rgb(249, 235, 187)</color-background-term-preferred-label><color-background-text-label-legacy>rgb(33, 60, 107)</color-background-text-label-legacy><color-secondary-shade-1>rgb(0, 177, 255)</color-secondary-shade-1><color-secondary-shade-2>rgb(0, 177, 255)</color-secondary-shade-2><color-text>rgb(88, 89, 91)</color-text><color-text-title>rgb(33, 55, 92)</color-text-title><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_5fd8eaf0-67f0-99c8-cc0f-4aa9014be8dd" obligation="normative">
+<title id="_19604a82-a482-3c87-1356-705ef7b11f09">Copyright notice</title>
+<p id="_80f87da6-d040-2990-4091-2d47560da00c" align="center">Copyright © 2029 Open Geospatial Consortium<br/> To obtain additional rights of use, visit <link target="https://www.ogc.org/legal"/></p>
+</clause>
+
+<clause id="_6908548e-204b-56e7-9062-6924cccf2315" obligation="normative">
+<title id="_db83e2f6-5841-eaeb-0d35-1277ee9d3f6a">Note</title>
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" align="left">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" align="left">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7" obligation="normative">
+<title id="_3788828e-41fb-3895-6acc-52071643abed">License Agreement</title>
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <link target="https://www.ogc.org/license"/></p>
+</clause>
+</license-statement>
+
+<legal-statement>
+
+<clause id="_7e312e4d-8814-893e-f10e-c3e51489bd3c" obligation="normative">
+<title id="_37bc7c72-0d8f-ba1e-c43f-647a0e7edf21">Notice</title>
+<p id="_9b894c3d-7c8b-fb29-c502-07bab3a7a276">This document is not an OGC Standard. This document is an OGC Policy and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+
+<p id="_7dd2e025-00fe-425f-0a1c-a52493226acc">Further, an OGC Policy should not be referenced as required or mandatory technology in procurements.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+</feedback-statement>
+</boilerplate><preface><abstract id="_25e34fd5-d649-b291-9c59-a529ab1a94c2"><title id="_37c298bf-5619-a5c6-817b-d777b5ead0b1">Abstract</title><p id="_e4e3e8d4-3d0d-3604-9f5a-c7669e135e9e">The mission of the OGC Naming Authority (OGC-NA) is to provide the means through which OGC resources such as OGC documents, namespaces and ontologies can be controlled and managed such that they can provide clear and well-defined names and definitions. In the terminology defined in ISO 19135, OGC-NA is the Control Body for the register of OGC Names. This document specifies a rule for constructing OGC names that may be used for identifying definitions, as well as rules for formally representing the meanings of the definitions.</p>
+</abstract><foreword id="_b4ae0685-ec0f-a8b2-2b70-790430757c77" obligation="informative">
+<title id="_67001cd2-f272-ceff-f849-7a43bc65e67d">Preface</title>
+<p id="_71cfbd01-1a98-470f-a176-5de7e109ce64">This document specifies a rule for constructing OGC names that may be used for identifying definitions.</p>
+</foreword><clause type="security" id="_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b" obligation="informative">
+  <title id="_7974edf1-0459-03d8-f74c-5b72ab98795c">Security considerations</title>
+  <p id="_927733ee-e695-c49f-5120-5f08eaf68e0c">No security considerations have been made for this document.</p></clause>
+<clause id="_7e1e502b-fd1f-f05e-8588-3004114a45d8" type="submitters" obligation="informative">
+<title id="_454e8fd9-fbfc-9c82-30fc-9121a2f52315">Submitters</title>
+<p id="_6e1b734b-e32c-864b-59a1-81792b76695c">All questions regarding this submission should be directed to the editor or the submitters:</p>
+
+<table id="_4dbdb442-31bb-137d-96ce-71a5c0489d77" unnumbered="true"><tbody><tr id="_c4fc1fb2-75c0-7d0a-b52e-111e87f4a829"><td id="_a7738332-a145-8faa-723b-af71e1ccccf6" valign="middle" align="left">Name</td>
+<td id="_88d632c9-1ff3-7cf1-d412-a86674180463" valign="middle" align="left">Affiliation</td>
+</tr><tr id="_3be2cf1b-c247-383d-c1d5-5c180a67a2fd"><td id="_c01e3a36-e1cc-0a15-02a2-f60971db4447" valign="middle" align="left">Gobe Hobona</td>
+<td id="_73b1079a-8bac-8a27-655b-2cecb6807c49" valign="middle" align="left">OGC</td>
+</tr><tr id="_296be6d0-c62a-1969-2617-b0b3f349eb4b"><td id="_bd92ab24-3dc4-fd9d-f7a3-85ee0fc65e01" valign="middle" align="left">Simon Cox</td>
+<td id="_b81fd030-3b49-49d9-fb3e-c99722669041" valign="middle" align="left">CSIRO</td>
+</tr></tbody>
+</table>
+</clause></preface><sections>
+
+
+
+<clause id="_b52692e9-a023-858a-8c1e-67ec6187c92b" type="scope" obligation="normative">
+<title id="_f70b6ff6-6131-0e24-81e1-850dbe94b63d">Scope</title>
+<p id="_ec749b49-e725-3092-bd2d-f36d26f1401c">An OGC name may be provided for a definition of a type of object broadly classified as a “concept” or system parameter, including:</p>
+
+<ul id="_44c70118-489d-53d4-a33f-40c0b456e8e7"><li><p id="_101bad15-b271-f860-82bd-8d3d6ef6cf81">Coordinate Reference Systems (CRSs) and related objects.</p>
+</li>
+<li><p id="_3261d7f2-98c3-e05a-5a44-023635a0df1a">Data types</p>
+</li>
+<li><p id="_df0aed4c-3ba4-e6a3-8027-cd1f03f03d28">Feature and property types</p>
+</li>
+<li><p id="_ff4af573-5251-f612-2aee-843c11d366c3">Functions</p>
+</li>
+<li><p id="_35f32558-01a6-27ec-1591-20028c7f8c50">Nil values</p>
+</li>
+<li><p id="_6e499cea-34ca-a6e1-7c74-04ecef900203">Units of measure</p>
+</li>
+</ul>
+
+<p id="_cb58fd62-9255-dbbf-ca9f-fd32b63fd3ac">The precise scope of definitions that may be identified with OGC Names is provided by the set of items in the register at <link target="http://www.opengis.net/register/ogc-na/def-type"/></p>
+
+<p id="_0b973bce-a8e6-e6c7-4733-d3126c8f57e4">Note that “Definitions” may be contrasted with “instances”, which shall use names constructed following rules provided in other OGC Name Type Specifications.</p>
+</clause>
+
+<clause id="_9ad93c2f-02d2-7f88-c8ca-56de2eb090cc" anchor="Conformance" type="conformance" obligation="normative">
+<title id="_e246d3c1-cf3f-232c-cb69-d9b3793ef60f">Conformance</title>
+<p id="_515c318b-4bf0-d77e-93c0-f04a996467fc">This policy defines part 1 of the OGC name-type specification for definitions.</p>
+
+<p id="_dd2c6767-74be-273d-487b-eb186185852a">Conformance with this policy shall be checked using the naming rule and naming assignment policy defined in this document.</p>
+</clause>
+
+
+
+<clause id="_b68dcd45-0d29-c1f6-1727-0ea64c41fdd2" obligation="normative" type="terms">
+<title id="_d198f6ed-2192-1538-1629-64f36b8c460b">Terms and definitions</title><p id="_fd16447f-e831-b957-4070-3e82ddcd6f73">This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+
+<p id="_316a9967-2d19-a471-57e7-e352a4ce176b">This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+
+<p id="_a605e310-fb97-016b-65e8-0d636b9ef70c">For the purposes of this document, the following additional terms and definitions apply.</p>
+<terms id="_cc1c3716-cbc6-d96e-ec65-acf63b4d5176" obligation="normative">
+<title id="_e6d9e30b-ba32-3676-ec96-82039e04fb4b">Terms and definitions</title>
+<term id="_c69f39c6-d67a-ea59-6e21-786884856055" anchor="term-Concept"><preferred><expression>
+<name>Concept</name>
+</expression>
+</preferred>
+<definition id="_b85aabcf-e2a7-38df-d3dd-cbde0af2e876"><verbal-definition id="_7960069d-1e11-0c60-43c5-56dd0f1c4553"><p id="_95cfdda4-e28e-9844-18a9-5021d576715b">unit of knowledge created by a unique combination of characteristics (source: ISO 1087‑1:2000)</p></verbal-definition></definition>
+ </term>
+
+<term id="_e823bc7d-8732-f36b-f2d0-caf77aacd520" anchor="term-control-body"><preferred><expression>
+<name>control body</name>
+</expression>
+</preferred>
+<definition id="_cccc9257-fc6e-d1a2-c27a-eb27e322e19e"><verbal-definition id="_a9f6b8bf-911d-baa4-38ee-70b5a61e9ad0"><p id="_9462d3c1-f42d-78ec-37b8-ba79762496c1">group of technical experts that makes decisions regarding the content of a register (source: ISO 19135)</p></verbal-definition></definition>
+ </term>
+
+<term id="_cb3e1064-47a8-0d29-838d-efc6fa1e5368" anchor="term-register"><preferred><expression>
+<name>register</name>
+</expression>
+</preferred>
+<definition id="_9037dbe7-640f-8f07-5d08-88c19b97abd4"><verbal-definition id="_d87572ed-c774-2e08-7a5d-6d1fa9f5e2f1"><p id="_61a67edb-97c7-b3ab-699a-6545ec5d2b8b">set of files containing identifiers assigned to items with descriptions of the associated items (source: ISO 19135)</p></verbal-definition></definition>
+ </term>
+</terms>
+</clause>
+
+<clause id="_26aa2a4b-1cb3-cdda-6fe7-375c695dc126" anchor="conventions" obligation="normative">
+<title id="_f9d680fa-eb91-8fb3-1391-c5e4a3bdb0cd">Conventions</title>
+<p id="_f7738e69-658c-6645-6cad-e1765c1b25ef">This document uses the normative terms (SHALL, SHOULD, etc) defined in Subclause 5.3 of [OGC 06-121r3], which is based on the ISO/IEC Directives, Part 2: Rules for the structure and drafting of International Standards. In particular, the word ‘shall’ (not ‘must’) is the verb form used to indicate a requirement to be strictly followed to comply with this specification.</p>
+
+<p id="_68b41325-c12b-387c-e556-bce7ec76325d">Name production rules in this document are expressed using ABNF (IETF RFC 5324).</p>
+</clause>
+
+<clause id="_8aab076a-3bf0-00ea-eedd-ca226d78ea06" anchor="naming_rule" obligation="normative">
+<title id="_e84e75a3-a3d4-353a-d30d-aaa2fff5717f">Naming Rule</title>
+<p id="_e2f88925-c57f-8379-1420-93a971691bfc">This section describes the naming rule.</p>
+
+<clause id="_7f91baf2-1171-263b-32fd-3f874cbe161b" obligation="normative">
+<title id="_750f3354-b6b6-e318-608e-ae132e62b087">OGC name schemes</title>
+<p id="_79942ed5-f702-d031-4084-987234939417">Two URI schemes <link target="https://datatracker.ietf.org/doc/html/rfc3986">IETF RFC 3986</link> are defined by OGC to provide persistent names for resources of interest in geographic information infrastructures. The generic syntax for OGC names is described in <link target="https://docs.opengeospatial.org/pol/09-046r6.html">OGC Naming Authority – Procedures</link>.</p>
+
+<p id="_a90818e0-db77-ee4c-3af8-94d588a425d5">The generic syntax for OGC http URIs is</p>
+
+<sourcecode id="_60fa90c7-4fa7-4009-8388-03c81cf8c5f3" unnumbered="true"><body>  URI = "http://www.opengis.net/" OGCResource "/" ResourceSpecificPath</body></sourcecode>
+
+
+<p id="_48bf3516-65ee-7e93-4289-e883999c34f4">The generic syntax for OGC URNs is <link target="https://datatracker.ietf.org/doc/rfc5165/">IETF RFC 5165</link></p>
+
+<sourcecode id="_b5b6043c-4e07-7c84-b1d6-db7d66164336" unnumbered="true"><body>  URN = "urn:ogc:" OGCResource ":" ResourceSpecificString</body></sourcecode>
+
+
+<p id="_2c1873ba-b554-9057-dba0-853b30f70d5b">The following ABNF adapted from <link target="https://datatracker.ietf.org/doc/html/rfc3986">IETF RFC 3986</link> provides some basic definitions required in the rest of this document.</p>
+
+<sourcecode id="_84d2f50a-1b4a-490a-c668-6dc081c2061e" unnumbered="true"><body>  segment       = *pchar
+  segment-nc    = *pchar-nc
+  segment-nz    = 1*pchar
+  segment-nz-nc = 1*pchar-nc
+  pchar         = unreserved / pct-encoded / sub-delims / ":" / "@"
+  pchar-nc      = unreserved / pct-encoded / sub-delims / "@"
+  pct-encoded   = "%" HEXDIG HEXDIG
+  unreserved    = ALPHA / DIGIT / "-" / "." / "_" / "~"
+  reserved      = gen-delims / sub-delims
+  gen-delims    = ":" / "/" / "?" / "#" / "[" / "]" / "@"
+  sub-delims    = "!" / "$" / "&amp;" / "'" / "(" / ")"
+                  / "*" / "+" / "," / ";" / "="</body></sourcecode>
+
+</clause>
+
+<clause id="_852037f4-d3cd-bef9-f900-aea5fe2d7853" obligation="normative">
+<title id="_3dbaf951-29f6-f151-b8ab-d9deec01e9c2">Production rule for definition URIs</title>
+<p id="_bf05c971-fbb5-4429-7635-28a28552b7c3">The basic form for an OGC name that identifies a definition shall be produced using the following rule:</p>
+
+<sourcecode id="_32f17df0-64b0-e01a-24c4-e3dac65919bc" unnumbered="true"><body>  OGCResource   = "def"
+  ResourceSpecificPath = definition-type "/" authority "/" version "/" code
+  ResourceSpecificString = definition-type ":" authority ":" versionURN ":" codeURN
+  definition-type = segment-nz-nc ; a token from the register of OGC definition types1
+  authority     = segment-nz-nc ; a token from the register of OGC authorities2
+  version       = segment-nz-nc / "0" ; use 0 for un-versioned names
+  code          = segment-nz-nc *( "/" segment-nz-nc )
+  versionURN    = segment-nc ; this may be a zero-length string
+  codeURN       = segment-nz-nc *( ":" segment-nz-nc )</body></sourcecode>
+
+
+<p id="_b02482e3-5e04-6366-ce0d-85402a7e9f50">“version” or “versionURN” is an optional field. For un-versioned definitions:</p>
+
+<ul id="_49c2be51-b4f8-317b-d60b-1a24079c9d05"><li><p id="_94c03820-1df2-6ad8-39ba-31ca2ddc979e">within the http URI form the version field shall be “0”</p>
+</li>
+<li><p id="_0d25e9dc-31b4-f5eb-147e-fe147fe08271">within the URN form versionURN shall be a zero-length string—so an un-versioned definition can be detected by a pair of colons “::”.</p>
+</li>
+</ul>
+
+<p id="_abfe50c0-72a9-f0a4-c51e-ed8beeb46327">The actual code may be composed of a sequence of fields delimited by “/” in the http URI form, or “:” in the URN form.</p>
+
+<p id="_3fcab615-98f7-c90e-4c70-b16fc1fc7cd5">Note that the register of definition types (<link target="http://www.opengis.net/register/ogc-na/def-type"/>) was previously presented as Table 2 in the OGC Best Practice Definition identifier URNs in OGC namespace OGC 07-092r1.</p>
+
+<p id="_1826e109-c1c0-c021-c3c1-6607c60b861d">Note that the register of authorities (<link target="http://www.opengis.net/register/ogc-na/authority"/>) was previously presented as Table 1 in the OGC Best Practice Definition identifier URNs in OGC namespace OGC 07-092r1</p>
+</clause>
+
+<clause id="_407d30d2-faf8-84d4-2370-2079b28f9386" obligation="normative">
+<title id="_bf8425e1-1ca9-69c1-5039-c801ff0cdcbf">Compact URIs</title>
+<p id="_c194aa00-bd13-8d77-8d82-e5f8905b594c">Compact URIs (<link target="https://www.w3.org/TR/curie/#P_curie">CURIEs</link>) are an abbreviation for strings that are intended to represent URIs. Their purpose is to support the definition of scoped names that map to URIs.</p>
+
+<p id="_8c89d0e4-a31a-4188-7039-c0add1ee180b">The URI of <strong>any</strong> definition registered in OGC-NA controlled registers may be represented in shortened form through use of CURIEs.</p>
+
+<clause id="_4c4b5eac-8766-996d-b467-0368ca5c93ff" obligation="normative">
+<title id="_d8f19a0c-f161-149b-dc38-3bfd97082496">Register of CURIEs</title>
+<p id="_0e488196-e1d7-dc6c-ed08-ce91df12c78d">The OGC-NA maintains a register of CURIEs at <link target="http://www.opengis.net/def/curie"/>. The register shall be used as a look-up for CURIEs commonly used in OGC Standards.</p>
+
+<p id="_ffb2d080-7d66-c8d8-c4fe-21dae7832f9f">CURIEs recorded in the register shall be treated as case sensitive.</p>
+</clause>
+
+<clause id="_d78ec8b9-abc9-9f33-2603-03924d8bb5a6" obligation="normative">
+<title id="_2fff1221-f09c-a414-2cf6-df7e02e0a8cc">Use of Safe CURIEs</title>
+<p id="_4f2e9d84-2e3f-0794-3d68-d26aedf88a29">OGC Standards should only allow <link target="https://www.w3.org/TR/curie/#P_safe_curie">safe CURIEs</link>, unless support for other forms of CURIEs is inherited from another standard (e.g. GeoSPARQL inherits its support of CURIEs from SPARQL). Safe CURIEs are specified in square brackets. For example, the safe CURIE <tt>[EPSG:3857]</tt> may be used in an API request such as : <tt>https://example.org/foo/collections/bar/items?crs=<bookmark id="_fc363a1c-90eb-dfad-02c1-af20f44548f8" anchor="EPSG:3857"/></tt></p>
+</clause>
+
+<clause id="_dc2d6741-366c-94c3-026f-46f680fd8084" obligation="normative">
+<title id="_ea86c690-3f37-cce0-00b7-335d06635c22">Applying CURIEs to Coordinate Reference Systems</title>
+<p id="_e1cea8f7-76cd-e9a5-675e-bed079dc3529">CURIEs representing a shortened form of the URI of a registered Coordinate Reference System (CRS) may be used as an alternative to the full URI by following the syntax below:</p>
+
+<p id="_da62067d-66cc-6e9b-84da-9c0e51ef8b61"><tt>{authority}:{identifier} == link:++http://www.opengis.net/def/crs/{authority}/0/{identifier}</tt>++[]</p>
+
+<p id="_f731a96d-fadf-99f6-bbc6-3c69fe0f85aa">For example, EPSG:4326 may be used to represent <link target="http://www.opengis.net/def/crs/EPSG/0/4326"/></p>
+
+<p id="_68bb6e1f-1a41-3a69-1356-8ee72abd50c5">When a CURIE is used to represent a CRS, the following shall apply:</p>
+
+<ol id="_d041582e-a7d1-67ff-cc24-3dc1f57f4a31" type="alphabet"><li><p id="_42039469-46aa-e2fb-28dc-b01fe9a89999">The version segment of the URI is assumed to be equal to <tt>0</tt></p>
+</li>
+<li><p id="_afa86f2a-2bb7-749e-73b6-4ee7c28d3313">The definition-type segment shall be assumed to be equal to <tt>crs</tt>.</p>
+</li>
+<li><p id="_d4e60f6c-5f07-5b7c-c4c8-5514cd2eae26">The definition segment shall be assumed to be equal to <tt>def</tt>.</p>
+</li>
+</ol>
+
+<p id="_87c38bfb-063a-5436-ea6d-0e1d742a0145">Therefore “EPSG” as a prefix shall expand to <tt><link target="http://www.opengis.net/def/crs/EPSG/0/"/></tt>.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_160efc7a-5d3a-1860-2b50-15804729a660" anchor="name_assignment" obligation="normative">
+<title id="_6dc87a8f-4ab9-f7da-bfc3-d27fd529f905">Name Assignment and Resolution</title>
+<p id="_e1ff9414-9ffe-51e7-43d2-7c0bda9c5da9">This section describes the name assignment policy.</p>
+
+<clause id="_8123e431-f891-8b5a-7c09-433977f8d794" obligation="normative">
+<title id="_9bfc8694-fb0c-8bc4-5fdf-ebbfe3d856f0">Definition types</title>
+<p id="_f90a3b1c-aa1d-73bf-dee8-a09c0e52edf1">The register of definition types <link target="http://www.opengis.net/register/ogc-na/def-type"/> is controlled by OGC-NA. Changes to this register (additions, deletions, and supersession) shall be initiated by a submission to the OGC Naming Authority <link target="mailto:names@opengeospatial.org"/>.</p>
+</clause>
+
+<clause id="_20b3c2a7-4074-0ba7-a24e-d6a9bb363c04" obligation="normative">
+<title id="_93767f14-428b-a9a1-02c3-c868fa054b00">Authorities</title>
+<p id="_3d682db1-7410-bb6a-b883-159eaf4976ab">The register of authorities <link target="http://www.opengis.net/register/ogc-na/authority"/> is controlled by OGC-NA. Changes to this register (additions, deletions, and supersession) shall be initiated by a submission to the OGC Naming Authority <link target="mailto:names@opengeospatial.org"/>.</p>
+</clause>
+
+<clause id="_188c1666-a49c-2612-e6ef-94342ca561db" obligation="normative">
+<title id="_653160f1-dbf6-2b8f-860a-00df4c9dd80c">Names</title>
+<p id="_753679e7-e8ae-d2dd-8bd6-909d0f2cfee6">The register of names <link target="http://www.opengis.net/def/"/> is controlled by OGC-NA. Changes to this register (addition, deletion, and supersession) shall be initiated by a submission to the OGC Naming Authority <link target="mailto:names@opengeospatial.org"/>.</p>
+</clause>
+
+<clause id="_9914000c-5d1c-68cf-ebf3-1a9d08f6b80a" obligation="normative">
+<title id="_174feda9-10fd-01c5-3ca6-7fb5fc9e53eb">Names for EPSG definitions</title>
+<p id="_e20f0415-f057-4e37-5af7-3feaf7eb7da6">http URI form:</p>
+
+<p id="_28054347-66be-cd7b-e31d-1e887af65449"><link target="http://www.opengis.net/def/definitionType/EPSG/0/code"/></p>
+
+<p id="_14852b80-7acf-4074-3c6d-dc64d38776b4">URN form:</p>
+
+<p id="_5d8e7521-c0a0-3a3c-542d-77dfa75e4fb6">urn:ogc:def:definitionType:EPSG::code</p>
+
+<p id="_27ff7788-556b-6ca6-eb8f-61c5d9a8d381">In this case, the ‘authority’ part of the URI is ‘EPSG’. The ‘code’ part of the URI is the EPSG ‘code’ unique identifier of the referenced definition. Alternately, the ‘code’ part of the URI can be the EPSG ‘name’ unique identifier.  In this case, omission of the version number is recommended, as this is not required to identify a referenced record in the EPSG dataset and may even lead to confusion if a version number is provided.</p>
+
+<p id="_9fbe2a4a-1bf2-7b79-2534-0a1b2be0d426">The policy of the Survey and Positioning Committee of the International Association of Oil and Gas Producers (IOGP) is to not delete any entities.  However, if a record is found to be incorrect, that record is deprecated and replaced. When this is done, the deprecation field of the deprecated record is changed from “false” to “true”. (In some implementations, “false” may be “0” or “no”, and “true” may be “1” or “yes”). Deprecated records are also termed ‘invalid records’. When retrieving any geodetic parameters from the EPSG dataset a user therefore needs to verify whether the record(s) is / are valid or invalid. The user then has two options: (1) follow the links provided and use the valid replacing record(s), a course typically followed when spatially referencing a new dataset, or (2) retrieve the invalid, deprecated record(s) in order to undo the effects of this error in an existing spatial dataset that had been spatially referenced using the incorrect records. Note that spatial referencing using (an) invalid EPSG entities will only generate errors if the data is subsequently subjected to coordinate conversions and/or transformations.</p>
+
+<p id="_73486f94-c342-c43a-3129-32a9aa53e427">Example 1 The http URI value for EPSG CRS 3163 is:</p>
+
+<p id="_90ca768d-a97b-ca52-94b7-3672e379e2a3"><link target="http://www.opengis.net/def/crs/EPSG/0/3163"/></p>
+
+<p id="_a38b7066-7cae-f031-ae49-f79f69e79062">Example 2 The http URI value for the “WGS 84 longitude-latitude” CRS specified in Subclause B.3 of WMS 1.3 (previously referenced as CRS:84) is:</p>
+
+<p id="_9a0276e9-61b0-dd6a-bf8f-8140ce53e014"><link target="http://www.opengis.net/def/crs/OGC/1.3/CRS84"/></p>
+
+<p id="_9d162093-9517-fbc0-8d25-d1e519d6dd49">Example 3 The URN value for EPSG CRS 3163 is:</p>
+
+<p id="_f3b7706a-b26b-b167-81e9-d6a792945ca0">urn:ogc:def:crs:EPSG::3163</p>
+
+<p id="_7fa1cfdb-29bf-d256-d85c-7c5b41d219bf">Example 4 The URN value for the “WGS 84 longitude-latitude” CRS specified in Subclause B.3 of WMS 1.3 (previously referenced as “CRS:84”) is:</p>
+
+<p id="_55bcae79-2eb0-1f10-2b89-bb7d8c7931e9">urn:ogc:def:crs:OGC:1.3:CRS84</p>
+</clause>
+
+<clause id="_74e07f05-0ec7-0650-39d9-3eb4eeff28d7" obligation="normative">
+<title id="_a469c25a-772f-4db7-0555-2325f1ac58f2">Description</title>
+<p id="_656a3248-8498-7f38-2a07-c606360d30b9">Each definition shall be described using the Simple Knowledge Organization System (SKOS) vocabulary of the World Wide Web (W3C) consortium. Other vocabularies may also be used <strong>in addition</strong> to SKOS.</p>
+
+<p id="_6c5262db-5eae-c764-141a-d894d889bb02">The following predicates are mandatory for resources:</p>
+
+<ul id="_9f6ea554-a16b-ca93-aa62-9c64d7632416"><li><p id="_bd4189db-3b44-663e-94bf-fa3ff398e3a1"><strong>skos:prefLabel</strong> for providing a human-readable version of a resource’s name</p>
+</li>
+<li><p id="_38563572-d5da-1adf-e8c3-e752f6601fd6"><strong>dcterms:created</strong> for stating the date the resource was created in the register</p>
+</li>
+<li><p id="_851e1246-4385-0657-d7fd-488e26571e45"><strong>dcterms:modified</strong> for stating the date the resource was modified in the register (mandatory if the resource has been modified)</p>
+</li>
+<li><p id="_0638f707-6fee-75c4-16cb-1773710ab1bb"><strong>policy:status</strong> for indicating whether the resource is valid, retired, superseded, or under consideration</p>
+</li>
+<li><p id="_c45bce9e-9362-c936-6be6-e63e9236b6bf"><strong>skos:definition</strong> for providing a human-readable description of the resource</p>
+</li>
+<li><p id="_ff108ac6-deca-af07-de9c-b745d6ef0f00"><strong>rdfs:label</strong> for providing a human-readable version of a resource’s name (used for compatibility with non-SKOS systems)</p>
+</li>
+</ul>
+
+<p id="_1751d249-c16d-1990-a9de-765362bca867">An example of a definition described in SKOS is shown below.</p>
+
+<sourcecode id="_ae07bde3-7ede-d6eb-0291-85c75eb72856" lang="ttl" unnumbered="true"><body>@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix policy: &lt;http://www.opengis.net/def/metamodel/ogc-na/&gt; .
+@prefix status: &lt;http://www.opengis.net/def/status/&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+&lt;http://www.opengis.net/def/serviceType/ogc/wcs/2.0&gt;
+  rdf:type skos:Concept ;
+  dcterms:created   "2018-03-13"^^xsd:date ;
+  dcterms:modified  "2018-04-16"^^xsd:date ;
+  policy:status     status:valid ;
+  skos:broader &lt;http://www.opengis.net/def/serviceType/ogc/wcs&gt;;
+  rdfs:label "OGC Web Coverage Service 2.0"^^xsd:string ;
+  rdfs:seeAlso &lt;http://www.opengis.net/spec/wcs/2.0&gt; ;
+  skos:prefLabel "OGC Web Coverage Service 2.0"@en ;
+  skos:definition "A Web Coverage Service (WCS) offers multi-dimensional coverage data for access over the Internet" .</body></sourcecode>
+
+</clause>
+
+<clause id="_4bdf5c8e-d59f-07b8-f06f-11df3e8d3406" obligation="normative">
+<title id="_e25e6d78-29e9-74cb-db35-3276662d2435">Resolution of the Same Definition to Different Encodings</title>
+<p id="_5062dfc1-583a-0f2e-07a2-3c9aa6a0e83f">The definition of a resource may be accessed in any number of encodings that are supported by a resolution service or resolver. A resolution service and a client application shall negotiate the encoding format to use through the content negotiation process defined in <link target="http://docs.ogc.org/DRAFTS/19-072.html#rfc7231">IETF RFC 7231</link>. A non-exhaustive list of example encodings relevant to different resources is below:</p>
+
+<ul id="_3787936c-60cc-a28e-30ac-d700b1e994f4"><li><p id="_0dca8003-c4e8-dec3-9e7f-2e850e4906b9">Geography Markup Language (GML): Supports the encoding on features, coordinate reference systems, and codelists.</p>
+</li>
+<li><p id="_4e8cc9a2-3bea-bbd2-1c55-f9e27fc75466">Well Known Text (WKT): Supports the encoding on features, and coordinate reference systems.</p>
+</li>
+<li><p id="_bc13e4e3-a673-4d12-eaaf-f92974792d95">Simple Knowledge Organization System (SKOS) in Resource Description Framework (RDF): Supports the encoding concepts, glossaries, and thesauri</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_4f5c6795-7233-59ed-5ae6-3ac3cbd6dd23" obligation="normative">
+<title id="_6ce199a1-de94-0b22-07c0-5e0ef0589285">Assigning and Handling Name Aliases</title>
+<p id="_303ab40e-5f4e-1ca6-8af9-60ad04267bcb">Where the URI of a named resource has an alias, the OGC-NA shall entail copies of all the properties for both forms of URI, and create inverse <link target="https://www.w3.org/TR/owl-ref/#sameAs-def">sameAs</link> relationships. For example, upon registering the resource <tt>example-B</tt> as an alias of <tt>example-A</tt>,</p>
+
+<ul id="_38228c1a-e215-6819-60ec-6f840a5fdfb9"><li><p id="_624119f3-d93b-bfc0-cec4-9cf681a39bf5">all of the properties of  <tt>example-A</tt> shall be copied to <tt>example-B</tt></p>
+</li>
+<li><p id="_dd492bdb-ad83-000f-6c0d-57e574b824f0">the statement that <tt>example-B</tt> is sameAs <tt>example-A</tt> shall be declared</p>
+</li>
+<li><p id="_4f5e4968-00a3-d078-e54c-1a60fbe300b4">the statement that <tt>example-A</tt> is sameAs <tt>example-B</tt> shall be declared</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+
+
+
+
+
+</sections><annex id="_bbfaf949-9d5e-a148-b619-8f6cb9cf89ae" anchor="annex_background" obligation="Informative">
+<title id="_4e159f24-154c-daf6-e562-5a88c4ab013b">Background</title>
+<clause id="_3746502c-c629-641f-395b-770661f16f00" obligation="Informative">
+<title id="_06231a12-b4e8-7cc0-a40e-9537b8ac699d">Introduction</title>
+<p id="_7019b9e2-2cf8-b074-e431-b1f37212e7b6">This annex includes useful information from the previous document OGC 07-092r3</p>
+</clause>
+
+<clause id="_589a5b13-c6e7-bd3f-3e30-7c7f7783d04f" obligation="Informative">
+<title id="_713e2b61-4710-7061-f387-b32dc42686f4">URNs for Coordinate Reference Systems</title>
+<p id="_85499cca-885a-94e7-bb1e-a74d50116033">One frequent use of URNs is referencing the CRS for an OGC Web Service input or output; another use is referencing the CRS for a feature geometry or a bounding box. These URNs are used to identify the referenced CRS, not to transfer a definition of that CRS. Most of this material is also applicable to referencing CRS components and Coordinate Operations and their components, often referred to as objects.</p>
+
+<p id="_be00128f-69e3-9c81-a1a2-67b5193c7b22"><strong>NOTE 1:</strong> Subclause D.14 of [OGC 06-121r3] summarizes many of the requirements considered when specifying how to reference CRSs.</p>
+
+<p id="_1473bc2f-498e-ee1f-aa7e-0773f7d11e9f">Document [OGC 06-121r3] specifies that each specific OWS shall always reference a CRS by using an XML attribute or element with the type anyURI. Such an anyURI value can be used to reference a CRS whether the definition of that CRS is included in the same data transfer, is NOT included in the same data transfer, cannot be electronically accessed, or can be electronically accessed.</p>
+
+<p id="_6522a51e-be40-1b88-469d-9b78a7521a5c"><strong>NOTE 2:</strong> In XML Schemas, the anyURI data type is the standard way to briefly reference (or cite) a value specified elsewhere. XML attributes with the type anyURI include the GML defined attributes named gml:srsName, gml:uom, xlink:href, and gml:codeSpace.</p>
+
+<p id="_70f82095-41ba-d899-49e5-4d4675bcb424">When using an XML attribute or element with the type anyURI to reference a CRS, CRS-related, or other object, that URI shall have a value which uses one of two alternative URI formats:</p>
+
+<p id="_927aca37-170b-7c2e-90f0-3a0ad9f36cfc">a) Universal Resource Locator (URL), with standard form. The URL format should be used whenever the referenced definition is known to be electronically available using this standard URL.</p>
+
+<p id="_c5a06d2e-1282-5ba7-4a89-f21420205d92">b) Universal Resource Name (URN), with a specified form. The URN format shall be used whenever the referenced definition is not, or might not be, available using a URL. This URN shall reference data that is specified by some ‘authority’ and is ‘well-known’ to both client and server software, including multiple clients and multiple servers.</p>
+
+<p id="_3fe5121e-bdbc-0581-62b5-c1aa0487d500"><strong>NOTE 3:</strong> Two widely-used forms of URI are URL and URN. We are specifying using URNs as the way of citing CRS-related definitions that are “well-known” but are not adequately electronically available using a URL.</p>
+
+<p id="_bdb4b63b-b9e2-4b85-eab5-be24fd0a536f">Subclause 10.3.2 of the OWS Common specification [OGC 06-121r3] specifies when and how to use URLs to reference a CRS or CRS-related object. Use of URNs is expected to be more common than use of URLs, and specific OWS Implementation Specifications are expected to use many standard URN values.</p>
+</clause>
+
+<clause id="_3931b59a-46a6-2149-eca4-cd07115aef7d" obligation="Informative">
+<title id="_c637e04a-1530-4a56-836d-669712a55047">URNs and URLs</title>
+<p id="_9d98c81a-f217-79c9-ec11-2df6b0715de8">URNs [IETF RFC 2141] are a kind of URI [IETF RFC 2396], and may be used as the value of references where a URI is required. This is often the case in GML-based encodings (e.g., the standard XML attributes xlink:href, xlink:role, xlink:arcrole, srsName, uom, codeSpace) and in OGC Web Services (OWS) operation requests and responses.</p>
+
+<p id="_2eca34df-863d-4da6-4b5f-8d0f2ab5a8cb">A URN serves as a persistent identifier of a resource or concept. A detailed description of the resource may also be available online, with a resource locator (URL) providing an access point. In general, there is no direct mapping or algorithm to obtain a URL for the resource designated by a URN. URNs are intended to be more persistent than URLs, so that they remain valid even if a resource description is relocated. However, a resolution service or resolver is expected to provide a URL corresponding to a URN.</p>
+</clause>
+
+<clause id="_92c11b6f-76f1-a9aa-f422-469fde10f1f1" obligation="Informative">
+<title id="_6551f231-cfd0-17f8-b8dc-aefc02c5ce2d">URN and schema component designators</title>
+<p id="_d0db071d-5a0f-61c5-7ebd-cd002d0362d7">In a few places in OWS interfaces, an identifier for an XML component is required. In these cases, it is important that the identifier reference the actual schema definition, which may then be used as the template for an OWS request or response.</p>
+
+<p id="_37b97488-30a1-938b-7a6b-10660fea9622">A number of options are available for identification of schema components. The W3C XML Schema recommendation provides QName (qualified name – see XML Schema Part 2, clause 3.2.18). A QName has the lexical form ns:name where ‘ns’ is an XML namespace prefix for which a namespace declaration is in scope. The QName thus corresponds with an identifier tuple {namespace, local name} where ‘namespace’ is the fully scoped identifier for the XML namespace. In contrast, a URN identifier is complete, and does not depend on context for resolution of the namespace prefix.<note id="_c70d5817-40b0-fa6b-f4d7-b142937bc291"><p id="_f6eff604-01d1-269d-3fdc-fc5695bcf441">The W3C XML activity is currently considering a more complete scheme for identification of schema components, documented in the working draft XML Schema: Component Designators <link target="http://www.w3.org/TR/xmlschema-ref/"/>.</p>
+</note></p>
+
+
+
+<p id="_685bd880-01f5-a354-54ef-7d78c8194ad4">In OWS interfaces, XML components are generally identified using a QName.</p>
+
+<p id="_26910d27-af63-1343-c7fe-ad88855827b0">While there is some overlap of the meaning of schema component designators with the OGC URN scheme used for dataTypes and featureTypes, it should be understood that a URN identifies the concept, and not just its XML and XML Schema implementation. Of course, the concepts denoted by identifiers from the featureType branch generally have XML Schema implementations, so direct mappings are implied. Note that the mapping may be one-to-many, for example to manage versioning of the XML schema implementation independent of versioning of the concept.</p>
+</clause>
+</annex><annex id="_0714178c-dde6-07a8-ca8e-c73952e03b3a" obligation="informative">
+<title id="_7ad1f784-2d0c-3e42-710d-6841d8df0a23">Revision History</title>
+<table id="_2260ced5-7a46-e72d-fb01-f45ff7d36e10" width="90%"><thead><tr id="_2c642e4b-3600-2c71-77f2-b629552d5e78"><th id="_dffc1185-42fd-b5c9-610a-4d6a0171cc84" valign="middle" align="left">Date</th>
+<th id="_5a6073c0-e16b-dcbf-4c04-846bf8c69f64" valign="middle" align="left">Release</th>
+<th id="_4f1a7a91-ecdc-ec78-08ad-cb62edd128a6" valign="middle" align="left">Editor</th>
+<th id="_e8dbb575-283a-ca60-e7bc-3c6460a45a23" valign="middle" align="left">Primary clauses modified</th>
+<th id="_25a85fd9-8e83-5a37-4fc5-035200fec6e4" valign="middle" align="left">Description</th>
+</tr></thead>
+<tbody><tr id="_3e991d86-00ef-f9b6-6cf8-987a6d0c204e"><td id="_2900a462-aa5b-a9a8-f8aa-fd84776641c2" valign="middle" align="left">2008-12-04</td>
+<td id="_a907fd7a-1b10-6b2b-f14e-3e07d87708e9" valign="middle" align="left">0.1</td>
+<td id="_a8301807-1219-de02-31e0-dda131df1c0a" valign="middle" align="left">Simon Cox</td>
+<td id="_79aca2e9-8603-d5fa-dfae-ebb6574c3831" valign="middle" align="left">N/A</td>
+<td id="_0b2add81-598e-709f-e44b-f5925efd6578" valign="middle" align="left">Initial draft document</td>
+</tr><tr id="_90fe4a2d-dc11-3fcd-2219-32b29f5de3aa"><td id="_d4246db1-bc13-9af3-0753-97c7c0c04aed" valign="middle" align="left">2008-12-11</td>
+<td id="_75659e92-388a-a996-c2d4-a64f08656dda" valign="middle" align="left">0.1</td>
+<td id="_f600efc2-4510-e489-57f6-34ea6da476b8" valign="middle" align="left">Arliss Whiteside</td>
+<td id="_14955786-d661-19c7-b2c6-f067dfd0ff61" valign="middle" align="left">Cover, i, ii, iii, 2, 3, 5, A</td>
+<td id="_62c4e960-3c74-979c-e776-553f9f2a6d2e" valign="middle" align="left">Corrected format, inserted comments, and extended</td>
+</tr><tr id="_dd9f4149-24ce-4dc5-a45a-578138907cd6"><td id="_9ef8d006-11b0-a5d4-654f-5e4f7f20e50e" valign="middle" align="left">2009-04-01</td>
+<td id="_57ba0be3-be99-b1dd-b700-6606ebd49a8a" valign="middle" align="left">0.1</td>
+<td id="_0ecb9810-4a43-00c7-8646-15670b42bd62" valign="middle" align="left">Simon Cox</td>
+<td id="_eaa3fa76-bc71-9214-0152-3b76f01b88d8" valign="middle" align="left">all</td>
+<td id="_6e2eb558-8e83-48ff-2866-f25a18c39ec2" valign="middle" align="left">Minor tweaks and corrections for consistency with the other OGC-NA documents.</td>
+</tr><tr id="_86bec5a0-fdad-611b-d32a-a856a6000063"><td id="_98274f8d-81b6-a794-fa33-4a1b9c9e1089" valign="middle" align="left">2009-05-15</td>
+<td id="_7159e1ad-629c-3a97-9e01-e4ed70cecb50" valign="middle" align="left">0.2</td>
+<td id="_b52aa05d-fbd7-61de-e209-41bb250e9df0" valign="middle" align="left">David Burggraf</td>
+<td id="_1f90d32a-80db-b915-5d81-c12801f561ff" valign="middle" align="left">all</td>
+<td id="_2b7610a6-3546-2d94-c1ea-a5786f4a8090" valign="middle" align="left">Moved all references to parameterized and compound name form of URN definitions with the intention of specifying these forms in the separate documents OGC 09-054 and OGC 09-055, respectively.</td>
+</tr><tr id="_52db0847-7ee0-ef13-0096-fcb67c47fa57"><td id="_f05882da-c39a-dd93-0577-b7bcdef4d37d" valign="middle" align="left">2009-05-21</td>
+<td id="_46c22fde-7bf0-f99f-9ffa-4963f6a7195a" valign="middle" align="left">0.2</td>
+<td id="_66fef209-213b-4c18-4a12-d3afa6339976" valign="middle" align="left">Simon Cox</td>
+<td id="_4617b468-1194-cbb0-6b95-ec1a55cc32df" valign="middle" align="left">2, 3</td>
+<td id="_169c9839-c154-cfbb-6654-a6baea7bd77f" valign="middle" align="left">Additional normative references; Replace EBNF with ABNF</td>
+</tr><tr id="_38f2b47c-7818-74b1-4c82-3fade27e65c3"><td id="_43a85367-51d7-bb4d-9ac4-81d57da828c4" valign="middle" align="left">2010-01-31</td>
+<td id="_b3cc8e57-d13d-3a5d-f1e4-0b5a9746cefb" valign="middle" align="left">1.1.0</td>
+<td id="_e8bb0bbb-82d1-0783-eba4-a36722df9f04" valign="middle" align="left">Simon Cox</td>
+<td id="_757252ea-310f-0fb1-be45-dd1c2a97072c" valign="middle" align="left">all</td>
+<td id="_e39d4864-754c-0679-9bc4-4f97e0b0941f" valign="middle" align="left">ABNF revised to match RFC 3986; http URI syntax made explicit</td>
+</tr><tr id="_44c4ebc7-164d-ff48-b8b5-53e8042e5a57"><td id="_e915230b-aef1-ef51-5dec-8fc05696372c" valign="middle" align="left">2010-02-28</td>
+<td id="_06f3a54b-7b3c-b71a-d635-d5a523b5168f" valign="middle" align="left">1.1.1</td>
+<td id="_92a3cd3b-b1f0-38da-a5c6-ccd63bf4a834" valign="middle" align="left">Simon Cox</td>
+<td id="_77362752-0e42-b12d-93a5-178f885f4696" valign="middle" align="left">3.2</td>
+<td id="_fc9f1d1d-45e9-d451-04aa-01822ad9e600" valign="middle" align="left">Specific token “0” to be used for un-versioned http URIs.</td>
+</tr><tr id="_8453790b-dfac-08eb-a592-042247710051"><td id="_31ff833c-c6fd-694a-87d3-46171400947b" valign="middle" align="left">2010-03-31</td>
+<td id="_5230ca4f-756b-ea3b-532a-27d773697d6a" valign="middle" align="left">1.1.2</td>
+<td id="_0a59d45b-3759-8f3a-88cb-22af41361e5f" valign="middle" align="left">Simon Cox</td>
+<td id="_2cb352e2-0c36-c82f-b7c1-d40350516417" valign="middle" align="left">3.2</td>
+<td id="_e9f5d34b-2697-ed50-1125-91f096e731c1" valign="middle" align="left">Amend ABNF to allow an unlimited set of fields separated by either : or / .</td>
+</tr><tr id="_58556ff0-ed83-4cf4-830a-4f63ececf3d2"><td id="_1dd2a6f7-0479-5c35-2836-580adcd8e552" valign="middle" align="left">2018-05-16</td>
+<td id="_fcf22589-4f34-cabe-9948-a4b9e057cf46" valign="middle" align="left">1.2</td>
+<td id="_2c60937d-2e0c-55e2-5b6d-7bd7363e0545" valign="middle" align="left">Gobe Hobona</td>
+<td id="_3296cb64-acc5-418f-ca8f-196c74dbd6e5" valign="middle" align="left">all</td>
+<td id="_9fbb5169-ece7-f946-d6aa-5d2370b85d45" valign="middle" align="left">Conversion to asciidoctor asciidoc. Updated URL of def-type list. Added the Description section and SKOS example.</td>
+</tr><tr id="_cd19b3cd-8b04-4f3f-2177-4238e77c612b"><td id="_52d0111b-dafc-75ff-0938-90a3e1e75f39" valign="middle" align="left">2021-06-25</td>
+<td id="_cb29442c-6aad-4e64-04db-e5a90cc8e969" valign="middle" align="left">1.3</td>
+<td id="_07b21b56-630e-0bc6-3e7b-afec05c77af9" valign="middle" align="left">Gobe Hobona</td>
+<td id="_11e332bb-0c9f-67ff-8f06-72ed808d162d" valign="middle" align="left">6.3</td>
+<td id="_f362df39-7f43-8608-e0ca-243118264845" valign="middle" align="left">Added clause on Shortened Names of CRS’s. Fixes <link target="https://github.com/opengeospatial/NamingAuthority/issues/92">Issue 92</link>.</td>
+</tr><tr id="_14f195db-42fc-462c-9e4b-6f57df507aa1"><td id="_1afec0b1-ac15-561a-be14-8a69fac927f7" valign="middle" align="left">2022-02-16</td>
+<td id="_bef11704-55d6-ac9e-3f7f-99878e7f9f05" valign="middle" align="left">1.3</td>
+<td id="_2ed01b48-0bca-4b8b-934d-f03a421b6370" valign="middle" align="left">Gobe Hobona</td>
+<td id="_93f024a0-34b8-7933-ec28-8e827e2f36b8" valign="middle" align="left">6.2</td>
+<td id="_4b4ec33d-816c-0a85-5391-41a352888286" valign="middle" align="left">Changed statement about version number to “version” or “versionURN” is an optional field. Fixes <link target="https://github.com/opengeospatial/NamingAuthority/issues/143">Issue 143</link>.</td>
+</tr><tr id="_da97e9b2-dd5f-bd39-81c1-e8dbb18a1bf3"><td id="_d511a650-c60d-ed05-e6dc-699f80a04abd" valign="middle" align="left">2022-02-16</td>
+<td id="_92f96b06-045c-1ed0-13d2-838396e75d30" valign="middle" align="left">1.3</td>
+<td id="_4f539f62-d11f-938c-a672-4d085abc6665" valign="middle" align="left">Gobe Hobona</td>
+<td id="_1d499bf4-c960-776e-98f3-845a2aabe697" valign="middle" align="left">all</td>
+<td id="_6b3573a3-cf02-8be5-34de-790a8edb19e2" valign="middle" align="left">Conversion to metanorma asciidoc.</td>
+</tr></tbody>
+</table>
+</annex><bibliography><references id="_62cb93de-9e89-f1ae-f6de-9bb12ad86103" normative="true" obligation="informative">
+<title id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><p id="_49996d2b-65c1-916b-9bbf-42b933aa0025">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+<bibitem id="_57f2ea29-d1ac-500b-17dd-4affca2fa532" type="standard" schema-version="v1.5.6" anchor="OGC_08-131r3">
+  <fetched>2026-07-07</fetched>
+  
+<title language="en" script="Latn" type="title-intro">The Specification Model</title>
+
+  
+<title language="en" script="Latn" type="title-main">Standard for Modular specifications</title>
+
+  
+<title language="en" script="Latn" type="main">The Specification Model — Standard for Modular specifications</title>
+
+  <uri type="html">https://docs.ogc.org/pol/08-131r3/08-131r3/pdf</uri>
+  <docidentifier type="OGC" primary="true">08-131r3</docidentifier>
+  <date type="published">
+    <on>2009-10-19</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Policy SWG</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>3</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This standard contains requirements for writing standards to be used for any document whose
+eventual purpose is the specification of requirements for software, services or data structures. </abstract>
+</bibitem>
+<bibitem id="_39d7f86e-754a-c775-78f4-485aae40b3b7" type="standard" schema-version="v1.5.6" anchor="OGC_06-121r9">
+  <fetched>2026-07-07</fetched>
+  
+<title language="en" script="Latn" type="title-main">OGC Web Service Common Implementation Specification</title>
+
+  
+<title language="en" script="Latn" type="main">OGC Web Service Common Implementation Specification</title>
+
+  <uri type="html">https://docs.ogc.org/is/06-121r9/06-121r9/pdf</uri>
+  <docidentifier type="OGC" primary="true">06-121r9</docidentifier>
+  <date type="published">
+    <on>2010-04-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Arliss Whiteside</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Jim Greenwood </completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>9</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This document specifies many of the aspects that are, or should be, common to all or multiple OGC Web Service (OWS) interface Implementation Standards. These common aspects are primarily some of the parameters and data structures used in operation requests and responses. Of course, each such Implementation Standard must specify the additional aspects of that interface, including specifying all additional parameters and data structures needed in all operation requests and responses.</abstract>
+</bibitem>
+</references><references id="_bff8ce99-108a-2b1f-7e43-4e0b51536e02" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_0010555b-3741-2dc8-aad1-fc615f4c26e5" type="standard" schema-version="v1.5.6" anchor="OGC_09-046r6">
+  <fetched>2026-07-07</fetched>
+  
+<title language="en" script="Latn" type="title-intro">OGC Naming Authority</title>
+
+  
+<title language="en" script="Latn" type="title-main">Procedures</title>
+
+  
+<title language="en" script="Latn" type="main">OGC Naming Authority — Procedures</title>
+
+  <uri type="src">http://www.opengis.net/doc/POL/OGC-NA/1.3</uri>
+  <uri type="html">https://docs.ogc.org/pol/09-046r6.html</uri>
+  <docidentifier type="OGC" primary="true">09-046r6</docidentifier>
+  <date type="published">
+    <on>2021-09-27</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Gobe Hobona</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Simon Cox</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>6</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">The mission of the OGC Naming Authority (OGC-NA) is to provide the means through which OGC resources such as OGC documents, namespaces and ontologies can be controlled and managed such that they can provide clear and well-defined names and definitions. In the terminology defined in ISO 19135, OGC-NA is the Control Body for the register of OGC Names. This document describes the framework of documents, registers and other resources required for OGC-NA to execute that role.</abstract>
+</bibitem><bibitem id="_983d9c0d-41fd-75a0-cc0e-b13c46584892" type="standard" schema-version="v1.5.6" anchor="rfc2141">
+  <fetched>2026-07-07</fetched>
+  
+<title type="main">URN Syntax</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2141</uri>
+  <docidentifier type="IETF" primary="true">RFC 2141</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2141</docidentifier>
+  <docnumber>RFC2141</docnumber>
+  <date type="published">
+    <on>1997-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">R.</formatted-initials>          <surname language="en" script="Latn">Moats</surname>          <completename language="en" script="Latn">R. Moats</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name language="en">RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name language="en">RFC Series</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name language="en">Internet Engineering Task Force</name>
+
+      <subdivision type="workgroup">
+        
+<name>Uniform Resource Names</name>
+
+        <identifier>urn</identifier>
+      </subdivision>
+      <abbreviation language="en">IETF</abbreviation>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p id="_baa8a2b9-8ab1-a9f2-ff2a-0a03766b3aca">Uniform Resource Names (URNs) are intended to serve as persistent, location-independent, resource identifiers.  This document sets forward the canonical syntax for URNs. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <status>
+    <stage>PROPOSED STANDARD</stage>
+  </status>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>RFC8141</formattedref>
+      <docidentifier type="IETF" primary="true">RFC8141</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title>RFC</title>
+
+    <number>2141</number>
+  </series>
+  <series type="stream">
+    
+<title>IETF</title>
+
+  </series>
+  <keyword>
+    <vocab>URN-SYNTAX</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Uniform</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Names</vocab>
+  </keyword>
+</bibitem><bibitem id="_9bd4c29d-935f-bde1-347f-2cdfbf3ef0a9" type="standard" schema-version="v1.5.6" anchor="rfc2616">
+  <fetched>2026-07-07</fetched>
+  
+<title type="main">Hypertext Transfer Protocol — HTTP/1.1</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2616</uri>
+  <docidentifier type="IETF" primary="true">RFC 2616</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2616</docidentifier>
+  <docnumber>RFC2616</docnumber>
+  <date type="published">
+    <on>1999-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">R.</formatted-initials>          <surname language="en" script="Latn">Fielding</surname>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">J.</formatted-initials>          <surname language="en" script="Latn">Gettys</surname>          <completename language="en" script="Latn">J. Gettys</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">J.</formatted-initials>          <surname language="en" script="Latn">Mogul</surname>          <completename language="en" script="Latn">J. Mogul</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">H.</formatted-initials>          <surname language="en" script="Latn">Frystyk</surname>          <completename language="en" script="Latn">H. Frystyk</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">L.</formatted-initials>          <surname language="en" script="Latn">Masinter</surname>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">P.</formatted-initials>          <surname language="en" script="Latn">Leach</surname>          <completename language="en" script="Latn">P. Leach</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">T.</formatted-initials>          <surname language="en" script="Latn">Berners-Lee</surname>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name language="en">RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name language="en">RFC Series</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name language="en">Internet Engineering Task Force</name>
+
+      <subdivision type="workgroup">
+        
+<name>HyperText Transfer Protocol</name>
+
+        <identifier>http</identifier>
+      </subdivision>
+      <abbreviation language="en">IETF</abbreviation>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p id="_b43e9580-d127-f96b-317a-2da001cb97c6">HTTP has been in use by the World-Wide Web global information initiative since 1990.  This specification defines the protocol referred to as “HTTP/1.1”, and is an update to RFC 2068. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <status>
+    <stage>DRAFT STANDARD</stage>
+  </status>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>RFC7230</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7230</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>RFC7231</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7231</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>RFC7232</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7232</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>RFC7233</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7233</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>RFC7234</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7234</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>RFC7235</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7235</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title>RFC</title>
+
+    <number>2616</number>
+  </series>
+  <series type="stream">
+    
+<title>IETF</title>
+
+  </series>
+  <keyword>
+    <vocab>HTTP</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Hypertext Transfer Protocol</vocab>
+  </keyword>
+  <keyword>
+    <vocab>World Wide Web</vocab>
+  </keyword>
+  <keyword>
+    <vocab>WWW</vocab>
+  </keyword>
+  <keyword>
+    <vocab>hypermedia</vocab>
+  </keyword>
+</bibitem><bibitem id="_e4d1a4d2-b674-5df5-3d65-f75e2c976038" type="standard" schema-version="v1.5.6" anchor="rfc3986">
+  <fetched>2026-07-07</fetched>
+  
+<title type="main">Uniform Resource Identifier (URI): Generic Syntax</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3986</uri>
+  <docidentifier type="IETF" primary="true">RFC 3986</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3986</docidentifier>
+  <docnumber>RFC3986</docnumber>
+  <date type="published">
+    <on>2005-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">T.</formatted-initials>          <surname language="en" script="Latn">Berners-Lee</surname>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">R.</formatted-initials>          <surname language="en" script="Latn">Fielding</surname>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">L.</formatted-initials>          <surname language="en" script="Latn">Masinter</surname>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name language="en">RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name language="en">RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p id="_46807142-c94e-0ad9-414e-de5ea6bbbd30">A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource.  This specification defines the generic URI syntax and a process for resolving URI references that might be in relative form, along with guidelines and security considerations for the use of URIs on the Internet.  The URI syntax defines a grammar that is a superset of all valid URIs, allowing an implementation to parse the common components of a URI reference without knowing the scheme-specific requirements of every possible identifier.  This specification does not define a generative grammar for URIs; that task is performed by the individual specifications of each URI scheme. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <status>
+    <stage>INTERNET STANDARD</stage>
+  </status>
+  <relation type="updates">
+    <bibitem>
+      <formattedref>RFC1738</formattedref>
+      <docidentifier type="IETF" primary="true">RFC1738</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title>STD</title>
+
+    <number>66</number>
+  </series>
+  <series>
+    
+<title>RFC</title>
+
+    <number>3986</number>
+  </series>
+  <series type="stream">
+    
+<title>IETF</title>
+
+  </series>
+  <keyword>
+    <vocab>Internet protocol</vocab>
+  </keyword>
+  <keyword>
+    <vocab>IP</vocab>
+  </keyword>
+  <keyword>
+    <vocab>uniform resource identifier</vocab>
+  </keyword>
+  <keyword>
+    <vocab>URI</vocab>
+  </keyword>
+  <keyword>
+    <vocab>www</vocab>
+  </keyword>
+  <keyword>
+    <vocab>world wide web</vocab>
+  </keyword>
+</bibitem><bibitem id="_c0e50324-855d-752a-bb56-a95eedab32b4" type="standard" schema-version="v1.5.6" anchor="rfc4395">
+  <fetched>2026-07-07</fetched>
+  
+<title type="main">Guidelines and Registration Procedures for New URI Schemes</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4395</uri>
+  <docidentifier type="IETF" primary="true">RFC 4395</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4395</docidentifier>
+  <docnumber>RFC4395</docnumber>
+  <date type="published">
+    <on>2006-02</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">T.</formatted-initials>          <surname language="en" script="Latn">Hansen</surname>          <completename language="en" script="Latn">T. Hansen</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">T.</formatted-initials>          <surname language="en" script="Latn">Hardie</surname>          <completename language="en" script="Latn">T. Hardie</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">L.</formatted-initials>          <surname language="en" script="Latn">Masinter</surname>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name language="en">RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name language="en">RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p id="_bb7ab519-d976-6ebc-c89d-92b96d4174c9">This document provides guidelines and recommendations for the definition of Uniform Resource Identifier (URI) schemes.  It also updates the process and IANA registry for URI schemes.  It obsoletes both RFC 2717 and RFC 2718.  This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+
+  </abstract>
+  <status>
+    <stage>BEST CURRENT PRACTICE</stage>
+  </status>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>RFC7595</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7595</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title>RFC</title>
+
+    <number>4395</number>
+  </series>
+  <series type="stream">
+    
+<title>IETF</title>
+
+  </series>
+  <keyword>
+    <vocab>uniform resource identifier</vocab>
+  </keyword>
+  <keyword>
+    <vocab>syntax</vocab>
+  </keyword>
+  <keyword>
+    <vocab>semantics</vocab>
+  </keyword>
+</bibitem><bibitem id="_c1cdf147-b070-7793-57d0-9e16744c0bda" type="standard" schema-version="v1.5.6" anchor="rfc5141">
+  <fetched>2026-07-07</fetched>
+  
+<title type="main">A Uniform Resource Name (URN) Namespace for the International Organization for Standardization (ISO)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5141</uri>
+  <docidentifier type="IETF" primary="true">RFC 5141</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5141</docidentifier>
+  <docnumber>RFC5141</docnumber>
+  <date type="published">
+    <on>2008-03</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">J.</formatted-initials>          <surname language="en" script="Latn">Goodwin</surname>          <completename language="en" script="Latn">J. Goodwin</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">H.</formatted-initials>          <surname language="en" script="Latn">Apel</surname>          <completename language="en" script="Latn">H. Apel</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name language="en">RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name language="en">RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p id="_fb2fb4d0-9122-19f5-677f-c7fb6596b00d">This document describes a Uniform Resource Name Namespace Identification (URN NID) for the International Organization for Standardization (ISO).  This URN NID is intended for use for the identification of persistent resources published by the ISO standards body (including documents, document metadata, extracted resources such as standard schemata and standard value sets, and other resources).  This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <status>
+    <stage>INFORMATIONAL</stage>
+  </status>
+  <series>
+    
+<title>RFC</title>
+
+    <number>5141</number>
+  </series>
+  <series type="stream">
+    
+<title>IETF</title>
+
+  </series>
+  <keyword>
+    <vocab>urn nid</vocab>
+  </keyword>
+  <keyword>
+    <vocab>uniform resource name namespace identification</vocab>
+  </keyword>
+  <keyword>
+    <vocab>NSS</vocab>
+  </keyword>
+</bibitem><bibitem id="_a7b834bb-a62e-7273-71d4-4028ab9e806f" type="standard" schema-version="v1.5.6" anchor="rfc5165">
+  <fetched>2026-07-07</fetched>
+  
+<title type="main">A Uniform Resource Name (URN) Namespace for the Open Geospatial Consortium (OGC)</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5165</uri>
+  <docidentifier type="IETF" primary="true">RFC 5165</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5165</docidentifier>
+  <docnumber>RFC5165</docnumber>
+  <date type="published">
+    <on>2008-04</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">C.</formatted-initials>          <surname language="en" script="Latn">Reed</surname>          <completename language="en" script="Latn">C. Reed</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name language="en">RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name language="en">RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p id="_9f9b04db-afe1-1b42-6d23-db6c86356e72">This document describes a Uniform Resource Name (URN) namespace that is engineered by the Open Geospatial Consortium (OGC) for naming persistent resources published by the OGC.  The formal Namespace IDentifier (NID) is “ogc”.  This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <status>
+    <stage>INFORMATIONAL</stage>
+  </status>
+  <series>
+    
+<title>RFC</title>
+
+    <number>5165</number>
+  </series>
+  <series type="stream">
+    
+<title>IETF</title>
+
+  </series>
+  <keyword>
+    <vocab>location</vocab>
+  </keyword>
+  <keyword>
+    <vocab>geospatial</vocab>
+  </keyword>
+  <keyword>
+    <vocab>namespace</vocab>
+  </keyword>
+  <keyword>
+    <vocab>OGC</vocab>
+  </keyword>
+  <keyword>
+    <vocab>URN</vocab>
+  </keyword>
+  <keyword>
+    <vocab>Open Geospatial Consortium</vocab>
+  </keyword>
+</bibitem><bibitem id="_82a23c04-7e2b-664d-db70-22d315f14062" type="standard" schema-version="v1.5.6" anchor="rfc5234">
+  <fetched>2026-07-07</fetched>
+  
+<title type="main">Augmented BNF for Syntax Specifications: ABNF</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc5234</uri>
+  <docidentifier type="IETF" primary="true">RFC 5234</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC5234</docidentifier>
+  <docnumber>RFC5234</docnumber>
+  <date type="published">
+    <on>2008-01</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">D.</formatted-initials>          <surname language="en" script="Latn">Crocker</surname>          <completename language="en" script="Latn">D. Crocker</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">P.</formatted-initials>          <surname language="en" script="Latn">Overell</surname>          <completename language="en" script="Latn">P. Overell</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name language="en">RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name language="en">RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p id="_9d44302e-5a57-fdf8-01fb-9a7c8090383b">Internet technical specifications often need to define a formal syntax.  Over the years, a modified version of Backus-Naur Form (BNF), called Augmented BNF (ABNF), has been popular among many Internet specifications.  The current specification documents ABNF.  It balances compactness and simplicity with reasonable representational power.  The differences between standard BNF and ABNF involve naming rules, repetition, alternatives, order-independence, and value ranges.  This specification also supplies additional rule definitions and encoding for a core lexical analyzer of the type common to several Internet specifications. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <status>
+    <stage>INTERNET STANDARD</stage>
+  </status>
+  <series>
+    
+<title>STD</title>
+
+    <number>68</number>
+  </series>
+  <series>
+    
+<title>RFC</title>
+
+    <number>5234</number>
+  </series>
+  <series type="stream">
+    
+<title>IETF</title>
+
+  </series>
+  <keyword>
+    <vocab>ABNF</vocab>
+  </keyword>
+  <keyword>
+    <vocab>backus-naur form</vocab>
+  </keyword>
+  <keyword>
+    <vocab>augmented backus-naur form</vocab>
+  </keyword>
+  <keyword>
+    <vocab>rule definitions</vocab>
+  </keyword>
+  <keyword>
+    <vocab>encoding</vocab>
+  </keyword>
+  <keyword>
+    <vocab>core lexical analyzer</vocab>
+  </keyword>
+</bibitem><bibitem id="_3e7dde64-aea3-2915-3656-f5ac91ff8484" type="standard" schema-version="v1.5.6" anchor="ISO1087_1">
+  <fetched>2026-07-07</fetched>
+  
+<title language="en" script="Latn" type="title-intro">Terminology work</title>
+
+  
+<title language="en" script="Latn" type="title-main">Vocabulary</title>
+
+  
+<title language="en" script="Latn" type="title-part">Part 1: Theory and application</title>
+
+  
+<title language="en" script="Latn" type="main">Terminology work — Vocabulary — Part 1: Theory and application</title>
+
+  
+<title language="fr" script="Latn" type="title-intro">Travaux terminologiques</title>
+
+  
+<title language="fr" script="Latn" type="title-main">Vocabulaire</title>
+
+  
+<title language="fr" script="Latn" type="title-part">Partie 1: Théorie et application</title>
+
+  
+<title language="fr" script="Latn" type="main">Travaux terminologiques — Vocabulaire — Partie 1: Théorie et application</title>
+
+  <uri type="src">https://www.iso.org/standard/20057.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:20057:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/02/00/20057.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 1087-1:2000</docidentifier>
+  <docidentifier type="iso-reference">ISO 1087-1:2000(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:1087:-1:stage-95.99</docidentifier>
+  <docnumber>1087</docnumber>
+  <date type="published">
+    <on>2000-10-26</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Principles and methods</name>
+
+        <identifier>ISO/TC 37/SC 1</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <status>
+    <stage>95</stage>
+    <substage>99</substage>
+  </status>
+  <copyright>
+    <from>2000</from>
+    <owner>
+      <organization>
+        
+<name>ISO</name>
+
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem>
+      <formattedref>ISO 1087:1990</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 1087:1990</docidentifier>
+      <date type="published">
+        <on>1990-04-26</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>ISO/DIS 1087</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/DIS 1087</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>ISO 1087:2019</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 1087:2019</docidentifier>
+      <date type="published">
+        <on>2019-09-24</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <place>
+    <city>Geneva</city>
+  </place>
+</bibitem><bibitem anchor="OGC_14-065" id="_5615091e-a426-99b9-f5e1-a8d333d57ab0">
+  <formattedref format="application/x-isodoc+xml">OGC 05-020r25, Technical Committee Policies and Procedures, <link target="http://docs.opengeospatial.org/pol/05-020r25/05-020r25.html"/> (2017)</formattedref>
+  <docidentifier type="OGC">OGC 05-020r25</docidentifier>
+  <docnumber>05-020r25</docnumber>
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem id="_1495eb17-7fc8-ba0c-55cb-3a0692e69a15" type="standard" schema-version="v1.5.6" anchor="W3C_CURIEs">
+  <fetched>2026-07-07</fetched>
+  
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
+
+  <uri type="src">https://www.w3.org/TR/curie/</uri>
+  <docidentifier type="W3C" primary="true">W3C curie</docidentifier>
+  <docnumber>curie</docnumber>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>World Wide Web Consortium</name>
+
+      <abbreviation>W3C</abbreviation>
+      <uri>https://www.w3.org</uri>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
+
+      <uri type="src">https://www.w3.org/TR/2010/NOTE-curie-20101216/</uri>
+      <docidentifier type="W3C" primary="true">W3C NOTE-curie-20101216</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
+
+      <uri type="src">https://www.w3.org/TR/2009/CR-curie-20090116</uri>
+      <docidentifier type="W3C" primary="true">W3C CR-curie-20090116</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
+
+      <uri type="src">https://www.w3.org/TR/2008/WD-curie-20080506</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-curie-20080506</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
+
+      <uri type="src">https://www.w3.org/TR/2008/WD-curie-20080402</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-curie-20080402</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
+
+      <uri type="src">https://www.w3.org/TR/2007/WD-curie-20071126</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-curie-20071126</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">CURIE Syntax 1.0</title>
+
+      <uri type="src">https://www.w3.org/TR/2007/WD-curie-20070307</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-curie-20070307</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title language="en" script="Latn">W3C technicalReport</title>
+
+    <number>curie</number>
+  </series>
+</bibitem><bibitem id="_39ed846b-4844-6e71-63ea-25db9f3929dc" type="standard" schema-version="v1.5.6" anchor="W3C_SKOS">
+  <fetched>2026-07-07</fetched>
+  
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
+
+  <uri type="src">https://www.w3.org/TR/skos-reference/</uri>
+  <docidentifier type="W3C" primary="true">W3C skos-reference</docidentifier>
+  <docnumber>skos-reference</docnumber>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>World Wide Web Consortium</name>
+
+      <abbreviation>W3C</abbreviation>
+      <uri>https://www.w3.org</uri>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
+
+      <uri type="src">https://www.w3.org/TR/2009/REC-skos-reference-20090818/</uri>
+      <docidentifier type="W3C" primary="true">W3C REC-skos-reference-20090818</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
+
+      <uri type="src">https://www.w3.org/TR/2009/PR-skos-reference-20090615/</uri>
+      <docidentifier type="W3C" primary="true">W3C PR-skos-reference-20090615</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
+
+      <uri type="src">https://www.w3.org/TR/2009/CR-skos-reference-20090317/</uri>
+      <docidentifier type="W3C" primary="true">W3C CR-skos-reference-20090317</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
+
+      <uri type="src">https://www.w3.org/TR/2008/WD-skos-reference-20080829/</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-skos-reference-20080829</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
+
+      <uri type="src">https://www.w3.org/TR/2008/WD-skos-reference-20080609/</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-skos-reference-20080609</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">SKOS Simple Knowledge Organization System Reference</title>
+
+      <uri type="src">https://www.w3.org/TR/2008/WD-skos-reference-20080125/</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-skos-reference-20080125</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title language="en" script="Latn">W3C technicalReport</title>
+
+    <number>skos-reference</number>
+  </series>
+</bibitem><bibitem anchor="OGCDEF" id="_decfffab-bbef-6ac6-5c3a-47ca55a0379f">
+  <formattedref format="application/x-isodoc+xml">OGC Definitions Server, Available at <link target="http://www.opengis.net/def"/>.</formattedref>
+  <docidentifier>OGCDEF</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
+</bibitem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</references></bibliography>
+</metanorma>
